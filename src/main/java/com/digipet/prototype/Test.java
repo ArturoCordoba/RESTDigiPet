@@ -1,11 +1,15 @@
 package com.digipet.prototype;
 
+import com.digipet.prototype.api.authentication.Role;
 import com.digipet.prototype.api.authentication.Secured;
 import com.digipet.prototype.api.authentication.TokenManager;
 
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.SecurityContext;
+import java.security.Principal;
 import java.util.ArrayList;
 
 @Path("test")
@@ -27,11 +31,16 @@ public class Test {
         return e;
     }
 
-    @Secured
+    @Secured//({Role.ADMINISTRATOR})
     @GET
     @Path("/getall")
     @Produces(MediaType.APPLICATION_JSON)
-    public ArrayList<Estudiante> getAll() {
+    public ArrayList<Estudiante> getAll(@Context SecurityContext securityContext) {
+        Principal principal = securityContext.getUserPrincipal();
+        String username = principal.getName();
+
+        System.out.println(username);
+
         return listaEstudiantes;
     }
 

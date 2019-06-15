@@ -6,8 +6,9 @@ import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.SecurityContext;
 import javax.ws.rs.ext.Provider;
-import java.io.IOException;
+import java.security.Principal;
 
 @Secured
 @Provider
@@ -29,12 +30,36 @@ public class AuthenticationFilter implements ContainerRequestFilter {
         }
 
         //Se extrae el token del header de autorizacion
-        String token = authorizationHeader.substring(AUTHENTICATION_SCHEME.length()).trim();
+        final String token = authorizationHeader.substring(AUTHENTICATION_SCHEME.length()).trim();
 
         //Se valida el token
         if(!TokenManager.validateToken(token)){
             abortWithUnauthorized(requestContext);
         }
+
+        //Se crea una nueva instancia de SecurityContext para extraer el nombre de usuario de la peticion
+        final SecurityContext currentSecurityContext = requestContext.getSecurityContext();
+        requestContext.setSecurityContext(new SecurityContext() {
+            @Override
+            public Principal getUserPrincipal() {
+                return () -> TokenManager.decodeToken(token);
+            }
+
+            @Override
+            public boolean isUserInRole(String s) {
+                return true;
+            }
+
+            @Override
+            public boolean isSecure() {
+                return currentSecurityContext.isSecure();
+            }
+
+            @Override
+            public String getAuthenticationScheme() {
+                return AUTHENTICATION_SCHEME;
+            }
+        });
     }
 
     /**

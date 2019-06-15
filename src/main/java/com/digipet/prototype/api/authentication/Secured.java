@@ -11,4 +11,6 @@ import static java.lang.annotation.ElementType.TYPE;
 @NameBinding
 @Retention(RetentionPolicy.RUNTIME)
 @Target({TYPE, METHOD})
-public @interface Secured { }
+public @interface Secured {
+    Role[] value() default {};
+}
