@@ -1,5 +1,8 @@
 package com.digipet.prototype;
 
+import com.digipet.prototype.api.authentication.Secured;
+import com.digipet.prototype.api.authentication.TokenManager;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -24,6 +27,7 @@ public class Test {
         return e;
     }
 
+    @Secured
     @GET
     @Path("/getall")
     @Produces(MediaType.APPLICATION_JSON)
@@ -42,5 +46,17 @@ public class Test {
         listaEstudiantes.add(estudiante);
 
         return Response.status(201).entity(estudiante).build();
+    }
+
+    @POST
+    @Path("/token")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response addToken(){
+        String token = TokenManager.issueToken("admin");
+
+        TokenManager.addToken(token);
+
+        return Response.status(Response.Status.OK).entity(token).build();
+
     }
 }
