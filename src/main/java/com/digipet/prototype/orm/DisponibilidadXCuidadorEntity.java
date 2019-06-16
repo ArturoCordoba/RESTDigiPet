@@ -5,12 +5,12 @@ import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
-@Table(name = "DISPONIBILIDAD_X_CUIDADOR", schema = "digipet", catalog = "")
+@Table(name = "DISPONIBILIDAD_X_CUIDADOR", schema = "digipet")
 public class DisponibilidadXCuidadorEntity {
     private int idDisponibilidad;
-    private int idCuidador;
     private Timestamp fechaHoraInicio;
     private Timestamp fechaHoraFinal;
+    private CuidadorEntity cuidador;
 
     @Id
     @Column(name = "Id_disponibilidad", nullable = false)
@@ -23,17 +23,7 @@ public class DisponibilidadXCuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Id_cuidador", nullable = false)
-    public int getIdCuidador() {
-        return idCuidador;
-    }
-
-    public void setIdCuidador(int idCuidador) {
-        this.idCuidador = idCuidador;
-    }
-
-    @Basic
-    @Column(name = "Fecha_hora_inicio", nullable = false)
+    @Column(name = "Fecha_hora_inicio")
     public Timestamp getFechaHoraInicio() {
         return fechaHoraInicio;
     }
@@ -58,13 +48,22 @@ public class DisponibilidadXCuidadorEntity {
         if (o == null || getClass() != o.getClass()) return false;
         DisponibilidadXCuidadorEntity that = (DisponibilidadXCuidadorEntity) o;
         return idDisponibilidad == that.idDisponibilidad &&
-                idCuidador == that.idCuidador &&
                 Objects.equals(fechaHoraInicio, that.fechaHoraInicio) &&
                 Objects.equals(fechaHoraFinal, that.fechaHoraFinal);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idDisponibilidad, idCuidador, fechaHoraInicio, fechaHoraFinal);
+        return Objects.hash(idDisponibilidad, fechaHoraInicio, fechaHoraFinal);
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Id_cuidador", referencedColumnName = "Id_cuidador", nullable = false)
+    public CuidadorEntity getCuidador() {
+        return cuidador;
+    }
+
+    public void setCuidador(CuidadorEntity cuidador) {
+        this.cuidador = cuidador;
     }
 }

@@ -4,24 +4,13 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "FOTO_X_MASCOTA", schema = "digipet", catalog = "")
-@IdClass(FotoXMascotaEntityPK.class)
+@Table(name = "FOTO_X_MASCOTA", schema = "digipet")
 public class FotoXMascotaEntity {
-    private int idMascota;
     private String foto;
+    private MascotaEntity mascota;
 
     @Id
-    @Column(name = "Id_mascota", nullable = false)
-    public int getIdMascota() {
-        return idMascota;
-    }
-
-    public void setIdMascota(int idMascota) {
-        this.idMascota = idMascota;
-    }
-
-    @Id
-    @Column(name = "Foto", nullable = false, length = 30)
+    @Column(name = "Foto")
     public String getFoto() {
         return foto;
     }
@@ -35,12 +24,21 @@ public class FotoXMascotaEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         FotoXMascotaEntity that = (FotoXMascotaEntity) o;
-        return idMascota == that.idMascota &&
-                Objects.equals(foto, that.foto);
+        return Objects.equals(foto, that.foto);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idMascota, foto);
+        return Objects.hash(foto);
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Id_mascota", referencedColumnName = "Id_mascota", nullable = false)
+    public MascotaEntity getMascota() {
+        return mascota;
+    }
+
+    public void setMascota(MascotaEntity mascota) {
+        this.mascota = mascota;
     }
 }

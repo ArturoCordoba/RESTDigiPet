@@ -2,19 +2,22 @@ package com.digipet.prototype.orm;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "MASCOTA", schema = "digipet", catalog = "")
+@Table(name = "MASCOTA", schema = "digipet")
 public class MascotaEntity {
     private int idMascota;
-    private int idCliente;
     private String nombre;
     private String raza;
     private int edad;
-    private int idTamano;
     private String descripcion;
     private Date fechaInscripcion;
+    private List<FotoXMascotaEntity> listaFotos;
+    private ClienteEntity cliente;
+    private TamanoEntity tamaño;
+    private List<SolicitudEntity> listaSolicitudes;
 
     @Id
     @Column(name = "Id_mascota", nullable = false)
@@ -27,17 +30,7 @@ public class MascotaEntity {
     }
 
     @Basic
-    @Column(name = "Id_cliente", nullable = false)
-    public int getIdCliente() {
-        return idCliente;
-    }
-
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
-    }
-
-    @Basic
-    @Column(name = "Nombre", nullable = false, length = 30)
+    @Column(name = "Nombre")
     public String getNombre() {
         return nombre;
     }
@@ -67,17 +60,7 @@ public class MascotaEntity {
     }
 
     @Basic
-    @Column(name = "Id_tamano", nullable = false)
-    public int getIdTamano() {
-        return idTamano;
-    }
-
-    public void setIdTamano(int idTamano) {
-        this.idTamano = idTamano;
-    }
-
-    @Basic
-    @Column(name = "Descripcion", nullable = false, length = 300)
+    @Column(name = "Descripcion")
     public String getDescripcion() {
         return descripcion;
     }
@@ -102,9 +85,7 @@ public class MascotaEntity {
         if (o == null || getClass() != o.getClass()) return false;
         MascotaEntity that = (MascotaEntity) o;
         return idMascota == that.idMascota &&
-                idCliente == that.idCliente &&
                 edad == that.edad &&
-                idTamano == that.idTamano &&
                 Objects.equals(nombre, that.nombre) &&
                 Objects.equals(raza, that.raza) &&
                 Objects.equals(descripcion, that.descripcion) &&
@@ -113,6 +94,44 @@ public class MascotaEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idMascota, idCliente, nombre, raza, edad, idTamano, descripcion, fechaInscripcion);
+        return Objects.hash(idMascota, nombre, raza, edad, descripcion, fechaInscripcion);
+    }
+
+    @OneToMany(mappedBy = "mascota")
+    public List<FotoXMascotaEntity> getListaFotos() {
+        return listaFotos;
+    }
+
+    public void setListaFotos(List<FotoXMascotaEntity> listaFotos) {
+        this.listaFotos = listaFotos;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Id_cliente", referencedColumnName = "Id_cliente", nullable = false)
+    public ClienteEntity getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(ClienteEntity cliente) {
+        this.cliente = cliente;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Id_tamano", referencedColumnName = "Id_tamano", nullable = false)
+    public TamanoEntity getTamaño() {
+        return tamaño;
+    }
+
+    public void setTamaño(TamanoEntity tamaño) {
+        this.tamaño = tamaño;
+    }
+
+    @OneToMany(mappedBy = "mascota")
+    public List<SolicitudEntity> getListaSolicitudes() {
+        return listaSolicitudes;
+    }
+
+    public void setListaSolicitudes(List<SolicitudEntity> listaSolicitudes) {
+        this.listaSolicitudes = listaSolicitudes;
     }
 }

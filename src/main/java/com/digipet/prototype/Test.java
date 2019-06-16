@@ -39,8 +39,6 @@ public class Test {
         Principal principal = securityContext.getUserPrincipal();
         String username = principal.getName();
 
-        System.out.println(username);
-
         return listaEstudiantes;
     }
 
@@ -49,23 +47,11 @@ public class Test {
     @POST
     @Path("/add")
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
     public Response agregarEstudiante(Estudiante estudiante) {
 
         listaEstudiantes.add(estudiante);
 
-        return Response.status(201).entity(estudiante).build();
+        return Response.status(201).build();
     }
 
-    @POST
-    @Path("/token")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response addToken(){
-        String token = TokenManager.issueToken("admin");
-
-        TokenManager.addToken(token);
-
-        return Response.status(Response.Status.OK).entity(token).build();
-
-    }
 }

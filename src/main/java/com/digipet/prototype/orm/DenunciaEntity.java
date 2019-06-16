@@ -4,12 +4,12 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "DENUNCIA", schema = "digipet", catalog = "")
+@Table(name = "DENUNCIA", schema = "digipet")
 public class DenunciaEntity {
     private int idDenuncia;
-    private int idCliente;
-    private int idCuidador;
     private String descripcion;
+    private ClienteEntity cliente;
+    private CuidadorEntity cuidador;
 
     @Id
     @Column(name = "Id_denuncia", nullable = false)
@@ -22,27 +22,7 @@ public class DenunciaEntity {
     }
 
     @Basic
-    @Column(name = "Id_cliente", nullable = false)
-    public int getIdCliente() {
-        return idCliente;
-    }
-
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
-    }
-
-    @Basic
-    @Column(name = "Id_cuidador", nullable = false)
-    public int getIdCuidador() {
-        return idCuidador;
-    }
-
-    public void setIdCuidador(int idCuidador) {
-        this.idCuidador = idCuidador;
-    }
-
-    @Basic
-    @Column(name = "Descripcion", nullable = false, length = 300)
+    @Column(name = "Descripcion")
     public String getDescripcion() {
         return descripcion;
     }
@@ -57,13 +37,31 @@ public class DenunciaEntity {
         if (o == null || getClass() != o.getClass()) return false;
         DenunciaEntity that = (DenunciaEntity) o;
         return idDenuncia == that.idDenuncia &&
-                idCliente == that.idCliente &&
-                idCuidador == that.idCuidador &&
                 Objects.equals(descripcion, that.descripcion);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idDenuncia, idCliente, idCuidador, descripcion);
+        return Objects.hash(idDenuncia, descripcion);
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Id_cliente", referencedColumnName = "Id_cliente", nullable = false)
+    public ClienteEntity getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(ClienteEntity cliente) {
+        this.cliente = cliente;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Id_cuidador", referencedColumnName = "Id_cuidador", nullable = false)
+    public CuidadorEntity getCuidador() {
+        return cuidador;
+    }
+
+    public void setCuidador(CuidadorEntity cuidador) {
+        this.cuidador = cuidador;
     }
 }

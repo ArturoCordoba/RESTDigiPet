@@ -6,17 +6,17 @@ import java.util.Objects;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Table(name = "USUARIO", schema = "digipet", catalog = "")
+@Table(name = "USUARIO", schema = "digipet")
 public class UsuarioEntity {
     private int idUsuario;
     private String primerNombre;
     private String primerApellido;
     private String segundoApellido;
-    private int idRol;
     private String email1;
     private String contrasena;
     private String fotoPerfil;
-    private int idEstado;
+    private RolEntity rol;
+    private EstadoEntity estado;
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -60,17 +60,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Id_rol", nullable = false)
-    public int getIdRol() {
-        return idRol;
-    }
-
-    public void setIdRol(int idRol) {
-        this.idRol = idRol;
-    }
-
-    @Basic
-    @Column(name = "Email_1", nullable = false, length = 30)
+    @Column(name = "Email_1")
     public String getEmail1() {
         return email1;
     }
@@ -99,24 +89,12 @@ public class UsuarioEntity {
         this.fotoPerfil = fotoPerfil;
     }
 
-    @Basic
-    @Column(name = "Id_estado", nullable = false)
-    public int getIdEstado() {
-        return idEstado;
-    }
-
-    public void setIdEstado(int idEstado) {
-        this.idEstado = idEstado;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UsuarioEntity that = (UsuarioEntity) o;
         return idUsuario == that.idUsuario &&
-                idRol == that.idRol &&
-                idEstado == that.idEstado &&
                 Objects.equals(primerNombre, that.primerNombre) &&
                 Objects.equals(primerApellido, that.primerApellido) &&
                 Objects.equals(segundoApellido, that.segundoApellido) &&
@@ -127,6 +105,26 @@ public class UsuarioEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idUsuario, primerNombre, primerApellido, segundoApellido, idRol, email1, contrasena, fotoPerfil, idEstado);
+        return Objects.hash(idUsuario, primerNombre, primerApellido, segundoApellido, email1, contrasena, fotoPerfil);
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Id_rol", referencedColumnName = "Id_rol", nullable = false)
+    public RolEntity getRol() {
+        return rol;
+    }
+
+    public void setRol(RolEntity rol) {
+        this.rol = rol;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Id_estado", referencedColumnName = "Id_estado", nullable = false)
+    public EstadoEntity getEstado() {
+        return estado;
+    }
+
+    public void setEstado(EstadoEntity estado) {
+        this.estado = estado;
     }
 }

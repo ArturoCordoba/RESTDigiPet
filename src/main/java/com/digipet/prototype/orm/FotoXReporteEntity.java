@@ -4,29 +4,18 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "FOTO_X_REPORTE", schema = "digipet", catalog = "")
-@IdClass(FotoXReporteEntityPK.class)
+@Table(name = "FOTO_X_REPORTE", schema = "digipet")
 public class FotoXReporteEntity {
-    private int idReporte;
-    private int foto;
+    private String foto;
+    private ReporteEntity reporte;
 
     @Id
-    @Column(name = "Id_reporte", nullable = false)
-    public int getIdReporte() {
-        return idReporte;
-    }
-
-    public void setIdReporte(int idReporte) {
-        this.idReporte = idReporte;
-    }
-
-    @Id
-    @Column(name = "Foto", nullable = false)
-    public int getFoto() {
+    @Column(name = "Foto")
+    public String getFoto() {
         return foto;
     }
 
-    public void setFoto(int foto) {
+    public void setFoto(String foto) {
         this.foto = foto;
     }
 
@@ -35,12 +24,21 @@ public class FotoXReporteEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         FotoXReporteEntity that = (FotoXReporteEntity) o;
-        return idReporte == that.idReporte &&
-                foto == that.foto;
+        return Objects.equals(foto, that.foto);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idReporte, foto);
+        return Objects.hash(foto);
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Id_reporte", referencedColumnName = "Id_reporte", nullable = false)
+    public ReporteEntity getReporte() {
+        return reporte;
+    }
+
+    public void setReporte(ReporteEntity reporte) {
+        this.reporte = reporte;
     }
 }

@@ -11,59 +11,36 @@
     <!-- SQL Properties -->
     <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
     <property name="connection.url">jdbc:mariadb://digipet.cg8mqwwu18oy.us-east-2.rds.amazonaws.com/digipet</property>
+    <property name="hbm2ddl.auto">update</property>
     <property name="connection.username">gafa</property>
     <property name="connection.password">gafa1234</property>
-    <property name="hbm2ddl.auto">update</property>
 
-    <property name="show_sql">true</property>
+    <property name="show_sql">false</property>
     <property name="format_sql">true</property>
 
-    <!-- Mapped classes -->
-    <mapping resource="com/digipet/prototype/orm/BadgeEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.BadgeEntity"/>
-    <mapping resource="com/digipet/prototype/orm/BadgeXCuidadorEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.BadgeXCuidadorEntity"/>
-    <mapping resource="com/digipet/prototype/orm/ClienteEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.ClienteEntity"/>
-    <mapping resource="com/digipet/prototype/orm/CuidadorEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.CuidadorEntity"/>
-    <mapping resource="com/digipet/prototype/orm/DenunciaEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.DenunciaEntity"/>
-    <mapping resource="com/digipet/prototype/orm/DisponibilidadXCuidadorEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.DisponibilidadXCuidadorEntity"/>
-    <mapping resource="com/digipet/prototype/orm/EstadoEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.EstadoEntity"/>
-    <mapping class="com.digipet.prototype.orm.FotoXMascotaEntity"/>
-    <mapping resource="com/digipet/prototype/orm/FotoXMascotaEntity.hbm.xml"/>
-    <mapping resource="com/digipet/prototype/orm/FotoXReporteEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.FotoXReporteEntity"/>
-    <mapping resource="com/digipet/prototype/orm/HotelEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.HotelEntity"/>
-    <mapping resource="com/digipet/prototype/orm/MascotaEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.MascotaEntity"/>
-    <mapping class="com.digipet.prototype.orm.PagoXClienteEntity"/>
-    <mapping resource="com/digipet/prototype/orm/PagoXClienteEntity.hbm.xml"/>
-    <mapping resource="com/digipet/prototype/orm/ProvinciaEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.ProvinciaEntity"/>
-    <mapping resource="com/digipet/prototype/orm/ProvinciaXCuidadorEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.ProvinciaXCuidadorEntity"/>
-    <mapping resource="com/digipet/prototype/orm/ReporteEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.ReporteEntity"/>
-    <mapping resource="com/digipet/prototype/orm/RolEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.RolEntity"/>
-    <mapping resource="com/digipet/prototype/orm/ServicioEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.ServicioEntity"/>
-    <mapping resource="com/digipet/prototype/orm/SolicitudEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.SolicitudEntity"/>
-    <mapping resource="com/digipet/prototype/orm/SolicitudXCuidadorEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.SolicitudXCuidadorEntity"/>
-    <mapping resource="com/digipet/prototype/orm/SolicitudXHotelEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.SolicitudXHotelEntity"/>
-    <mapping resource="com/digipet/prototype/orm/TamanoEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.TamanoEntity"/>
-    <mapping class="com.digipet.prototype.orm.UniversidadEntity"/>
-    <mapping resource="com/digipet/prototype/orm/UniversidadEntity.hbm.xml"/>
-    <mapping resource="com/digipet/prototype/orm/UsuarioEntity.hbm.xml"/>
-    <mapping class="com.digipet.prototype.orm.UsuarioEntity"/>
+      <!-- Mapped classes -->
+      <mapping class="com.digipet.prototype.orm.BadgeEntity"/>
+      <mapping class="com.digipet.prototype.orm.BadgeXCuidadorEntity"/>
+      <mapping class="com.digipet.prototype.orm.ClienteEntity"/>
+      <mapping class="com.digipet.prototype.orm.CuidadorEntity"/>
+      <mapping class="com.digipet.prototype.orm.DenunciaEntity"/>
+      <mapping class="com.digipet.prototype.orm.DisponibilidadXCuidadorEntity"/>
+      <mapping class="com.digipet.prototype.orm.EstadoEntity"/>
+      <mapping class="com.digipet.prototype.orm.FotoXMascotaEntity"/>
+      <mapping class="com.digipet.prototype.orm.FotoXReporteEntity"/>
+      <mapping class="com.digipet.prototype.orm.HotelEntity"/>
+      <mapping class="com.digipet.prototype.orm.MascotaEntity"/>
+      <mapping class="com.digipet.prototype.orm.PagoXClienteEntity"/>
+      <mapping class="com.digipet.prototype.orm.ProvinciaEntity"/>
+      <mapping class="com.digipet.prototype.orm.ProvinciaXCuidadorEntity"/>
+      <mapping class="com.digipet.prototype.orm.ReporteEntity"/>
+      <mapping class="com.digipet.prototype.orm.RolEntity"/>
+      <mapping class="com.digipet.prototype.orm.ServicioEntity"/>
+      <mapping class="com.digipet.prototype.orm.SolicitudEntity"/>
+      <mapping class="com.digipet.prototype.orm.SolicitudXCuidadorEntity"/>
+      <mapping class="com.digipet.prototype.orm.SolicitudXHotelEntity"/>
+      <mapping class="com.digipet.prototype.orm.TamanoEntity"/>
+      <mapping class="com.digipet.prototype.orm.UniversidadEntity"/>
+      <mapping class="com.digipet.prototype.orm.UsuarioEntity"/>
   </session-factory>
 </hibernate-configuration>

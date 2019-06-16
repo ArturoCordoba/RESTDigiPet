@@ -4,24 +4,13 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "PAGO_X_CLIENTE", schema = "digipet", catalog = "")
-@IdClass(PagoXClienteEntityPK.class)
+@Table(name = "PAGO_X_CLIENTE", schema = "digipet")
 public class PagoXClienteEntity {
-    private int idCliente;
     private String metodoPago;
+    private ClienteEntity cliente;
 
     @Id
-    @Column(name = "Id_cliente", nullable = false)
-    public int getIdCliente() {
-        return idCliente;
-    }
-
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
-    }
-
-    @Id
-    @Column(name = "Metodo_pago", nullable = false, length = 30)
+    @Column(name = "Metodo_pago")
     public String getMetodoPago() {
         return metodoPago;
     }
@@ -35,12 +24,21 @@ public class PagoXClienteEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PagoXClienteEntity that = (PagoXClienteEntity) o;
-        return idCliente == that.idCliente &&
-                Objects.equals(metodoPago, that.metodoPago);
+        return Objects.equals(metodoPago, that.metodoPago);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idCliente, metodoPago);
+        return Objects.hash(metodoPago);
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Id_cliente", referencedColumnName = "Id_cliente", nullable = false)
+    public ClienteEntity getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(ClienteEntity cliente) {
+        this.cliente = cliente;
     }
 }

@@ -1,46 +1,41 @@
 package com.digipet.prototype.orm;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
-@Table(name = "BADGE_X_CUIDADOR", schema = "digipet", catalog = "")
-@IdClass(BadgeXCuidadorEntityPK.class)
+@Table(name = "BADGE_X_CUIDADOR", schema = "digipet")
 public class BadgeXCuidadorEntity {
-    private int idCuidador;
-    private int idBadge;
+    private CuidadorEntity cuidador;
+    private BadgeEntity badge;
+
+    @ManyToOne
+    @JoinColumn(name = "Id_cuidador", referencedColumnName = "Id_cuidador", nullable = false)
+    public CuidadorEntity getCuidador() {
+        return cuidador;
+    }
+
+    public void setCuidador(CuidadorEntity cuidador) {
+        this.cuidador = cuidador;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Id_badge", referencedColumnName = "Id_badge", nullable = false)
+    public BadgeEntity getBadge() {
+        return badge;
+    }
+
+    public void setBadge(BadgeEntity badge) {
+        this.badge = badge;
+    }
+
+    private int id;
 
     @Id
-    @Column(name = "Id_cuidador", nullable = false)
-    public int getIdCuidador() {
-        return idCuidador;
+    public int getId() {
+        return id;
     }
 
-    public void setIdCuidador(int idCuidador) {
-        this.idCuidador = idCuidador;
-    }
-
-    @Id
-    @Column(name = "Id_badge", nullable = false)
-    public int getIdBadge() {
-        return idBadge;
-    }
-
-    public void setIdBadge(int idBadge) {
-        this.idBadge = idBadge;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        BadgeXCuidadorEntity that = (BadgeXCuidadorEntity) o;
-        return idCuidador == that.idCuidador &&
-                idBadge == that.idBadge;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(idCuidador, idBadge);
+    public void setId(int id) {
+        this.id = id;
     }
 }

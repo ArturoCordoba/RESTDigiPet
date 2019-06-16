@@ -2,18 +2,23 @@ package com.digipet.prototype.orm;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "CLIENTE", schema = "digipet", catalog = "")
+@Table(name = "CLIENTE", schema = "digipet")
 public class ClienteEntity {
     private int idCliente;
     private String telefonoMovil;
-    private int idProvincia;
     private String canton;
     private String email2;
     private String descripcion;
     private Date fechaInscripcion;
+    private UsuarioEntity usuario;
+    private ProvinciaEntity provincia;
+    private List<MascotaEntity> listaMascotas;
+    private List<PagoXClienteEntity> listaPago;
+    private List<SolicitudEntity> listaSolicitudes;
 
     @Id
     @Column(name = "Id_cliente", nullable = false)
@@ -36,17 +41,7 @@ public class ClienteEntity {
     }
 
     @Basic
-    @Column(name = "Id_provincia", nullable = false)
-    public int getIdProvincia() {
-        return idProvincia;
-    }
-
-    public void setIdProvincia(int idProvincia) {
-        this.idProvincia = idProvincia;
-    }
-
-    @Basic
-    @Column(name = "Canton", nullable = false, length = 30)
+    @Column(name = "Canton")
     public String getCanton() {
         return canton;
     }
@@ -91,7 +86,6 @@ public class ClienteEntity {
         if (o == null || getClass() != o.getClass()) return false;
         ClienteEntity that = (ClienteEntity) o;
         return idCliente == that.idCliente &&
-                idProvincia == that.idProvincia &&
                 Objects.equals(telefonoMovil, that.telefonoMovil) &&
                 Objects.equals(canton, that.canton) &&
                 Objects.equals(email2, that.email2) &&
@@ -101,6 +95,53 @@ public class ClienteEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idCliente, telefonoMovil, idProvincia, canton, email2, descripcion, fechaInscripcion);
+        return Objects.hash(idCliente, telefonoMovil, canton, email2, descripcion, fechaInscripcion);
+    }
+
+    @OneToOne
+    @JoinColumn(name = "Id_cliente", referencedColumnName = "Id_usuario", nullable = false)
+    public UsuarioEntity getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioEntity usuario) {
+        this.usuario = usuario;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Id_provincia", referencedColumnName = "Id_provincia", nullable = false)
+    public ProvinciaEntity getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(ProvinciaEntity provincia) {
+        this.provincia = provincia;
+    }
+
+    @OneToMany(mappedBy = "cliente")
+    public List<MascotaEntity> getListaMascotas() {
+        return listaMascotas;
+    }
+
+    public void setListaMascotas(List<MascotaEntity> listaMascotas) {
+        this.listaMascotas = listaMascotas;
+    }
+
+    @OneToMany(mappedBy = "cliente")
+    public List<PagoXClienteEntity> getListaPago() {
+        return listaPago;
+    }
+
+    public void setListaPago(List<PagoXClienteEntity> listaPago) {
+        this.listaPago = listaPago;
+    }
+
+    @OneToMany(mappedBy = "cliente")
+    public List<SolicitudEntity> getListaSolicitudes() {
+        return listaSolicitudes;
+    }
+
+    public void setListaSolicitudes(List<SolicitudEntity> listaSolicitudes) {
+        this.listaSolicitudes = listaSolicitudes;
     }
 }
