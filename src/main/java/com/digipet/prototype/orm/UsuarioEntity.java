@@ -4,21 +4,17 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "USUARIO", schema = "digipet", catalog = "")
+@Table(name = "USUARIO", schema = "digipet")
 public class UsuarioEntity {
     private int idUsuario;
     private String primerNombre;
     private String primerApellido;
     private String segundoApellido;
-    private int idRol;
     private String email1;
     private String contrasena;
     private String fotoPerfil;
-    private int idEstado;
-    private ClienteEntity clienteByIdUsuario;
-    private CuidadorEntity cuidadorByIdUsuario;
-    private RolEntity rolByIdRol;
-    private EstadoEntity estadoByIdEstado;
+    private RolEntity rol;
+    private EstadoEntity estado;
 
     @Id
     @Column(name = "Id_usuario")
@@ -61,16 +57,6 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Id_rol")
-    public int getIdRol() {
-        return idRol;
-    }
-
-    public void setIdRol(int idRol) {
-        this.idRol = idRol;
-    }
-
-    @Basic
     @Column(name = "Email_1")
     public String getEmail1() {
         return email1;
@@ -100,24 +86,12 @@ public class UsuarioEntity {
         this.fotoPerfil = fotoPerfil;
     }
 
-    @Basic
-    @Column(name = "Id_estado")
-    public int getIdEstado() {
-        return idEstado;
-    }
-
-    public void setIdEstado(int idEstado) {
-        this.idEstado = idEstado;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UsuarioEntity that = (UsuarioEntity) o;
         return idUsuario == that.idUsuario &&
-                idRol == that.idRol &&
-                idEstado == that.idEstado &&
                 Objects.equals(primerNombre, that.primerNombre) &&
                 Objects.equals(primerApellido, that.primerApellido) &&
                 Objects.equals(segundoApellido, that.segundoApellido) &&
@@ -128,44 +102,26 @@ public class UsuarioEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idUsuario, primerNombre, primerApellido, segundoApellido, idRol, email1, contrasena, fotoPerfil, idEstado);
-    }
-
-    @OneToOne(mappedBy = "usuarioByIdCliente")
-    public ClienteEntity getClienteByIdUsuario() {
-        return clienteByIdUsuario;
-    }
-
-    public void setClienteByIdUsuario(ClienteEntity clienteByIdUsuario) {
-        this.clienteByIdUsuario = clienteByIdUsuario;
-    }
-
-    @OneToOne(mappedBy = "usuarioByIdCuidador")
-    public CuidadorEntity getCuidadorByIdUsuario() {
-        return cuidadorByIdUsuario;
-    }
-
-    public void setCuidadorByIdUsuario(CuidadorEntity cuidadorByIdUsuario) {
-        this.cuidadorByIdUsuario = cuidadorByIdUsuario;
+        return Objects.hash(idUsuario, primerNombre, primerApellido, segundoApellido, email1, contrasena, fotoPerfil);
     }
 
     @ManyToOne
     @JoinColumn(name = "Id_rol", referencedColumnName = "Id_rol", nullable = false)
-    public RolEntity getRolByIdRol() {
-        return rolByIdRol;
+    public RolEntity getRol() {
+        return rol;
     }
 
-    public void setRolByIdRol(RolEntity rolByIdRol) {
-        this.rolByIdRol = rolByIdRol;
+    public void setRol(RolEntity rol) {
+        this.rol = rol;
     }
 
     @ManyToOne
     @JoinColumn(name = "Id_estado", referencedColumnName = "Id_estado", nullable = false)
-    public EstadoEntity getEstadoByIdEstado() {
-        return estadoByIdEstado;
+    public EstadoEntity getEstado() {
+        return estado;
     }
 
-    public void setEstadoByIdEstado(EstadoEntity estadoByIdEstado) {
-        this.estadoByIdEstado = estadoByIdEstado;
+    public void setEstado(EstadoEntity estado) {
+        this.estado = estado;
     }
 }

@@ -1,18 +1,18 @@
 package com.digipet.prototype.orm;
 
 import javax.persistence.*;
-import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "HOTEL", schema = "digipet", catalog = "")
+@Table(name = "HOTEL", schema = "digipet")
 public class HotelEntity {
     private int idHotel;
     private String nombre;
     private String direccion;
     private int capacidad;
     private String descripcion;
-    private Collection<SolicitudXHotelEntity> solicitudXHotelsByIdHotel;
+    private List<SolicitudXHotelEntity> listaSolicutdes;
 
     @Id
     @Column(name = "Id_hotel")
@@ -81,12 +81,12 @@ public class HotelEntity {
         return Objects.hash(idHotel, nombre, direccion, capacidad, descripcion);
     }
 
-    @OneToMany(mappedBy = "hotelByIdHotel")
-    public Collection<SolicitudXHotelEntity> getSolicitudXHotelsByIdHotel() {
-        return solicitudXHotelsByIdHotel;
+    @OneToMany(mappedBy = "hotel")
+    public List<SolicitudXHotelEntity> getListaSolicutdes() {
+        return listaSolicutdes;
     }
 
-    public void setSolicitudXHotelsByIdHotel(Collection<SolicitudXHotelEntity> solicitudXHotelsByIdHotel) {
-        this.solicitudXHotelsByIdHotel = solicitudXHotelsByIdHotel;
+    public void setListaSolicutdes(List<SolicitudXHotelEntity> listaSolicutdes) {
+        this.listaSolicutdes = listaSolicutdes;
     }
 }

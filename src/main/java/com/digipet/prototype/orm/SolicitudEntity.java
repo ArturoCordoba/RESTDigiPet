@@ -1,27 +1,24 @@
 package com.digipet.prototype.orm;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "SOLICITUD", schema = "digipet", catalog = "")
+@Table(name = "SOLICITUD", schema = "digipet")
 public class SolicitudEntity {
     private int idSolicitud;
     private Timestamp horaInicio;
     private Timestamp horaFinal;
     private int duracion;
     private String estadoSolicitud;
-    private BigDecimal precioUnitario;
-    private int idCliente;
-    private int idMascota;
-    private int idServicio;
-    private Collection<ReporteEntity> reportesByIdSolicitud;
-    private ClienteEntity clienteByIdCliente;
-    private MascotaEntity mascotaByIdMascota;
-    private ServicioEntity servicioByIdServicio;
+    private int precioUnitario;
+    private List<ReporteEntity> reporte;
+    private ClienteEntity cliente;
+    private MascotaEntity mascota;
+    private ServicioEntity servicio;
     private Collection<SolicitudXCuidadorEntity> solicitudXCuidadorsByIdSolicitud;
     private Collection<SolicitudXHotelEntity> solicitudXHotelsByIdSolicitud;
 
@@ -77,42 +74,12 @@ public class SolicitudEntity {
 
     @Basic
     @Column(name = "Precio_unitario")
-    public BigDecimal getPrecioUnitario() {
+    public int getPrecioUnitario() {
         return precioUnitario;
     }
 
-    public void setPrecioUnitario(BigDecimal precioUnitario) {
+    public void setPrecioUnitario(int precioUnitario) {
         this.precioUnitario = precioUnitario;
-    }
-
-    @Basic
-    @Column(name = "Id_cliente")
-    public int getIdCliente() {
-        return idCliente;
-    }
-
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
-    }
-
-    @Basic
-    @Column(name = "Id_mascota")
-    public int getIdMascota() {
-        return idMascota;
-    }
-
-    public void setIdMascota(int idMascota) {
-        this.idMascota = idMascota;
-    }
-
-    @Basic
-    @Column(name = "Id_servicio")
-    public int getIdServicio() {
-        return idServicio;
-    }
-
-    public void setIdServicio(int idServicio) {
-        this.idServicio = idServicio;
     }
 
     @Override
@@ -122,60 +89,57 @@ public class SolicitudEntity {
         SolicitudEntity that = (SolicitudEntity) o;
         return idSolicitud == that.idSolicitud &&
                 duracion == that.duracion &&
-                idCliente == that.idCliente &&
-                idMascota == that.idMascota &&
-                idServicio == that.idServicio &&
+                precioUnitario == that.precioUnitario &&
                 Objects.equals(horaInicio, that.horaInicio) &&
                 Objects.equals(horaFinal, that.horaFinal) &&
-                Objects.equals(estadoSolicitud, that.estadoSolicitud) &&
-                Objects.equals(precioUnitario, that.precioUnitario);
+                Objects.equals(estadoSolicitud, that.estadoSolicitud);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idSolicitud, horaInicio, horaFinal, duracion, estadoSolicitud, precioUnitario, idCliente, idMascota, idServicio);
+        return Objects.hash(idSolicitud, horaInicio, horaFinal, duracion, estadoSolicitud, precioUnitario);
     }
 
-    @OneToMany(mappedBy = "solicitudByIdSolicitud")
-    public Collection<ReporteEntity> getReportesByIdSolicitud() {
-        return reportesByIdSolicitud;
+    @OneToMany(mappedBy = "solicitud")
+    public List<ReporteEntity> getReporte() {
+        return reporte;
     }
 
-    public void setReportesByIdSolicitud(Collection<ReporteEntity> reportesByIdSolicitud) {
-        this.reportesByIdSolicitud = reportesByIdSolicitud;
+    public void setReporte(List<ReporteEntity> reporte) {
+        this.reporte = reporte;
     }
 
     @ManyToOne
     @JoinColumn(name = "Id_cliente", referencedColumnName = "Id_cliente", nullable = false)
-    public ClienteEntity getClienteByIdCliente() {
-        return clienteByIdCliente;
+    public ClienteEntity getCliente() {
+        return cliente;
     }
 
-    public void setClienteByIdCliente(ClienteEntity clienteByIdCliente) {
-        this.clienteByIdCliente = clienteByIdCliente;
+    public void setCliente(ClienteEntity cliente) {
+        this.cliente = cliente;
     }
 
     @ManyToOne
     @JoinColumn(name = "Id_mascota", referencedColumnName = "Id_mascota", nullable = false)
-    public MascotaEntity getMascotaByIdMascota() {
-        return mascotaByIdMascota;
+    public MascotaEntity getMascota() {
+        return mascota;
     }
 
-    public void setMascotaByIdMascota(MascotaEntity mascotaByIdMascota) {
-        this.mascotaByIdMascota = mascotaByIdMascota;
+    public void setMascota(MascotaEntity mascota) {
+        this.mascota = mascota;
     }
 
     @ManyToOne
     @JoinColumn(name = "Id_servicio", referencedColumnName = "Id_servicio", nullable = false)
-    public ServicioEntity getServicioByIdServicio() {
-        return servicioByIdServicio;
+    public ServicioEntity getServicio() {
+        return servicio;
     }
 
-    public void setServicioByIdServicio(ServicioEntity servicioByIdServicio) {
-        this.servicioByIdServicio = servicioByIdServicio;
+    public void setServicio(ServicioEntity servicio) {
+        this.servicio = servicio;
     }
 
-    @OneToMany(mappedBy = "solicitudByIdSolicitud")
+    @OneToMany(mappedBy = "solicitud")
     public Collection<SolicitudXCuidadorEntity> getSolicitudXCuidadorsByIdSolicitud() {
         return solicitudXCuidadorsByIdSolicitud;
     }

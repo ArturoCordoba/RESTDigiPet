@@ -1,40 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9dc38141-b8cf-4859-b8dc-b49668673f7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/BadgeEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/BadgeXCuidadorEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/BadgeXCuidadorEntityPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ClienteEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/CuidadorEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/DenunciaEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/DisponibilidadXCuidadorEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/EstadoEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXMascotaEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXMascotaEntityPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXReporteEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXReporteEntityPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/HotelEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/MascotaEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/PagoXClienteEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/PagoXClienteEntityPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ProvinciaEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ProvinciaXCuidadorEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ProvinciaXCuidadorEntityPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ReporteEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/RolEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ServicioEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXCuidadorEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXCuidadorEntityPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXHotelEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXHotelEntityPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/TamanoEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UniversidadEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UsuarioEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/digipet/prototype/auxiliar/ORManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate.cfg.xml" afterDir="false" />
+    <list default="true" id="9dc38141-b8cf-4859-b8dc-b49668673f7e" name="Default Changelist" comment="Objetos ORM con relaciones">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/data/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/digipet/prototype/data/HibernateUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESTDigiPet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RESTDigiPet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/api/authentication/AuthenticationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/api/authentication/AuthenticationEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/dto/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/dto/Credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/BadgeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/BadgeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/BadgeXCuidadorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/BadgeXCuidadorEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/BadgeXCuidadorEntityPK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ClienteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ClienteEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/CuidadorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/CuidadorEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/DenunciaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/DenunciaEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/DisponibilidadXCuidadorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/DisponibilidadXCuidadorEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/EstadoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/EstadoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXMascotaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXMascotaEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXMascotaEntityPK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXReporteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXReporteEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXReporteEntityPK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/HotelEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/HotelEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/MascotaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/MascotaEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/PagoXClienteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/PagoXClienteEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/PagoXClienteEntityPK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ProvinciaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ProvinciaEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ProvinciaXCuidadorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ProvinciaXCuidadorEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ProvinciaXCuidadorEntityPK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ReporteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ReporteEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/RolEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/RolEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ServicioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ServicioEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXCuidadorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXCuidadorEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXCuidadorEntityPK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXHotelEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXHotelEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXHotelEntityPK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/TamanoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/TamanoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UniversidadEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UniversidadEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UsuarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UsuarioEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/orm.uml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,18 +65,25 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MariaDB - @AWS" type="feb32156:DbDataSourceImpl" />
+        <item name="@digipet.cg8mqwwu18oy.us-east-2.rds.amazonaws.com" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MariaDB - @AWS" type="feb32156:DbDataSourceImpl" />
+        <item name="@digipet.cg8mqwwu18oy.us-east-2.rds.amazonaws.com" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MariaDB - @AWS" type="feb32156:DbDataSourceImpl" />
+        <item name="@digipet.cg8mqwwu18oy.us-east-2.rds.amazonaws.com" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="digipet: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@digipet.cg8mqwwu18oy.us-east-2.rds.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="digipet: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="USUARIO: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -78,30 +92,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate.cfg.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/MascotaEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1650">
-              <caret column="29" selection-start-column="29" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/auxiliar/ORManager.java">
+        <entry file="file://$PROJECT_DIR$/src/main/test/com/digipet/prototype/data/HibernateUtilTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="32" column="72" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
+            <state relative-caret-position="161">
+              <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,34 +106,98 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/com/digipet/prototype/auxiliar/ORManagerTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="15" column="86" lean-forward="true" selection-start-line="15" selection-start-column="86" selection-end-line="15" selection-end-column="86" />
+            <state relative-caret-position="85">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ReporteEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/RolEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ServicioEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXCuidadorEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
               <folding>
-                <element signature="e#220#221#0" expanded="true" />
-                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#2479#2480#0" expanded="true" />
+                <element signature="e#2504#2505#0" expanded="true" />
+                <element signature="e#2537#2538#0" expanded="true" />
+                <element signature="e#2565#2566#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/com/digipet/prototype/api/authentication/TokenManagerTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXHotelEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="85">
+              <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+              <folding>
+                <element signature="e#931#932#0" expanded="true" />
+                <element signature="e#956#957#0" expanded="true" />
+                <element signature="e#989#990#0" expanded="true" />
+                <element signature="e#1017#1018#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://8a26876c-6a23-4b87-95d6-48574e090246/schema/digipet/table/MASCOTA">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="1e381b67-ecfb-4df9-b17c-fe0c50fcc854">
-              <filtering>
-                <filter text="" />
-              </filtering>
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/TamanoEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UniversidadEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UsuarioEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+              <folding>
+                <element signature="e#539#540#0" expanded="true" />
+                <element signature="e#571#572#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,8 +207,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -165,8 +225,43 @@
         <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/auxiliar/Crear.java" />
         <option value="$PROJECT_DIR$/src/main/test/com/digipet/prototype/auxiliar/ORManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/auxiliar/ORManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/dto/Credentials.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/data/HibernateUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/BadgeEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/BadgeXCuidadorEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ClienteEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/CuidadorEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/DenunciaEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/DisponibilidadXCuidadorEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/EstadoEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXMascotaEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXReporteEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/HotelEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/MascotaEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/PagoXClienteEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ProvinciaEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ProvinciaXCuidadorEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ReporteEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/RolEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ServicioEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXCuidadorEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXHotelEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/TamanoEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UniversidadEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UsuarioEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/test/com/digipet/prototype/data/HibernateUtilTest.java" />
       </list>
     </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -201,12 +296,13 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1000" />
-    <option name="width" value="927" />
-    <option name="height" value="1087" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -214,28 +310,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -280,11 +354,120 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="prototype" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="prototype" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="prototype" type="462c0819:PsiDirectoryNode" />
+              <item name="auxiliar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="prototype" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="prototype" type="462c0819:PsiDirectoryNode" />
+              <item name="orm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="prototype" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTDigiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTDigiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="prototype" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mariadb" />
-    <property name="JPA.DatabaseSchemaImportDialog" value="8a26876c-6a23-4b87-95d6-48574e090246" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="54a7bd30-96de-4528-a5a0-1140c5adf5a6" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -303,6 +486,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.digipet.prototype.data" />
       <recent name="com.digipet.prototype.auxiliar" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -325,7 +509,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.HibernateUtilTest.openSession">
+    <configuration name="HibernateUtilTest.openSession" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RESTDigiPet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.digipet.prototype.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.digipet.prototype.data" />
+      <option name="MAIN_CLASS_NAME" value="com.digipet.prototype.data.HibernateUtilTest" />
+      <option name="METHOD_NAME" value="openSession" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ORManagerTest.obtenerTabla" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="REST-DigiPet" />
       <extension name="coverage">
@@ -342,8 +542,110 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="REST-DigiPet [package]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="RESTDigiPet:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_RESTDigiPet_5" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53210" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="REST-DigiPet [package]" run_configuration_type="MavenRunConfiguration" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.ORManagerTest.obtenerTabla" />
+      <item itemvalue="JUnit.HibernateUtilTest.openSession" />
+      <item itemvalue="Maven.REST-DigiPet [package]" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.21" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HibernateUtilTest.openSession" />
         <item itemvalue="JUnit.ORManagerTest.obtenerTabla" />
       </list>
     </recent_temporary>
@@ -359,35 +661,55 @@
       <option name="presentableId" value="Default" />
       <updated>1560637693929</updated>
       <workItem from="1560637698301" duration="6356000" />
+      <workItem from="1560712819420" duration="3454000" />
+      <workItem from="1560716819804" duration="274000" />
+      <workItem from="1560717141350" duration="2957000" />
+      <workItem from="1560721693102" duration="760000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ORManagerTest_obtenerTabla - 2019.06.16 at 00h 57m 07s.xml">
-      <configuration name="ORManagerTest.obtenerTabla" configurationId="JUnit" />
+    <history-entry file="HibernateUtilTest_openSession - 2019.06.16 at 14h 41m 31s.xml">
+      <configuration name="HibernateUtilTest.openSession" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ORManagerTest_obtenerTabla - 2019.06.16 at 00h 57m 39s.xml">
-      <configuration name="ORManagerTest.obtenerTabla" configurationId="JUnit" />
+    <history-entry file="HibernateUtilTest_openSession - 2019.06.16 at 15h 12m 33s.xml">
+      <configuration name="HibernateUtilTest.openSession" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ORManagerTest_obtenerTabla - 2019.06.16 at 00h 59m 00s.xml">
-      <configuration name="ORManagerTest.obtenerTabla" configurationId="JUnit" />
+    <history-entry file="HibernateUtilTest_openSession - 2019.06.16 at 15h 13m 24s.xml">
+      <configuration name="HibernateUtilTest.openSession" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ORManagerTest_obtenerTabla - 2019.06.16 at 00h 59m 53s.xml">
-      <configuration name="ORManagerTest.obtenerTabla" configurationId="JUnit" />
+    <history-entry file="HibernateUtilTest_openSession - 2019.06.16 at 15h 13m 59s.xml">
+      <configuration name="HibernateUtilTest.openSession" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ORManagerTest_obtenerTabla - 2019.06.16 at 01h 00m 04s.xml">
-      <configuration name="ORManagerTest.obtenerTabla" configurationId="JUnit" />
+    <history-entry file="HibernateUtilTest_openSession - 2019.06.16 at 15h 14m 27s.xml">
+      <configuration name="HibernateUtilTest.openSession" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HibernateUtilTest_openSession - 2019.06.16 at 15h 14m 52s.xml">
+      <configuration name="HibernateUtilTest.openSession" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HibernateUtilTest_openSession - 2019.06.16 at 15h 15m 25s.xml">
+      <configuration name="HibernateUtilTest.openSession" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HibernateUtilTest_openSession - 2019.06.16 at 15h 17m 17s.xml">
+      <configuration name="HibernateUtilTest.openSession" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HibernateUtilTest_openSession - 2019.06.16 at 15h 17m 57s.xml">
+      <configuration name="HibernateUtilTest.openSession" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HibernateUtilTest_openSession - 2019.06.16 at 15h 49m 36s.xml">
+      <configuration name="HibernateUtilTest.openSession" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20932000" />
+    <option name="totallyTimeSpent" value="28566000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="86" y="-8" width="1842" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1552" height="840" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.75851065" visible="true" weight="0.19378531" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7521008" visible="true" weight="0.23592493" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Persistence" order="2" sideWeight="0.24148937" side_tool="true" weight="0.19378531" />
+      <window_info id="Persistence" order="2" sideWeight="0.24789916" side_tool="true" visible="true" weight="0.23592493" />
       <window_info id="Designer" order="3" />
       <window_info id="Learn" order="4" weight="0.32985073" />
       <window_info id="UI Designer" order="5" />
@@ -395,9 +717,10 @@
       <window_info id="Capture Tool" order="7" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info id="Image Layers" order="9" />
+      <window_info id="aws.explorer" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32768363" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -409,22 +732,63 @@
       <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32978722" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32978722" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32909605" />
+      <window_info anchor="bottom" id="Application Servers" order="15" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24971752" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="CDI" order="5" weight="0.3299435" />
-      <window_info anchor="right" id="Database" order="6" weight="0.21299435" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.2191689" />
       <window_info anchor="right" id="Maven" order="7" weight="0.32996634" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.114072494" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25135428" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32936078" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="CDI" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Objetos ORM con relaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Objetos ORM con relaciones" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -468,23 +832,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://8a26876c-6a23-4b87-95d6-48574e090246/schema/digipet/table/BADGE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="1e381b67-ecfb-4df9-b17c-fe0c50fcc854">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://8a26876c-6a23-4b87-95d6-48574e090246/schema/digipet/table/BADGE" />
     <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" />
-    <entry file="file://$PROJECT_DIR$/REST-DigiPet.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/REST-DigiPet.iml" />
     <entry file="uml://MODULES/mdl-REST-DigiPet">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -505,9 +855,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8a26876c-6a23-4b87-95d6-48574e090246/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8a26876c-6a23-4b87-95d6-48574e090246/console.sql" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/Estudiante.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -515,106 +863,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UsuarioEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/HotelEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/orm.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="" y="">com.digipet.prototype.orm.FotoXMascotaEntityPK</node>
-            <node x="" y="">com.digipet.prototype.orm.DenunciaEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.CuidadorEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.SolicitudXHotelEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.BadgeXCuidadorEntityPK</node>
-            <node x="" y="">com.digipet.prototype.orm.FotoXReporteEntityPK</node>
-            <node x="" y="">com.digipet.prototype.orm.DisponibilidadXCuidadorEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.EstadoEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.ServicioEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.UniversidadEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.PagoXClienteEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.TamanoEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.ProvinciaXCuidadorEntityPK</node>
-            <node x="" y="">com.digipet.prototype.orm.FotoXReporteEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.ProvinciaXCuidadorEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.ProvinciaEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.SolicitudXHotelEntityPK</node>
-            <node x="" y="">com.digipet.prototype.orm.RolEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.BadgeXCuidadorEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.FotoXMascotaEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.SolicitudXCuidadorEntityPK</node>
-            <node x="" y="">com.digipet.prototype.orm.ClienteEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.SolicitudXCuidadorEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.MascotaEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.SolicitudEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.PagoXClienteEntityPK</node>
-            <node x="" y="">com.digipet.prototype.orm.HotelEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.BadgeEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.UsuarioEntity</node>
-            <node x="" y="">com.digipet.prototype.orm.ReporteEntity</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.6408399710354815" x="1103.3824858757062" y="491.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXMascotaEntityPK.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/MascotaEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1650">
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://8a26876c-6a23-4b87-95d6-48574e090246/schema/digipet/table/HOTEL">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="1e381b67-ecfb-4df9-b17c-fe0c50fcc854">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://8a26876c-6a23-4b87-95d6-48574e090246/schema/digipet/table/MASCOTA">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="1e381b67-ecfb-4df9-b17c-fe0c50fcc854">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/orm.uml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXMascotaEntityPK.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate.cfg.xml" />
+    <entry file="das://8a26876c-6a23-4b87-95d6-48574e090246/schema/digipet/table/HOTEL" />
+    <entry file="das://8a26876c-6a23-4b87-95d6-48574e090246/schema/digipet/table/MASCOTA" />
     <entry file="file://$PROJECT_DIR$/src/main/test/com/digipet/prototype/api/authentication/TokenManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-176">
@@ -622,21 +875,286 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/com/digipet/prototype/auxiliar/ORManagerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/test/com/digipet/prototype/auxiliar/ORManagerTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/api/twitter/TwitterManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="86" lean-forward="true" selection-start-line="15" selection-start-column="86" selection-end-line="15" selection-end-column="86" />
+        <state relative-caret-position="459">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/dto/Credentials.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/api/authentication/AuthenticationEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/auxiliar/ORManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="-1048">
           <caret line="32" column="72" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://54a7bd30-96de-4528-a5a0-1140c5adf5a6/schema/digipet/table/ROL">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://54a7bd30-96de-4528-a5a0-1140c5adf5a6/schema/digipet/table/ESTADO">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://54a7bd30-96de-4528-a5a0-1140c5adf5a6/schema/digipet/table/SOLICITUD">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://54a7bd30-96de-4528-a5a0-1140c5adf5a6/schema/digipet/table/USUARIO">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/data/HibernateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/BadgeEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/BadgeXCuidadorEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+          <folding>
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ClienteEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/CuidadorEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/DenunciaEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/DisponibilidadXCuidadorEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/EstadoEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXMascotaEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/FotoXReporteEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/HotelEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/MascotaEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/PagoXClienteEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ProvinciaEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ProvinciaXCuidadorEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+          <folding>
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ReporteEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/RolEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/ServicioEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXCuidadorEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+          <folding>
+            <element signature="e#2479#2480#0" expanded="true" />
+            <element signature="e#2504#2505#0" expanded="true" />
+            <element signature="e#2537#2538#0" expanded="true" />
+            <element signature="e#2565#2566#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/SolicitudXHotelEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+          <folding>
+            <element signature="e#931#932#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/TamanoEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UniversidadEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/digipet/prototype/orm/UsuarioEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding>
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/com/digipet/prototype/data/HibernateUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

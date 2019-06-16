@@ -1,15 +1,13 @@
 package com.digipet.prototype.orm;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "UNIVERSIDAD", schema = "digipet", catalog = "")
+@Table(name = "UNIVERSIDAD", schema = "digipet")
 public class UniversidadEntity {
     private int idUniversidad;
     private String nombre;
-    private Collection<CuidadorEntity> cuidadorsByIdUniversidad;
 
     @Id
     @Column(name = "Id_universidad")
@@ -43,14 +41,5 @@ public class UniversidadEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idUniversidad, nombre);
-    }
-
-    @OneToMany(mappedBy = "universidadByIdUniversidad")
-    public Collection<CuidadorEntity> getCuidadorsByIdUniversidad() {
-        return cuidadorsByIdUniversidad;
-    }
-
-    public void setCuidadorsByIdUniversidad(Collection<CuidadorEntity> cuidadorsByIdUniversidad) {
-        this.cuidadorsByIdUniversidad = cuidadorsByIdUniversidad;
     }
 }

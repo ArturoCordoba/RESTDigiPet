@@ -4,14 +4,12 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "DENUNCIA", schema = "digipet", catalog = "")
+@Table(name = "DENUNCIA", schema = "digipet")
 public class DenunciaEntity {
     private int idDenuncia;
-    private int idCliente;
-    private int idCuidador;
     private String descripcion;
-    private ClienteEntity clienteByIdCliente;
-    private CuidadorEntity cuidadorByIdCuidador;
+    private ClienteEntity cliente;
+    private CuidadorEntity cuidador;
 
     @Id
     @Column(name = "Id_denuncia")
@@ -21,26 +19,6 @@ public class DenunciaEntity {
 
     public void setIdDenuncia(int idDenuncia) {
         this.idDenuncia = idDenuncia;
-    }
-
-    @Basic
-    @Column(name = "Id_cliente")
-    public int getIdCliente() {
-        return idCliente;
-    }
-
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
-    }
-
-    @Basic
-    @Column(name = "Id_cuidador")
-    public int getIdCuidador() {
-        return idCuidador;
-    }
-
-    public void setIdCuidador(int idCuidador) {
-        this.idCuidador = idCuidador;
     }
 
     @Basic
@@ -59,33 +37,31 @@ public class DenunciaEntity {
         if (o == null || getClass() != o.getClass()) return false;
         DenunciaEntity that = (DenunciaEntity) o;
         return idDenuncia == that.idDenuncia &&
-                idCliente == that.idCliente &&
-                idCuidador == that.idCuidador &&
                 Objects.equals(descripcion, that.descripcion);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idDenuncia, idCliente, idCuidador, descripcion);
+        return Objects.hash(idDenuncia, descripcion);
     }
 
     @ManyToOne
     @JoinColumn(name = "Id_cliente", referencedColumnName = "Id_cliente", nullable = false)
-    public ClienteEntity getClienteByIdCliente() {
-        return clienteByIdCliente;
+    public ClienteEntity getCliente() {
+        return cliente;
     }
 
-    public void setClienteByIdCliente(ClienteEntity clienteByIdCliente) {
-        this.clienteByIdCliente = clienteByIdCliente;
+    public void setCliente(ClienteEntity cliente) {
+        this.cliente = cliente;
     }
 
     @ManyToOne
     @JoinColumn(name = "Id_cuidador", referencedColumnName = "Id_cuidador", nullable = false)
-    public CuidadorEntity getCuidadorByIdCuidador() {
-        return cuidadorByIdCuidador;
+    public CuidadorEntity getCuidador() {
+        return cuidador;
     }
 
-    public void setCuidadorByIdCuidador(CuidadorEntity cuidadorByIdCuidador) {
-        this.cuidadorByIdCuidador = cuidadorByIdCuidador;
+    public void setCuidador(CuidadorEntity cuidador) {
+        this.cuidador = cuidador;
     }
 }

@@ -1,49 +1,25 @@
 package com.digipet.prototype.orm;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
-@Table(name = "SOLICITUD_X_CUIDADOR", schema = "digipet", catalog = "")
-@IdClass(SolicitudXCuidadorEntityPK.class)
+@Table(name = "SOLICITUD_X_CUIDADOR", schema = "digipet")
 public class SolicitudXCuidadorEntity {
-    private int idSolicitud;
-    private int idCuidador;
-    private BigDecimal calificacion;
+    private int calificacion;
     private String metodoPago;
     private String direccion;
     private String descripcion;
-    private SolicitudEntity solicitudByIdSolicitud;
-    private CuidadorEntity cuidadorByIdCuidador;
-
-    @Id
-    @Column(name = "Id_solicitud")
-    public int getIdSolicitud() {
-        return idSolicitud;
-    }
-
-    public void setIdSolicitud(int idSolicitud) {
-        this.idSolicitud = idSolicitud;
-    }
-
-    @Id
-    @Column(name = "Id_cuidador")
-    public int getIdCuidador() {
-        return idCuidador;
-    }
-
-    public void setIdCuidador(int idCuidador) {
-        this.idCuidador = idCuidador;
-    }
+    private SolicitudEntity solicitud;
+    private CuidadorEntity cuidador;
 
     @Basic
     @Column(name = "Calificacion")
-    public BigDecimal getCalificacion() {
+    public int getCalificacion() {
         return calificacion;
     }
 
-    public void setCalificacion(BigDecimal calificacion) {
+    public void setCalificacion(int calificacion) {
         this.calificacion = calificacion;
     }
 
@@ -82,9 +58,7 @@ public class SolicitudXCuidadorEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SolicitudXCuidadorEntity that = (SolicitudXCuidadorEntity) o;
-        return idSolicitud == that.idSolicitud &&
-                idCuidador == that.idCuidador &&
-                Objects.equals(calificacion, that.calificacion) &&
+        return calificacion == that.calificacion &&
                 Objects.equals(metodoPago, that.metodoPago) &&
                 Objects.equals(direccion, that.direccion) &&
                 Objects.equals(descripcion, that.descripcion);
@@ -92,26 +66,37 @@ public class SolicitudXCuidadorEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idSolicitud, idCuidador, calificacion, metodoPago, direccion, descripcion);
+        return Objects.hash(calificacion, metodoPago, direccion, descripcion);
     }
 
     @ManyToOne
     @JoinColumn(name = "Id_solicitud", referencedColumnName = "Id_solicitud", nullable = false)
-    public SolicitudEntity getSolicitudByIdSolicitud() {
-        return solicitudByIdSolicitud;
+    public SolicitudEntity getSolicitud() {
+        return solicitud;
     }
 
-    public void setSolicitudByIdSolicitud(SolicitudEntity solicitudByIdSolicitud) {
-        this.solicitudByIdSolicitud = solicitudByIdSolicitud;
+    public void setSolicitud(SolicitudEntity solicitud) {
+        this.solicitud = solicitud;
     }
 
     @ManyToOne
     @JoinColumn(name = "Id_cuidador", referencedColumnName = "Id_cuidador", nullable = false)
-    public CuidadorEntity getCuidadorByIdCuidador() {
-        return cuidadorByIdCuidador;
+    public CuidadorEntity getCuidador() {
+        return cuidador;
     }
 
-    public void setCuidadorByIdCuidador(CuidadorEntity cuidadorByIdCuidador) {
-        this.cuidadorByIdCuidador = cuidadorByIdCuidador;
+    public void setCuidador(CuidadorEntity cuidador) {
+        this.cuidador = cuidador;
+    }
+
+    private int id;
+
+    @Id
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

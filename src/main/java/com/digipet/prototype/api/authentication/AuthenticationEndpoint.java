@@ -5,7 +5,6 @@ import com.digipet.prototype.dto.Credentials;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -15,7 +14,7 @@ public class AuthenticationEndpoint {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response authenticateUser(Credentials credentials){
-        String username = credentials.getUsername();
+        String username = credentials.getEmail();
         String password = credentials.getPassword();
 
         try {

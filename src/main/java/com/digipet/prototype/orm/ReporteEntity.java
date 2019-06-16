@@ -1,22 +1,21 @@
 package com.digipet.prototype.orm;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
-import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "REPORTE", schema = "digipet", catalog = "")
+@Table(name = "REPORTE", schema = "digipet")
 public class ReporteEntity {
     private int idReporte;
+    private int duracion;
     private int cantidadCaca;
     private int cantidadOrines;
     private int cantidadJuegos;
-    private BigDecimal distancia;
+    private int distancia;
     private String detalles;
-    private int idSolicitud;
-    private Collection<FotoXReporteEntity> fotoXReportesByIdReporte;
-    private SolicitudEntity solicitudByIdSolicitud;
+    private List<FotoXReporteEntity> listaFotos;
+    private SolicitudEntity solicitud;
 
     @Id
     @Column(name = "Id_reporte")
@@ -26,6 +25,16 @@ public class ReporteEntity {
 
     public void setIdReporte(int idReporte) {
         this.idReporte = idReporte;
+    }
+
+    @Basic
+    @Column(name = "Duracion")
+    public int getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(int duracion) {
+        this.duracion = duracion;
     }
 
     @Basic
@@ -60,11 +69,11 @@ public class ReporteEntity {
 
     @Basic
     @Column(name = "Distancia")
-    public BigDecimal getDistancia() {
+    public int getDistancia() {
         return distancia;
     }
 
-    public void setDistancia(BigDecimal distancia) {
+    public void setDistancia(int distancia) {
         this.distancia = distancia;
     }
 
@@ -78,51 +87,41 @@ public class ReporteEntity {
         this.detalles = detalles;
     }
 
-    @Basic
-    @Column(name = "Id_solicitud")
-    public int getIdSolicitud() {
-        return idSolicitud;
-    }
-
-    public void setIdSolicitud(int idSolicitud) {
-        this.idSolicitud = idSolicitud;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ReporteEntity that = (ReporteEntity) o;
         return idReporte == that.idReporte &&
+                duracion == that.duracion &&
                 cantidadCaca == that.cantidadCaca &&
                 cantidadOrines == that.cantidadOrines &&
                 cantidadJuegos == that.cantidadJuegos &&
-                idSolicitud == that.idSolicitud &&
-                Objects.equals(distancia, that.distancia) &&
+                distancia == that.distancia &&
                 Objects.equals(detalles, that.detalles);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idReporte, cantidadCaca, cantidadOrines, cantidadJuegos, distancia, detalles, idSolicitud);
+        return Objects.hash(idReporte, duracion, cantidadCaca, cantidadOrines, cantidadJuegos, distancia, detalles);
     }
 
-    @OneToMany(mappedBy = "reporteByIdReporte")
-    public Collection<FotoXReporteEntity> getFotoXReportesByIdReporte() {
-        return fotoXReportesByIdReporte;
+    @OneToMany(mappedBy = "reporte")
+    public List<FotoXReporteEntity> getListaFotos() {
+        return listaFotos;
     }
 
-    public void setFotoXReportesByIdReporte(Collection<FotoXReporteEntity> fotoXReportesByIdReporte) {
-        this.fotoXReportesByIdReporte = fotoXReportesByIdReporte;
+    public void setListaFotos(List<FotoXReporteEntity> listaFotos) {
+        this.listaFotos = listaFotos;
     }
 
     @ManyToOne
     @JoinColumn(name = "Id_solicitud", referencedColumnName = "Id_solicitud", nullable = false)
-    public SolicitudEntity getSolicitudByIdSolicitud() {
-        return solicitudByIdSolicitud;
+    public SolicitudEntity getSolicitud() {
+        return solicitud;
     }
 
-    public void setSolicitudByIdSolicitud(SolicitudEntity solicitudByIdSolicitud) {
-        this.solicitudByIdSolicitud = solicitudByIdSolicitud;
+    public void setSolicitud(SolicitudEntity solicitud) {
+        this.solicitud = solicitud;
     }
 }
