@@ -1,7 +1,6 @@
 package com.digipet.prototype.orm;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -9,10 +8,9 @@ import java.util.Objects;
 public class EstadoEntity {
     private int idEstado;
     private String nombre;
-    private Collection<UsuarioEntity> usuariosByIdEstado;
 
     @Id
-    @Column(name = "Id_estado")
+    @Column(name = "Id_estado", nullable = false)
     public int getIdEstado() {
         return idEstado;
     }
@@ -22,7 +20,7 @@ public class EstadoEntity {
     }
 
     @Basic
-    @Column(name = "Nombre")
+    @Column(name = "Nombre", nullable = false, length = 20)
     public String getNombre() {
         return nombre;
     }
@@ -43,14 +41,5 @@ public class EstadoEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idEstado, nombre);
-    }
-
-    @OneToMany(mappedBy = "estadoByIdEstado")
-    public Collection<UsuarioEntity> getUsuariosByIdEstado() {
-        return usuariosByIdEstado;
-    }
-
-    public void setUsuariosByIdEstado(Collection<UsuarioEntity> usuariosByIdEstado) {
-        this.usuariosByIdEstado = usuariosByIdEstado;
     }
 }

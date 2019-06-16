@@ -3,7 +3,6 @@ package com.digipet.prototype.orm;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -18,15 +17,9 @@ public class SolicitudEntity {
     private int idCliente;
     private int idMascota;
     private int idServicio;
-    private Collection<ReporteEntity> reportesByIdSolicitud;
-    private ClienteEntity clienteByIdCliente;
-    private MascotaEntity mascotaByIdMascota;
-    private ServicioEntity servicioByIdServicio;
-    private Collection<SolicitudXCuidadorEntity> solicitudXCuidadorsByIdSolicitud;
-    private Collection<SolicitudXHotelEntity> solicitudXHotelsByIdSolicitud;
 
     @Id
-    @Column(name = "Id_solicitud")
+    @Column(name = "Id_solicitud", nullable = false)
     public int getIdSolicitud() {
         return idSolicitud;
     }
@@ -36,7 +29,7 @@ public class SolicitudEntity {
     }
 
     @Basic
-    @Column(name = "Hora_inicio")
+    @Column(name = "Hora_inicio", nullable = false)
     public Timestamp getHoraInicio() {
         return horaInicio;
     }
@@ -46,7 +39,7 @@ public class SolicitudEntity {
     }
 
     @Basic
-    @Column(name = "Hora_final")
+    @Column(name = "Hora_final", nullable = false)
     public Timestamp getHoraFinal() {
         return horaFinal;
     }
@@ -56,7 +49,7 @@ public class SolicitudEntity {
     }
 
     @Basic
-    @Column(name = "Duracion")
+    @Column(name = "Duracion", nullable = false)
     public int getDuracion() {
         return duracion;
     }
@@ -66,7 +59,7 @@ public class SolicitudEntity {
     }
 
     @Basic
-    @Column(name = "Estado_solicitud")
+    @Column(name = "Estado_solicitud", nullable = false, length = 10)
     public String getEstadoSolicitud() {
         return estadoSolicitud;
     }
@@ -76,7 +69,7 @@ public class SolicitudEntity {
     }
 
     @Basic
-    @Column(name = "Precio_unitario")
+    @Column(name = "Precio_unitario", nullable = false, precision = 1)
     public BigDecimal getPrecioUnitario() {
         return precioUnitario;
     }
@@ -86,7 +79,7 @@ public class SolicitudEntity {
     }
 
     @Basic
-    @Column(name = "Id_cliente")
+    @Column(name = "Id_cliente", nullable = false)
     public int getIdCliente() {
         return idCliente;
     }
@@ -96,7 +89,7 @@ public class SolicitudEntity {
     }
 
     @Basic
-    @Column(name = "Id_mascota")
+    @Column(name = "Id_mascota", nullable = false)
     public int getIdMascota() {
         return idMascota;
     }
@@ -106,7 +99,7 @@ public class SolicitudEntity {
     }
 
     @Basic
-    @Column(name = "Id_servicio")
+    @Column(name = "Id_servicio", nullable = false)
     public int getIdServicio() {
         return idServicio;
     }
@@ -134,62 +127,5 @@ public class SolicitudEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idSolicitud, horaInicio, horaFinal, duracion, estadoSolicitud, precioUnitario, idCliente, idMascota, idServicio);
-    }
-
-    @OneToMany(mappedBy = "solicitudByIdSolicitud")
-    public Collection<ReporteEntity> getReportesByIdSolicitud() {
-        return reportesByIdSolicitud;
-    }
-
-    public void setReportesByIdSolicitud(Collection<ReporteEntity> reportesByIdSolicitud) {
-        this.reportesByIdSolicitud = reportesByIdSolicitud;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_cliente", referencedColumnName = "Id_cliente", nullable = false)
-    public ClienteEntity getClienteByIdCliente() {
-        return clienteByIdCliente;
-    }
-
-    public void setClienteByIdCliente(ClienteEntity clienteByIdCliente) {
-        this.clienteByIdCliente = clienteByIdCliente;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_mascota", referencedColumnName = "Id_mascota", nullable = false)
-    public MascotaEntity getMascotaByIdMascota() {
-        return mascotaByIdMascota;
-    }
-
-    public void setMascotaByIdMascota(MascotaEntity mascotaByIdMascota) {
-        this.mascotaByIdMascota = mascotaByIdMascota;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_servicio", referencedColumnName = "Id_servicio", nullable = false)
-    public ServicioEntity getServicioByIdServicio() {
-        return servicioByIdServicio;
-    }
-
-    public void setServicioByIdServicio(ServicioEntity servicioByIdServicio) {
-        this.servicioByIdServicio = servicioByIdServicio;
-    }
-
-    @OneToMany(mappedBy = "solicitudByIdSolicitud")
-    public Collection<SolicitudXCuidadorEntity> getSolicitudXCuidadorsByIdSolicitud() {
-        return solicitudXCuidadorsByIdSolicitud;
-    }
-
-    public void setSolicitudXCuidadorsByIdSolicitud(Collection<SolicitudXCuidadorEntity> solicitudXCuidadorsByIdSolicitud) {
-        this.solicitudXCuidadorsByIdSolicitud = solicitudXCuidadorsByIdSolicitud;
-    }
-
-    @OneToMany(mappedBy = "solicitudByIdSolicitud")
-    public Collection<SolicitudXHotelEntity> getSolicitudXHotelsByIdSolicitud() {
-        return solicitudXHotelsByIdSolicitud;
-    }
-
-    public void setSolicitudXHotelsByIdSolicitud(Collection<SolicitudXHotelEntity> solicitudXHotelsByIdSolicitud) {
-        this.solicitudXHotelsByIdSolicitud = solicitudXHotelsByIdSolicitud;
     }
 }

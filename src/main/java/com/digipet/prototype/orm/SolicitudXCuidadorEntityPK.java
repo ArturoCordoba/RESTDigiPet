@@ -9,7 +9,7 @@ public class SolicitudXCuidadorEntityPK implements Serializable {
     private int idSolicitud;
     private int idCuidador;
 
-    @Column(name = "Id_solicitud")
+    @Column(name = "Id_solicitud", nullable = false)
     @Id
     public int getIdSolicitud() {
         return idSolicitud;
@@ -19,7 +19,7 @@ public class SolicitudXCuidadorEntityPK implements Serializable {
         this.idSolicitud = idSolicitud;
     }
 
-    @Column(name = "Id_cuidador")
+    @Column(name = "Id_cuidador", nullable = false)
     @Id
     public int getIdCuidador() {
         return idCuidador;

@@ -2,7 +2,6 @@ package com.digipet.prototype.orm;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -15,11 +14,9 @@ public class ReporteEntity {
     private BigDecimal distancia;
     private String detalles;
     private int idSolicitud;
-    private Collection<FotoXReporteEntity> fotoXReportesByIdReporte;
-    private SolicitudEntity solicitudByIdSolicitud;
 
     @Id
-    @Column(name = "Id_reporte")
+    @Column(name = "Id_reporte", nullable = false)
     public int getIdReporte() {
         return idReporte;
     }
@@ -29,7 +26,7 @@ public class ReporteEntity {
     }
 
     @Basic
-    @Column(name = "Cantidad_caca")
+    @Column(name = "Cantidad_caca", nullable = false)
     public int getCantidadCaca() {
         return cantidadCaca;
     }
@@ -39,7 +36,7 @@ public class ReporteEntity {
     }
 
     @Basic
-    @Column(name = "Cantidad_orines")
+    @Column(name = "Cantidad_orines", nullable = false)
     public int getCantidadOrines() {
         return cantidadOrines;
     }
@@ -49,7 +46,7 @@ public class ReporteEntity {
     }
 
     @Basic
-    @Column(name = "Cantidad_juegos")
+    @Column(name = "Cantidad_juegos", nullable = false)
     public int getCantidadJuegos() {
         return cantidadJuegos;
     }
@@ -59,7 +56,7 @@ public class ReporteEntity {
     }
 
     @Basic
-    @Column(name = "Distancia")
+    @Column(name = "Distancia", nullable = false, precision = 1)
     public BigDecimal getDistancia() {
         return distancia;
     }
@@ -69,7 +66,7 @@ public class ReporteEntity {
     }
 
     @Basic
-    @Column(name = "Detalles")
+    @Column(name = "Detalles", nullable = false, length = 300)
     public String getDetalles() {
         return detalles;
     }
@@ -79,7 +76,7 @@ public class ReporteEntity {
     }
 
     @Basic
-    @Column(name = "Id_solicitud")
+    @Column(name = "Id_solicitud", nullable = false)
     public int getIdSolicitud() {
         return idSolicitud;
     }
@@ -105,24 +102,5 @@ public class ReporteEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idReporte, cantidadCaca, cantidadOrines, cantidadJuegos, distancia, detalles, idSolicitud);
-    }
-
-    @OneToMany(mappedBy = "reporteByIdReporte")
-    public Collection<FotoXReporteEntity> getFotoXReportesByIdReporte() {
-        return fotoXReportesByIdReporte;
-    }
-
-    public void setFotoXReportesByIdReporte(Collection<FotoXReporteEntity> fotoXReportesByIdReporte) {
-        this.fotoXReportesByIdReporte = fotoXReportesByIdReporte;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_solicitud", referencedColumnName = "Id_solicitud", nullable = false)
-    public SolicitudEntity getSolicitudByIdSolicitud() {
-        return solicitudByIdSolicitud;
-    }
-
-    public void setSolicitudByIdSolicitud(SolicitudEntity solicitudByIdSolicitud) {
-        this.solicitudByIdSolicitud = solicitudByIdSolicitud;
     }
 }

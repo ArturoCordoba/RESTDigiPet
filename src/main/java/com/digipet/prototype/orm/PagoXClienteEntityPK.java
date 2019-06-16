@@ -9,7 +9,7 @@ public class PagoXClienteEntityPK implements Serializable {
     private int idCliente;
     private String metodoPago;
 
-    @Column(name = "Id_cliente")
+    @Column(name = "Id_cliente", nullable = false)
     @Id
     public int getIdCliente() {
         return idCliente;
@@ -19,7 +19,7 @@ public class PagoXClienteEntityPK implements Serializable {
         this.idCliente = idCliente;
     }
 
-    @Column(name = "Metodo_pago")
+    @Column(name = "Metodo_pago", nullable = false, length = 30)
     @Id
     public String getMetodoPago() {
         return metodoPago;

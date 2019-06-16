@@ -1,7 +1,6 @@
 package com.digipet.prototype.orm;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -12,10 +11,9 @@ public class HotelEntity {
     private String direccion;
     private int capacidad;
     private String descripcion;
-    private Collection<SolicitudXHotelEntity> solicitudXHotelsByIdHotel;
 
     @Id
-    @Column(name = "Id_hotel")
+    @Column(name = "Id_hotel", nullable = false)
     public int getIdHotel() {
         return idHotel;
     }
@@ -25,7 +23,7 @@ public class HotelEntity {
     }
 
     @Basic
-    @Column(name = "Nombre")
+    @Column(name = "Nombre", nullable = false, length = 30)
     public String getNombre() {
         return nombre;
     }
@@ -35,7 +33,7 @@ public class HotelEntity {
     }
 
     @Basic
-    @Column(name = "Direccion")
+    @Column(name = "Direccion", nullable = false, length = 300)
     public String getDireccion() {
         return direccion;
     }
@@ -45,7 +43,7 @@ public class HotelEntity {
     }
 
     @Basic
-    @Column(name = "Capacidad")
+    @Column(name = "Capacidad", nullable = false)
     public int getCapacidad() {
         return capacidad;
     }
@@ -55,7 +53,7 @@ public class HotelEntity {
     }
 
     @Basic
-    @Column(name = "Descripcion")
+    @Column(name = "Descripcion", nullable = false, length = 300)
     public String getDescripcion() {
         return descripcion;
     }
@@ -79,14 +77,5 @@ public class HotelEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idHotel, nombre, direccion, capacidad, descripcion);
-    }
-
-    @OneToMany(mappedBy = "hotelByIdHotel")
-    public Collection<SolicitudXHotelEntity> getSolicitudXHotelsByIdHotel() {
-        return solicitudXHotelsByIdHotel;
-    }
-
-    public void setSolicitudXHotelsByIdHotel(Collection<SolicitudXHotelEntity> solicitudXHotelsByIdHotel) {
-        this.solicitudXHotelsByIdHotel = solicitudXHotelsByIdHotel;
     }
 }

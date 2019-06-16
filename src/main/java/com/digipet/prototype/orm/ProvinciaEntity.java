@@ -1,7 +1,6 @@
 package com.digipet.prototype.orm;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -9,11 +8,9 @@ import java.util.Objects;
 public class ProvinciaEntity {
     private int idProvincia;
     private String nombre;
-    private Collection<ClienteEntity> clientesByIdProvincia;
-    private Collection<ProvinciaXCuidadorEntity> provinciaXCuidadorsByIdProvincia;
 
     @Id
-    @Column(name = "Id_provincia")
+    @Column(name = "Id_provincia", nullable = false)
     public int getIdProvincia() {
         return idProvincia;
     }
@@ -23,7 +20,7 @@ public class ProvinciaEntity {
     }
 
     @Basic
-    @Column(name = "Nombre")
+    @Column(name = "Nombre", nullable = false, length = 30)
     public String getNombre() {
         return nombre;
     }
@@ -44,23 +41,5 @@ public class ProvinciaEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idProvincia, nombre);
-    }
-
-    @OneToMany(mappedBy = "provinciaByIdProvincia")
-    public Collection<ClienteEntity> getClientesByIdProvincia() {
-        return clientesByIdProvincia;
-    }
-
-    public void setClientesByIdProvincia(Collection<ClienteEntity> clientesByIdProvincia) {
-        this.clientesByIdProvincia = clientesByIdProvincia;
-    }
-
-    @OneToMany(mappedBy = "provinciaByIdProvincia")
-    public Collection<ProvinciaXCuidadorEntity> getProvinciaXCuidadorsByIdProvincia() {
-        return provinciaXCuidadorsByIdProvincia;
-    }
-
-    public void setProvinciaXCuidadorsByIdProvincia(Collection<ProvinciaXCuidadorEntity> provinciaXCuidadorsByIdProvincia) {
-        this.provinciaXCuidadorsByIdProvincia = provinciaXCuidadorsByIdProvincia;
     }
 }

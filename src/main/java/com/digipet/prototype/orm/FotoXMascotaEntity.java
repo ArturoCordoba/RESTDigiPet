@@ -9,10 +9,9 @@ import java.util.Objects;
 public class FotoXMascotaEntity {
     private int idMascota;
     private String foto;
-    private MascotaEntity mascotaByIdMascota;
 
     @Id
-    @Column(name = "Id_mascota")
+    @Column(name = "Id_mascota", nullable = false)
     public int getIdMascota() {
         return idMascota;
     }
@@ -22,7 +21,7 @@ public class FotoXMascotaEntity {
     }
 
     @Id
-    @Column(name = "Foto")
+    @Column(name = "Foto", nullable = false, length = 30)
     public String getFoto() {
         return foto;
     }
@@ -43,15 +42,5 @@ public class FotoXMascotaEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idMascota, foto);
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_mascota", referencedColumnName = "Id_mascota", nullable = false)
-    public MascotaEntity getMascotaByIdMascota() {
-        return mascotaByIdMascota;
-    }
-
-    public void setMascotaByIdMascota(MascotaEntity mascotaByIdMascota) {
-        this.mascotaByIdMascota = mascotaByIdMascota;
     }
 }

@@ -9,10 +9,9 @@ import java.util.Objects;
 public class PagoXClienteEntity {
     private int idCliente;
     private String metodoPago;
-    private ClienteEntity clienteByIdCliente;
 
     @Id
-    @Column(name = "Id_cliente")
+    @Column(name = "Id_cliente", nullable = false)
     public int getIdCliente() {
         return idCliente;
     }
@@ -22,7 +21,7 @@ public class PagoXClienteEntity {
     }
 
     @Id
-    @Column(name = "Metodo_pago")
+    @Column(name = "Metodo_pago", nullable = false, length = 30)
     public String getMetodoPago() {
         return metodoPago;
     }
@@ -43,15 +42,5 @@ public class PagoXClienteEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idCliente, metodoPago);
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_cliente", referencedColumnName = "Id_cliente", nullable = false)
-    public ClienteEntity getClienteByIdCliente() {
-        return clienteByIdCliente;
-    }
-
-    public void setClienteByIdCliente(ClienteEntity clienteByIdCliente) {
-        this.clienteByIdCliente = clienteByIdCliente;
     }
 }

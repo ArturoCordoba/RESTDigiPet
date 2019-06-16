@@ -9,10 +9,9 @@ import java.util.Objects;
 public class FotoXReporteEntity {
     private int idReporte;
     private int foto;
-    private ReporteEntity reporteByIdReporte;
 
     @Id
-    @Column(name = "Id_reporte")
+    @Column(name = "Id_reporte", nullable = false)
     public int getIdReporte() {
         return idReporte;
     }
@@ -22,7 +21,7 @@ public class FotoXReporteEntity {
     }
 
     @Id
-    @Column(name = "Foto")
+    @Column(name = "Foto", nullable = false)
     public int getFoto() {
         return foto;
     }
@@ -43,15 +42,5 @@ public class FotoXReporteEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idReporte, foto);
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_reporte", referencedColumnName = "Id_reporte", nullable = false)
-    public ReporteEntity getReporteByIdReporte() {
-        return reporteByIdReporte;
-    }
-
-    public void setReporteByIdReporte(ReporteEntity reporteByIdReporte) {
-        this.reporteByIdReporte = reporteByIdReporte;
     }
 }

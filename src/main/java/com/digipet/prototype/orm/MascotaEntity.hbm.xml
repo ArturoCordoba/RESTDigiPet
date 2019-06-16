@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.digipet.prototype.orm.MascotaEntity" table="MASCOTA" schema="digipet">
+        <id name="idMascota">
+            <column name="Id_mascota" sql-type="int(11)"/>
+        </id>
+        <property name="idCliente">
+            <column name="Id_cliente" sql-type="int(11)"/>
+        </property>
+        <property name="nombre">
+            <column name="Nombre" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="raza">
+            <column name="Raza" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="edad">
+            <column name="Edad" sql-type="int(11)"/>
+        </property>
+        <property name="idTamano">
+            <column name="Id_tamano" sql-type="int(11)"/>
+        </property>
+        <property name="descripcion">
+            <column name="Descripcion" sql-type="varchar(300)" length="300"/>
+        </property>
+        <property name="fechaInscripcion">
+            <column name="Fecha_inscripcion" sql-type="date"/>
+        </property>
+    </class>
+</hibernate-mapping>

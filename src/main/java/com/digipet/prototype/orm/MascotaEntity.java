@@ -2,7 +2,6 @@ package com.digipet.prototype.orm;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -16,13 +15,9 @@ public class MascotaEntity {
     private int idTamano;
     private String descripcion;
     private Date fechaInscripcion;
-    private Collection<FotoXMascotaEntity> fotoXMascotasByIdMascota;
-    private ClienteEntity clienteByIdCliente;
-    private TamanoEntity tamanoByIdTamano;
-    private Collection<SolicitudEntity> solicitudsByIdMascota;
 
     @Id
-    @Column(name = "Id_mascota")
+    @Column(name = "Id_mascota", nullable = false)
     public int getIdMascota() {
         return idMascota;
     }
@@ -32,7 +27,7 @@ public class MascotaEntity {
     }
 
     @Basic
-    @Column(name = "Id_cliente")
+    @Column(name = "Id_cliente", nullable = false)
     public int getIdCliente() {
         return idCliente;
     }
@@ -42,7 +37,7 @@ public class MascotaEntity {
     }
 
     @Basic
-    @Column(name = "Nombre")
+    @Column(name = "Nombre", nullable = false, length = 30)
     public String getNombre() {
         return nombre;
     }
@@ -52,7 +47,7 @@ public class MascotaEntity {
     }
 
     @Basic
-    @Column(name = "Raza")
+    @Column(name = "Raza", nullable = false, length = 30)
     public String getRaza() {
         return raza;
     }
@@ -62,7 +57,7 @@ public class MascotaEntity {
     }
 
     @Basic
-    @Column(name = "Edad")
+    @Column(name = "Edad", nullable = false)
     public int getEdad() {
         return edad;
     }
@@ -72,7 +67,7 @@ public class MascotaEntity {
     }
 
     @Basic
-    @Column(name = "Id_tamano")
+    @Column(name = "Id_tamano", nullable = false)
     public int getIdTamano() {
         return idTamano;
     }
@@ -82,7 +77,7 @@ public class MascotaEntity {
     }
 
     @Basic
-    @Column(name = "Descripcion")
+    @Column(name = "Descripcion", nullable = false, length = 300)
     public String getDescripcion() {
         return descripcion;
     }
@@ -92,7 +87,7 @@ public class MascotaEntity {
     }
 
     @Basic
-    @Column(name = "Fecha_inscripcion")
+    @Column(name = "Fecha_inscripcion", nullable = false)
     public Date getFechaInscripcion() {
         return fechaInscripcion;
     }
@@ -119,43 +114,5 @@ public class MascotaEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idMascota, idCliente, nombre, raza, edad, idTamano, descripcion, fechaInscripcion);
-    }
-
-    @OneToMany(mappedBy = "mascotaByIdMascota")
-    public Collection<FotoXMascotaEntity> getFotoXMascotasByIdMascota() {
-        return fotoXMascotasByIdMascota;
-    }
-
-    public void setFotoXMascotasByIdMascota(Collection<FotoXMascotaEntity> fotoXMascotasByIdMascota) {
-        this.fotoXMascotasByIdMascota = fotoXMascotasByIdMascota;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_cliente", referencedColumnName = "Id_cliente", nullable = false)
-    public ClienteEntity getClienteByIdCliente() {
-        return clienteByIdCliente;
-    }
-
-    public void setClienteByIdCliente(ClienteEntity clienteByIdCliente) {
-        this.clienteByIdCliente = clienteByIdCliente;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_tamano", referencedColumnName = "Id_tamano", nullable = false)
-    public TamanoEntity getTamanoByIdTamano() {
-        return tamanoByIdTamano;
-    }
-
-    public void setTamanoByIdTamano(TamanoEntity tamanoByIdTamano) {
-        this.tamanoByIdTamano = tamanoByIdTamano;
-    }
-
-    @OneToMany(mappedBy = "mascotaByIdMascota")
-    public Collection<SolicitudEntity> getSolicitudsByIdMascota() {
-        return solicitudsByIdMascota;
-    }
-
-    public void setSolicitudsByIdMascota(Collection<SolicitudEntity> solicitudsByIdMascota) {
-        this.solicitudsByIdMascota = solicitudsByIdMascota;
     }
 }

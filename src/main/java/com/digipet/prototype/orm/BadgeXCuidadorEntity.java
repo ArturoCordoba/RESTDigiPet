@@ -9,11 +9,9 @@ import java.util.Objects;
 public class BadgeXCuidadorEntity {
     private int idCuidador;
     private int idBadge;
-    private CuidadorEntity cuidadorByIdCuidador;
-    private BadgeEntity badgeByIdBadge;
 
     @Id
-    @Column(name = "Id_cuidador")
+    @Column(name = "Id_cuidador", nullable = false)
     public int getIdCuidador() {
         return idCuidador;
     }
@@ -23,7 +21,7 @@ public class BadgeXCuidadorEntity {
     }
 
     @Id
-    @Column(name = "Id_badge")
+    @Column(name = "Id_badge", nullable = false)
     public int getIdBadge() {
         return idBadge;
     }
@@ -44,25 +42,5 @@ public class BadgeXCuidadorEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idCuidador, idBadge);
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_cuidador", referencedColumnName = "Id_cuidador", nullable = false)
-    public CuidadorEntity getCuidadorByIdCuidador() {
-        return cuidadorByIdCuidador;
-    }
-
-    public void setCuidadorByIdCuidador(CuidadorEntity cuidadorByIdCuidador) {
-        this.cuidadorByIdCuidador = cuidadorByIdCuidador;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_badge", referencedColumnName = "Id_badge", nullable = false)
-    public BadgeEntity getBadgeByIdBadge() {
-        return badgeByIdBadge;
-    }
-
-    public void setBadgeByIdBadge(BadgeEntity badgeByIdBadge) {
-        this.badgeByIdBadge = badgeByIdBadge;
     }
 }

@@ -1,18 +1,19 @@
 package com.digipet.prototype.orm;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
+
+import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "BADGE", schema = "digipet", catalog = "")
 public class BadgeEntity {
     private int idBadge;
     private String nombre;
-    private Collection<BadgeXCuidadorEntity> badgeXCuidadorsByIdBadge;
 
     @Id
-    @Column(name = "Id_badge")
+    @GeneratedValue(strategy=IDENTITY)
+    @Column(name = "Id_badge", nullable = false)
     public int getIdBadge() {
         return idBadge;
     }
@@ -22,7 +23,7 @@ public class BadgeEntity {
     }
 
     @Basic
-    @Column(name = "Nombre")
+    @Column(name = "Nombre", nullable = false, length = 30)
     public String getNombre() {
         return nombre;
     }
@@ -43,14 +44,5 @@ public class BadgeEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idBadge, nombre);
-    }
-
-    @OneToMany(mappedBy = "badgeByIdBadge")
-    public Collection<BadgeXCuidadorEntity> getBadgeXCuidadorsByIdBadge() {
-        return badgeXCuidadorsByIdBadge;
-    }
-
-    public void setBadgeXCuidadorsByIdBadge(Collection<BadgeXCuidadorEntity> badgeXCuidadorsByIdBadge) {
-        this.badgeXCuidadorsByIdBadge = badgeXCuidadorsByIdBadge;
     }
 }

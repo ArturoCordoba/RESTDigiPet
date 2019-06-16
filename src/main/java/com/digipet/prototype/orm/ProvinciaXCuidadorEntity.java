@@ -9,11 +9,9 @@ import java.util.Objects;
 public class ProvinciaXCuidadorEntity {
     private int idCuidador;
     private int idProvincia;
-    private CuidadorEntity cuidadorByIdCuidador;
-    private ProvinciaEntity provinciaByIdProvincia;
 
     @Id
-    @Column(name = "Id_cuidador")
+    @Column(name = "Id_cuidador", nullable = false)
     public int getIdCuidador() {
         return idCuidador;
     }
@@ -23,7 +21,7 @@ public class ProvinciaXCuidadorEntity {
     }
 
     @Id
-    @Column(name = "Id_provincia")
+    @Column(name = "Id_provincia", nullable = false)
     public int getIdProvincia() {
         return idProvincia;
     }
@@ -44,25 +42,5 @@ public class ProvinciaXCuidadorEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idCuidador, idProvincia);
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_cuidador", referencedColumnName = "Id_cuidador", nullable = false)
-    public CuidadorEntity getCuidadorByIdCuidador() {
-        return cuidadorByIdCuidador;
-    }
-
-    public void setCuidadorByIdCuidador(CuidadorEntity cuidadorByIdCuidador) {
-        this.cuidadorByIdCuidador = cuidadorByIdCuidador;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_provincia", referencedColumnName = "Id_provincia", nullable = false)
-    public ProvinciaEntity getProvinciaByIdProvincia() {
-        return provinciaByIdProvincia;
-    }
-
-    public void setProvinciaByIdProvincia(ProvinciaEntity provinciaByIdProvincia) {
-        this.provinciaByIdProvincia = provinciaByIdProvincia;
     }
 }

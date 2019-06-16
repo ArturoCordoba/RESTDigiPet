@@ -9,7 +9,7 @@ public class BadgeXCuidadorEntityPK implements Serializable {
     private int idCuidador;
     private int idBadge;
 
-    @Column(name = "Id_cuidador")
+    @Column(name = "Id_cuidador", nullable = false)
     @Id
     public int getIdCuidador() {
         return idCuidador;
@@ -19,7 +19,7 @@ public class BadgeXCuidadorEntityPK implements Serializable {
         this.idCuidador = idCuidador;
     }
 
-    @Column(name = "Id_badge")
+    @Column(name = "Id_badge", nullable = false)
     @Id
     public int getIdBadge() {
         return idBadge;

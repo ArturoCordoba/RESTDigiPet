@@ -9,7 +9,7 @@ public class FotoXMascotaEntityPK implements Serializable {
     private int idMascota;
     private String foto;
 
-    @Column(name = "Id_mascota")
+    @Column(name = "Id_mascota", nullable = false)
     @Id
     public int getIdMascota() {
         return idMascota;
@@ -19,7 +19,7 @@ public class FotoXMascotaEntityPK implements Serializable {
         this.idMascota = idMascota;
     }
 
-    @Column(name = "Foto")
+    @Column(name = "Foto", nullable = false, length = 30)
     @Id
     public String getFoto() {
         return foto;

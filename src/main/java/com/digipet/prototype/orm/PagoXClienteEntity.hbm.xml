@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.digipet.prototype.orm.PagoXClienteEntity" table="PAGO_X_CLIENTE" schema="digipet">
+        <composite-id mapped="true" class="com.digipet.prototype.orm.PagoXClienteEntityPK">
+            <key-property name="idCliente">
+                <column name="Id_cliente" sql-type="int(11)"/>
+            </key-property>
+            <key-property name="metodoPago">
+                <column name="Metodo_pago" sql-type="varchar(30)" length="30"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

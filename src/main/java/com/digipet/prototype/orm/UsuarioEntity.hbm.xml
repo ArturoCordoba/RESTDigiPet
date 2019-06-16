@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.digipet.prototype.orm.UsuarioEntity" table="USUARIO" schema="digipet">
+        <id name="idUsuario">
+            <column name="Id_usuario" sql-type="int(11)"/>
+        </id>
+        <property name="primerNombre">
+            <column name="Primer_nombre" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="primerApellido">
+            <column name="Primer_apellido" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="segundoApellido">
+            <column name="Segundo_apellido" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="idRol">
+            <column name="Id_rol" sql-type="int(11)"/>
+        </property>
+        <property name="email1">
+            <column name="Email_1" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="contrasena">
+            <column name="Contrasena" sql-type="varchar(8)" length="8"/>
+        </property>
+        <property name="fotoPerfil">
+            <column name="Foto_perfil" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="idEstado">
+            <column name="Id_estado" sql-type="int(11)"/>
+        </property>
+    </class>
+</hibernate-mapping>

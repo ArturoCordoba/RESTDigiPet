@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.digipet.prototype.orm.SolicitudEntity" table="SOLICITUD" schema="digipet">
+        <id name="idSolicitud">
+            <column name="Id_solicitud" sql-type="int(11)"/>
+        </id>
+        <property name="horaInicio">
+            <column name="Hora_inicio" sql-type="datetime"/>
+        </property>
+        <property name="horaFinal">
+            <column name="Hora_final" sql-type="datetime"/>
+        </property>
+        <property name="duracion">
+            <column name="Duracion" sql-type="int(11)"/>
+        </property>
+        <property name="estadoSolicitud">
+            <column name="Estado_solicitud" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="precioUnitario">
+            <column name="Precio_unitario" sql-type="decimal(5,1)" precision="5" scale="1"/>
+        </property>
+        <property name="idCliente">
+            <column name="Id_cliente" sql-type="int(11)"/>
+        </property>
+        <property name="idMascota">
+            <column name="Id_mascota" sql-type="int(11)"/>
+        </property>
+        <property name="idServicio">
+            <column name="Id_servicio" sql-type="int(11)"/>
+        </property>
+    </class>
+</hibernate-mapping>

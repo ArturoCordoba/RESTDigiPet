@@ -3,6 +3,8 @@ package com.digipet.prototype.orm;
 import javax.persistence.*;
 import java.util.Objects;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 @Entity
 @Table(name = "USUARIO", schema = "digipet", catalog = "")
 public class UsuarioEntity {
@@ -15,13 +17,10 @@ public class UsuarioEntity {
     private String contrasena;
     private String fotoPerfil;
     private int idEstado;
-    private ClienteEntity clienteByIdUsuario;
-    private CuidadorEntity cuidadorByIdUsuario;
-    private RolEntity rolByIdRol;
-    private EstadoEntity estadoByIdEstado;
 
     @Id
-    @Column(name = "Id_usuario")
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "Id_usuario", nullable = false)
     public int getIdUsuario() {
         return idUsuario;
     }
@@ -31,7 +30,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Primer_nombre")
+    @Column(name = "Primer_nombre", nullable = false, length = 30)
     public String getPrimerNombre() {
         return primerNombre;
     }
@@ -41,7 +40,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Primer_apellido")
+    @Column(name = "Primer_apellido", nullable = false, length = 30)
     public String getPrimerApellido() {
         return primerApellido;
     }
@@ -51,7 +50,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Segundo_apellido")
+    @Column(name = "Segundo_apellido", nullable = true, length = 30)
     public String getSegundoApellido() {
         return segundoApellido;
     }
@@ -61,7 +60,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Id_rol")
+    @Column(name = "Id_rol", nullable = false)
     public int getIdRol() {
         return idRol;
     }
@@ -71,7 +70,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Email_1")
+    @Column(name = "Email_1", nullable = false, length = 30)
     public String getEmail1() {
         return email1;
     }
@@ -81,7 +80,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Contrasena")
+    @Column(name = "Contrasena", nullable = false, length = 8)
     public String getContrasena() {
         return contrasena;
     }
@@ -91,7 +90,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Foto_perfil")
+    @Column(name = "Foto_perfil", nullable = false, length = 30)
     public String getFotoPerfil() {
         return fotoPerfil;
     }
@@ -101,7 +100,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Id_estado")
+    @Column(name = "Id_estado", nullable = false)
     public int getIdEstado() {
         return idEstado;
     }
@@ -129,43 +128,5 @@ public class UsuarioEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idUsuario, primerNombre, primerApellido, segundoApellido, idRol, email1, contrasena, fotoPerfil, idEstado);
-    }
-
-    @OneToOne(mappedBy = "usuarioByIdCliente")
-    public ClienteEntity getClienteByIdUsuario() {
-        return clienteByIdUsuario;
-    }
-
-    public void setClienteByIdUsuario(ClienteEntity clienteByIdUsuario) {
-        this.clienteByIdUsuario = clienteByIdUsuario;
-    }
-
-    @OneToOne(mappedBy = "usuarioByIdCuidador")
-    public CuidadorEntity getCuidadorByIdUsuario() {
-        return cuidadorByIdUsuario;
-    }
-
-    public void setCuidadorByIdUsuario(CuidadorEntity cuidadorByIdUsuario) {
-        this.cuidadorByIdUsuario = cuidadorByIdUsuario;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_rol", referencedColumnName = "Id_rol", nullable = false)
-    public RolEntity getRolByIdRol() {
-        return rolByIdRol;
-    }
-
-    public void setRolByIdRol(RolEntity rolByIdRol) {
-        this.rolByIdRol = rolByIdRol;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_estado", referencedColumnName = "Id_estado", nullable = false)
-    public EstadoEntity getEstadoByIdEstado() {
-        return estadoByIdEstado;
-    }
-
-    public void setEstadoByIdEstado(EstadoEntity estadoByIdEstado) {
-        this.estadoByIdEstado = estadoByIdEstado;
     }
 }

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.digipet.prototype.orm.CuidadorEntity" table="CUIDADOR" schema="digipet">
+        <id name="idCuidador">
+            <column name="Id_cuidador" sql-type="int(11)"/>
+        </id>
+        <property name="carne">
+            <column name="Carne" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="telefonoMovil">
+            <column name="Telefono_movil" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="idUniversidad">
+            <column name="Id_universidad" sql-type="int(11)"/>
+        </property>
+        <property name="canton">
+            <column name="Canton" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="opcionProvincias">
+            <column name="Opcion_provincias" sql-type="tinyint(1)"/>
+        </property>
+        <property name="email2">
+            <column name="Email_2" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="descripcion">
+            <column name="Descripcion" sql-type="varchar(300)" length="300"/>
+        </property>
+        <property name="fechaInscripcion">
+            <column name="Fecha_Inscripcion" sql-type="date"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -2,7 +2,6 @@ package com.digipet.prototype.orm;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -15,15 +14,9 @@ public class ClienteEntity {
     private String email2;
     private String descripcion;
     private Date fechaInscripcion;
-    private UsuarioEntity usuarioByIdCliente;
-    private ProvinciaEntity provinciaByIdProvincia;
-    private Collection<DenunciaEntity> denunciasByIdCliente;
-    private Collection<MascotaEntity> mascotasByIdCliente;
-    private Collection<PagoXClienteEntity> pagoXClientesByIdCliente;
-    private Collection<SolicitudEntity> solicitudsByIdCliente;
 
     @Id
-    @Column(name = "Id_cliente")
+    @Column(name = "Id_cliente", nullable = false)
     public int getIdCliente() {
         return idCliente;
     }
@@ -33,7 +26,7 @@ public class ClienteEntity {
     }
 
     @Basic
-    @Column(name = "Telefono_movil")
+    @Column(name = "Telefono_movil", nullable = false, length = 10)
     public String getTelefonoMovil() {
         return telefonoMovil;
     }
@@ -43,7 +36,7 @@ public class ClienteEntity {
     }
 
     @Basic
-    @Column(name = "Id_provincia")
+    @Column(name = "Id_provincia", nullable = false)
     public int getIdProvincia() {
         return idProvincia;
     }
@@ -53,7 +46,7 @@ public class ClienteEntity {
     }
 
     @Basic
-    @Column(name = "Canton")
+    @Column(name = "Canton", nullable = false, length = 30)
     public String getCanton() {
         return canton;
     }
@@ -63,7 +56,7 @@ public class ClienteEntity {
     }
 
     @Basic
-    @Column(name = "Email_2")
+    @Column(name = "Email_2", nullable = true, length = 30)
     public String getEmail2() {
         return email2;
     }
@@ -73,7 +66,7 @@ public class ClienteEntity {
     }
 
     @Basic
-    @Column(name = "Descripcion")
+    @Column(name = "Descripcion", nullable = false, length = 300)
     public String getDescripcion() {
         return descripcion;
     }
@@ -83,7 +76,7 @@ public class ClienteEntity {
     }
 
     @Basic
-    @Column(name = "Fecha_Inscripcion")
+    @Column(name = "Fecha_Inscripcion", nullable = false)
     public Date getFechaInscripcion() {
         return fechaInscripcion;
     }
@@ -109,61 +102,5 @@ public class ClienteEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idCliente, telefonoMovil, idProvincia, canton, email2, descripcion, fechaInscripcion);
-    }
-
-    @OneToOne
-    @JoinColumn(name = "Id_cliente", referencedColumnName = "Id_usuario", nullable = false)
-    public UsuarioEntity getUsuarioByIdCliente() {
-        return usuarioByIdCliente;
-    }
-
-    public void setUsuarioByIdCliente(UsuarioEntity usuarioByIdCliente) {
-        this.usuarioByIdCliente = usuarioByIdCliente;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_provincia", referencedColumnName = "Id_provincia", nullable = false)
-    public ProvinciaEntity getProvinciaByIdProvincia() {
-        return provinciaByIdProvincia;
-    }
-
-    public void setProvinciaByIdProvincia(ProvinciaEntity provinciaByIdProvincia) {
-        this.provinciaByIdProvincia = provinciaByIdProvincia;
-    }
-
-    @OneToMany(mappedBy = "clienteByIdCliente")
-    public Collection<DenunciaEntity> getDenunciasByIdCliente() {
-        return denunciasByIdCliente;
-    }
-
-    public void setDenunciasByIdCliente(Collection<DenunciaEntity> denunciasByIdCliente) {
-        this.denunciasByIdCliente = denunciasByIdCliente;
-    }
-
-    @OneToMany(mappedBy = "clienteByIdCliente")
-    public Collection<MascotaEntity> getMascotasByIdCliente() {
-        return mascotasByIdCliente;
-    }
-
-    public void setMascotasByIdCliente(Collection<MascotaEntity> mascotasByIdCliente) {
-        this.mascotasByIdCliente = mascotasByIdCliente;
-    }
-
-    @OneToMany(mappedBy = "clienteByIdCliente")
-    public Collection<PagoXClienteEntity> getPagoXClientesByIdCliente() {
-        return pagoXClientesByIdCliente;
-    }
-
-    public void setPagoXClientesByIdCliente(Collection<PagoXClienteEntity> pagoXClientesByIdCliente) {
-        this.pagoXClientesByIdCliente = pagoXClientesByIdCliente;
-    }
-
-    @OneToMany(mappedBy = "clienteByIdCliente")
-    public Collection<SolicitudEntity> getSolicitudsByIdCliente() {
-        return solicitudsByIdCliente;
-    }
-
-    public void setSolicitudsByIdCliente(Collection<SolicitudEntity> solicitudsByIdCliente) {
-        this.solicitudsByIdCliente = solicitudsByIdCliente;
     }
 }

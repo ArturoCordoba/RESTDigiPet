@@ -10,11 +10,9 @@ public class DenunciaEntity {
     private int idCliente;
     private int idCuidador;
     private String descripcion;
-    private ClienteEntity clienteByIdCliente;
-    private CuidadorEntity cuidadorByIdCuidador;
 
     @Id
-    @Column(name = "Id_denuncia")
+    @Column(name = "Id_denuncia", nullable = false)
     public int getIdDenuncia() {
         return idDenuncia;
     }
@@ -24,7 +22,7 @@ public class DenunciaEntity {
     }
 
     @Basic
-    @Column(name = "Id_cliente")
+    @Column(name = "Id_cliente", nullable = false)
     public int getIdCliente() {
         return idCliente;
     }
@@ -34,7 +32,7 @@ public class DenunciaEntity {
     }
 
     @Basic
-    @Column(name = "Id_cuidador")
+    @Column(name = "Id_cuidador", nullable = false)
     public int getIdCuidador() {
         return idCuidador;
     }
@@ -44,7 +42,7 @@ public class DenunciaEntity {
     }
 
     @Basic
-    @Column(name = "Descripcion")
+    @Column(name = "Descripcion", nullable = false, length = 300)
     public String getDescripcion() {
         return descripcion;
     }
@@ -67,25 +65,5 @@ public class DenunciaEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idDenuncia, idCliente, idCuidador, descripcion);
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_cliente", referencedColumnName = "Id_cliente", nullable = false)
-    public ClienteEntity getClienteByIdCliente() {
-        return clienteByIdCliente;
-    }
-
-    public void setClienteByIdCliente(ClienteEntity clienteByIdCliente) {
-        this.clienteByIdCliente = clienteByIdCliente;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_cuidador", referencedColumnName = "Id_cuidador", nullable = false)
-    public CuidadorEntity getCuidadorByIdCuidador() {
-        return cuidadorByIdCuidador;
-    }
-
-    public void setCuidadorByIdCuidador(CuidadorEntity cuidadorByIdCuidador) {
-        this.cuidadorByIdCuidador = cuidadorByIdCuidador;
     }
 }

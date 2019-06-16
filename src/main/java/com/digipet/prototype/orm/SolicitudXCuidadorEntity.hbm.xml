@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.digipet.prototype.orm.SolicitudXCuidadorEntity" table="SOLICITUD_X_CUIDADOR" schema="digipet">
+        <composite-id mapped="true" class="com.digipet.prototype.orm.SolicitudXCuidadorEntityPK">
+            <key-property name="idSolicitud">
+                <column name="Id_solicitud" sql-type="int(11)"/>
+            </key-property>
+            <key-property name="idCuidador">
+                <column name="Id_cuidador" sql-type="int(11)"/>
+            </key-property>
+        </composite-id>
+        <property name="calificacion">
+            <column name="Calificacion" sql-type="decimal(1,1)" precision="1" scale="1"/>
+        </property>
+        <property name="metodoPago">
+            <column name="Metodo_pago" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="direccion">
+            <column name="Direccion" sql-type="varchar(300)" length="300"/>
+        </property>
+        <property name="descripcion">
+            <column name="Descripcion" sql-type="varchar(300)" length="300"/>
+        </property>
+    </class>
+</hibernate-mapping>

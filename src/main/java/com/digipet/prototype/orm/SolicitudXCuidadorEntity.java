@@ -14,11 +14,9 @@ public class SolicitudXCuidadorEntity {
     private String metodoPago;
     private String direccion;
     private String descripcion;
-    private SolicitudEntity solicitudByIdSolicitud;
-    private CuidadorEntity cuidadorByIdCuidador;
 
     @Id
-    @Column(name = "Id_solicitud")
+    @Column(name = "Id_solicitud", nullable = false)
     public int getIdSolicitud() {
         return idSolicitud;
     }
@@ -28,7 +26,7 @@ public class SolicitudXCuidadorEntity {
     }
 
     @Id
-    @Column(name = "Id_cuidador")
+    @Column(name = "Id_cuidador", nullable = false)
     public int getIdCuidador() {
         return idCuidador;
     }
@@ -38,7 +36,7 @@ public class SolicitudXCuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Calificacion")
+    @Column(name = "Calificacion", nullable = false, precision = 1)
     public BigDecimal getCalificacion() {
         return calificacion;
     }
@@ -48,7 +46,7 @@ public class SolicitudXCuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Metodo_pago")
+    @Column(name = "Metodo_pago", nullable = false, length = 30)
     public String getMetodoPago() {
         return metodoPago;
     }
@@ -58,7 +56,7 @@ public class SolicitudXCuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Direccion")
+    @Column(name = "Direccion", nullable = false, length = 300)
     public String getDireccion() {
         return direccion;
     }
@@ -68,7 +66,7 @@ public class SolicitudXCuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Descripcion")
+    @Column(name = "Descripcion", nullable = false, length = 300)
     public String getDescripcion() {
         return descripcion;
     }
@@ -93,25 +91,5 @@ public class SolicitudXCuidadorEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idSolicitud, idCuidador, calificacion, metodoPago, direccion, descripcion);
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_solicitud", referencedColumnName = "Id_solicitud", nullable = false)
-    public SolicitudEntity getSolicitudByIdSolicitud() {
-        return solicitudByIdSolicitud;
-    }
-
-    public void setSolicitudByIdSolicitud(SolicitudEntity solicitudByIdSolicitud) {
-        this.solicitudByIdSolicitud = solicitudByIdSolicitud;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_cuidador", referencedColumnName = "Id_cuidador", nullable = false)
-    public CuidadorEntity getCuidadorByIdCuidador() {
-        return cuidadorByIdCuidador;
-    }
-
-    public void setCuidadorByIdCuidador(CuidadorEntity cuidadorByIdCuidador) {
-        this.cuidadorByIdCuidador = cuidadorByIdCuidador;
     }
 }

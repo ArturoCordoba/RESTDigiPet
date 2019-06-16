@@ -9,11 +9,9 @@ import java.util.Objects;
 public class SolicitudXHotelEntity {
     private int idSolicitud;
     private int idHotel;
-    private SolicitudEntity solicitudByIdSolicitud;
-    private HotelEntity hotelByIdHotel;
 
     @Id
-    @Column(name = "Id_solicitud")
+    @Column(name = "Id_solicitud", nullable = false)
     public int getIdSolicitud() {
         return idSolicitud;
     }
@@ -23,7 +21,7 @@ public class SolicitudXHotelEntity {
     }
 
     @Id
-    @Column(name = "Id_hotel")
+    @Column(name = "Id_hotel", nullable = false)
     public int getIdHotel() {
         return idHotel;
     }
@@ -44,25 +42,5 @@ public class SolicitudXHotelEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idSolicitud, idHotel);
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_solicitud", referencedColumnName = "Id_solicitud", nullable = false)
-    public SolicitudEntity getSolicitudByIdSolicitud() {
-        return solicitudByIdSolicitud;
-    }
-
-    public void setSolicitudByIdSolicitud(SolicitudEntity solicitudByIdSolicitud) {
-        this.solicitudByIdSolicitud = solicitudByIdSolicitud;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_hotel", referencedColumnName = "Id_hotel", nullable = false)
-    public HotelEntity getHotelByIdHotel() {
-        return hotelByIdHotel;
-    }
-
-    public void setHotelByIdHotel(HotelEntity hotelByIdHotel) {
-        this.hotelByIdHotel = hotelByIdHotel;
     }
 }

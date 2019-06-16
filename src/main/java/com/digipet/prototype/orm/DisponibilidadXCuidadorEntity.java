@@ -11,10 +11,9 @@ public class DisponibilidadXCuidadorEntity {
     private int idCuidador;
     private Timestamp fechaHoraInicio;
     private Timestamp fechaHoraFinal;
-    private CuidadorEntity cuidadorByIdCuidador;
 
     @Id
-    @Column(name = "Id_disponibilidad")
+    @Column(name = "Id_disponibilidad", nullable = false)
     public int getIdDisponibilidad() {
         return idDisponibilidad;
     }
@@ -24,7 +23,7 @@ public class DisponibilidadXCuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Id_cuidador")
+    @Column(name = "Id_cuidador", nullable = false)
     public int getIdCuidador() {
         return idCuidador;
     }
@@ -34,7 +33,7 @@ public class DisponibilidadXCuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Fecha_hora_inicio")
+    @Column(name = "Fecha_hora_inicio", nullable = false)
     public Timestamp getFechaHoraInicio() {
         return fechaHoraInicio;
     }
@@ -44,7 +43,7 @@ public class DisponibilidadXCuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Fecha_hora_final")
+    @Column(name = "Fecha_hora_final", nullable = false)
     public Timestamp getFechaHoraFinal() {
         return fechaHoraFinal;
     }
@@ -67,15 +66,5 @@ public class DisponibilidadXCuidadorEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idDisponibilidad, idCuidador, fechaHoraInicio, fechaHoraFinal);
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_cuidador", referencedColumnName = "Id_cuidador", nullable = false)
-    public CuidadorEntity getCuidadorByIdCuidador() {
-        return cuidadorByIdCuidador;
-    }
-
-    public void setCuidadorByIdCuidador(CuidadorEntity cuidadorByIdCuidador) {
-        this.cuidadorByIdCuidador = cuidadorByIdCuidador;
     }
 }

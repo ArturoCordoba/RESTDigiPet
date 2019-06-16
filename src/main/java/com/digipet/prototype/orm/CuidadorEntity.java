@@ -2,7 +2,6 @@ package com.digipet.prototype.orm;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -17,16 +16,9 @@ public class CuidadorEntity {
     private String email2;
     private String descripcion;
     private Date fechaInscripcion;
-    private Collection<BadgeXCuidadorEntity> badgeXCuidadorsByIdCuidador;
-    private UsuarioEntity usuarioByIdCuidador;
-    private UniversidadEntity universidadByIdUniversidad;
-    private Collection<DenunciaEntity> denunciasByIdCuidador;
-    private Collection<DisponibilidadXCuidadorEntity> disponibilidadXCuidadorsByIdCuidador;
-    private Collection<ProvinciaXCuidadorEntity> provinciaXCuidadorsByIdCuidador;
-    private Collection<SolicitudXCuidadorEntity> solicitudXCuidadorsByIdCuidador;
 
     @Id
-    @Column(name = "Id_cuidador")
+    @Column(name = "Id_cuidador", nullable = false)
     public int getIdCuidador() {
         return idCuidador;
     }
@@ -36,7 +28,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Carne")
+    @Column(name = "Carne", nullable = false, length = 10)
     public String getCarne() {
         return carne;
     }
@@ -46,7 +38,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Telefono_movil")
+    @Column(name = "Telefono_movil", nullable = false, length = 10)
     public String getTelefonoMovil() {
         return telefonoMovil;
     }
@@ -56,7 +48,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Id_universidad")
+    @Column(name = "Id_universidad", nullable = false)
     public int getIdUniversidad() {
         return idUniversidad;
     }
@@ -66,7 +58,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Canton")
+    @Column(name = "Canton", nullable = false, length = 30)
     public String getCanton() {
         return canton;
     }
@@ -76,7 +68,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Opcion_provincias")
+    @Column(name = "Opcion_provincias", nullable = false)
     public byte getOpcionProvincias() {
         return opcionProvincias;
     }
@@ -86,7 +78,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Email_2")
+    @Column(name = "Email_2", nullable = true, length = 30)
     public String getEmail2() {
         return email2;
     }
@@ -96,7 +88,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Descripcion")
+    @Column(name = "Descripcion", nullable = false, length = 300)
     public String getDescripcion() {
         return descripcion;
     }
@@ -106,7 +98,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Fecha_Inscripcion")
+    @Column(name = "Fecha_Inscripcion", nullable = false)
     public Date getFechaInscripcion() {
         return fechaInscripcion;
     }
@@ -134,70 +126,5 @@ public class CuidadorEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idCuidador, carne, telefonoMovil, idUniversidad, canton, opcionProvincias, email2, descripcion, fechaInscripcion);
-    }
-
-    @OneToMany(mappedBy = "cuidadorByIdCuidador")
-    public Collection<BadgeXCuidadorEntity> getBadgeXCuidadorsByIdCuidador() {
-        return badgeXCuidadorsByIdCuidador;
-    }
-
-    public void setBadgeXCuidadorsByIdCuidador(Collection<BadgeXCuidadorEntity> badgeXCuidadorsByIdCuidador) {
-        this.badgeXCuidadorsByIdCuidador = badgeXCuidadorsByIdCuidador;
-    }
-
-    @OneToOne
-    @JoinColumn(name = "Id_cuidador", referencedColumnName = "Id_usuario", nullable = false)
-    public UsuarioEntity getUsuarioByIdCuidador() {
-        return usuarioByIdCuidador;
-    }
-
-    public void setUsuarioByIdCuidador(UsuarioEntity usuarioByIdCuidador) {
-        this.usuarioByIdCuidador = usuarioByIdCuidador;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "Id_universidad", referencedColumnName = "Id_universidad", nullable = false)
-    public UniversidadEntity getUniversidadByIdUniversidad() {
-        return universidadByIdUniversidad;
-    }
-
-    public void setUniversidadByIdUniversidad(UniversidadEntity universidadByIdUniversidad) {
-        this.universidadByIdUniversidad = universidadByIdUniversidad;
-    }
-
-    @OneToMany(mappedBy = "cuidadorByIdCuidador")
-    public Collection<DenunciaEntity> getDenunciasByIdCuidador() {
-        return denunciasByIdCuidador;
-    }
-
-    public void setDenunciasByIdCuidador(Collection<DenunciaEntity> denunciasByIdCuidador) {
-        this.denunciasByIdCuidador = denunciasByIdCuidador;
-    }
-
-    @OneToMany(mappedBy = "cuidadorByIdCuidador")
-    public Collection<DisponibilidadXCuidadorEntity> getDisponibilidadXCuidadorsByIdCuidador() {
-        return disponibilidadXCuidadorsByIdCuidador;
-    }
-
-    public void setDisponibilidadXCuidadorsByIdCuidador(Collection<DisponibilidadXCuidadorEntity> disponibilidadXCuidadorsByIdCuidador) {
-        this.disponibilidadXCuidadorsByIdCuidador = disponibilidadXCuidadorsByIdCuidador;
-    }
-
-    @OneToMany(mappedBy = "cuidadorByIdCuidador")
-    public Collection<ProvinciaXCuidadorEntity> getProvinciaXCuidadorsByIdCuidador() {
-        return provinciaXCuidadorsByIdCuidador;
-    }
-
-    public void setProvinciaXCuidadorsByIdCuidador(Collection<ProvinciaXCuidadorEntity> provinciaXCuidadorsByIdCuidador) {
-        this.provinciaXCuidadorsByIdCuidador = provinciaXCuidadorsByIdCuidador;
-    }
-
-    @OneToMany(mappedBy = "cuidadorByIdCuidador")
-    public Collection<SolicitudXCuidadorEntity> getSolicitudXCuidadorsByIdCuidador() {
-        return solicitudXCuidadorsByIdCuidador;
-    }
-
-    public void setSolicitudXCuidadorsByIdCuidador(Collection<SolicitudXCuidadorEntity> solicitudXCuidadorsByIdCuidador) {
-        this.solicitudXCuidadorsByIdCuidador = solicitudXCuidadorsByIdCuidador;
     }
 }

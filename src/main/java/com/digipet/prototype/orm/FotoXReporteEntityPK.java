@@ -9,7 +9,7 @@ public class FotoXReporteEntityPK implements Serializable {
     private int idReporte;
     private int foto;
 
-    @Column(name = "Id_reporte")
+    @Column(name = "Id_reporte", nullable = false)
     @Id
     public int getIdReporte() {
         return idReporte;
@@ -19,7 +19,7 @@ public class FotoXReporteEntityPK implements Serializable {
         this.idReporte = idReporte;
     }
 
-    @Column(name = "Foto")
+    @Column(name = "Foto", nullable = false)
     @Id
     public int getFoto() {
         return foto;
