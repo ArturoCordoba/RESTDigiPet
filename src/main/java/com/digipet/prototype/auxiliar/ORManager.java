@@ -1,13 +1,16 @@
 package com.digipet.prototype.auxiliar;
 
+import com.digipet.prototype.data.HibernateSession;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,7 +21,6 @@ public class ORManager<T> {
 
     private final Class<T> typeParameterClass; //Clase del objeto
     private final T object; //Objeto a comunicar
-    private final SessionFactory sessionFactory; //SessionFactory necesario para la comunicación
     private final Session session; //Session necesario para la comunicación
 
     /**
@@ -30,10 +32,7 @@ public class ORManager<T> {
         this.typeParameterClass = typeParameterClass;
         this.object = object;
         try {
-            Configuration configuration = new Configuration().configure();
-            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-            sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-            session = sessionFactory.openSession();
+            session = HibernateSession.openSession();
         } catch (Exception e){
             System.out.println("Error al crear servicio en el constructor");
             throw e;
@@ -53,7 +52,6 @@ public class ORManager<T> {
             session.getTransaction().commit();
 
             session.close();
-            sessionFactory.close();
 
         } catch (Exception exception){
             System.out.println("Error no identificado");
@@ -65,18 +63,13 @@ public class ORManager<T> {
      * Método que retorna una lista con todas las instancias de la clase
      * @return lista de objetos
      */
-    public List<T> obtenerTabla(){
+    public ArrayList<T> obtenerTabla(String tabla){
 
-        List<T> data; //Navigate the object using an iterator
+        ArrayList<T> data;
 
         try {
-            CriteriaBuilder builder = session.getCriteriaBuilder();
-            CriteriaQuery<T> criteria = builder.createQuery(typeParameterClass);
-            criteria.from(typeParameterClass);
-            data = session.createQuery(criteria).getResultList();
-
-            session.close();
-            sessionFactory.close();
+            Query query = session.createQuery("FROM " + tabla);
+            data = (ArrayList<T>) query.getResultList();
 
         } catch (Exception exception){
             System.out.println("Error no identificado");
@@ -91,7 +84,7 @@ public class ORManager<T> {
      * @param identificador id del objeto a buscar en la base de datos
      * @return objeto encontrado //TODO: manejar retorno de objeto nulo
      */
-    public T obtenerObjeto(int identificador){
+    public T obtenerObjetoPorID(int identificador){
 
         T data;
 
@@ -100,13 +93,11 @@ public class ORManager<T> {
             data = session.get(this.typeParameterClass, identificador); //TODO: excepción identificador inválido
 
             session.close();
-            sessionFactory.close();
 
         } catch (Exception exception){
             System.out.println("Error no identificado");
             throw exception;
         }
-
         return data;
     }
 }

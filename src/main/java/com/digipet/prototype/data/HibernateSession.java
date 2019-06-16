@@ -7,7 +7,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-public final class HibernateUtil {
+public final class HibernateSession {
     private static SessionFactory sessionFactory;
 
     /**
@@ -54,9 +54,9 @@ public final class HibernateUtil {
      * Se utiliza un Doble-Check Singlenton
      */
     private static void buildSession(){
-        synchronized (HibernateUtil.class){
+        synchronized (HibernateSession.class){
             if(sessionFactory == null){
-                synchronized (HibernateUtil.class){
+                synchronized (HibernateSession.class){
                     if(sessionFactory == null)
                         buildSessionFactory();
                 }
