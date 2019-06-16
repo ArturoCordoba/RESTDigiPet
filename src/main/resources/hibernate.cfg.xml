@@ -10,6 +10,8 @@
     <!-- SQL Properties -->
     <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
     <property name="connection.url">jdbc:mariadb://digipet.cg8mqwwu18oy.us-east-2.rds.amazonaws.com</property>
+    <property name="connection.username">gafa</property>
+    <property name="connection.password">gafa1234</property>
 
     <property name="hbm2ddl.auto">update</property>
 
