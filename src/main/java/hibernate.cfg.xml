@@ -10,12 +10,34 @@
     <!-- SQL Properties -->
     <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
     <property name="connection.url">jdbc:mariadb://digipet.cg8mqwwu18oy.us-east-2.rds.amazonaws.com</property>
-    <property name="connection.username">gafa</property>
-    <property name="connection.password">gafa1234</property>
 
     <property name="hbm2ddl.auto">update</property>
 
     <property name="show_sql">true</property>
     <property name="format_sql">true</property>
-  </session-factory>
-</hibernate-configuration>
+
+    <!-- Mapped classes -->
+    <mapping class="com.digipet.prototype.orm.BadgeEntity"/>
+    <mapping class="com.digipet.prototype.orm.BadgeXCuidadorEntity"/>
+    <mapping class="com.digipet.prototype.orm.ClienteEntity"/>
+    <mapping class="com.digipet.prototype.orm.CuidadorEntity"/>
+    <mapping class="com.digipet.prototype.orm.DenunciaEntity"/>
+    <mapping class="com.digipet.prototype.orm.DisponibilidadXCuidadorEntity"/>
+    <mapping class="com.digipet.prototype.orm.EstadoEntity"/>
+    <mapping class="com.digipet.prototype.orm.FotoXMascotaEntity"/>
+    <mapping class="com.digipet.prototype.orm.FotoXReporteEntity"/>
+    <mapping class="com.digipet.prototype.orm.HotelEntity"/>
+    <mapping class="com.digipet.prototype.orm.MascotaEntity"/>
+    <mapping class="com.digipet.prototype.orm.PagoXClienteEntity"/>
+    <mapping class="com.digipet.prototype.orm.ProvinciaEntity"/>
+    <mapping class="com.digipet.prototype.orm.ProvinciaXCuidadorEntity"/>
+    <mapping class="com.digipet.prototype.orm.ReporteEntity"/>
+    <mapping class="com.digipet.prototype.orm.RolEntity"/>
+    <mapping class="com.digipet.prototype.orm.ServicioEntity"/>
+    <mapping class="com.digipet.prototype.orm.SolicitudEntity"/>
+    <mapping class="com.digipet.prototype.orm.SolicitudXCuidadorEntity"/>
+    <mapping class="com.digipet.prototype.orm.SolicitudXHotelEntity"/>
+    <mapping class="com.digipet.prototype.orm.TamanoEntity"/>
+    <mapping class="com.digipet.prototype.orm.UniversidadEntity"/>
+    <mapping class="com.digipet.prototype.orm.UsuarioEntity"/>
+  </session-factory></hibernate-configuration>
