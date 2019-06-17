@@ -116,7 +116,7 @@ public class MascotaRepository {
             session.close();
 
         } catch (Exception e){
-            System.out.println("Durante el procesamiento de insertarFotoMascota");
+            System.out.println("Durante el procesamiento de insertarFotoMascotaSP");
             throw e;
         }
     }
