@@ -3,6 +3,8 @@ package com.digipet.prototype.orm;
 import javax.persistence.*;
 import java.util.Objects;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 @Entity
 @Table(name = "USUARIO", schema = "digipet")
 public class UsuarioEntity {
@@ -17,7 +19,8 @@ public class UsuarioEntity {
     private EstadoEntity estado;
 
     @Id
-    @Column(name = "Id_usuario")
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "Id_usuario", nullable = false)
     public int getIdUsuario() {
         return idUsuario;
     }
@@ -27,7 +30,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Primer_nombre")
+    @Column(name = "Primer_nombre", nullable = false, length = 30)
     public String getPrimerNombre() {
         return primerNombre;
     }
@@ -37,7 +40,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Primer_apellido")
+    @Column(name = "Primer_apellido", nullable = false, length = 30)
     public String getPrimerApellido() {
         return primerApellido;
     }
@@ -47,7 +50,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Segundo_apellido")
+    @Column(name = "Segundo_apellido", nullable = true, length = 30)
     public String getSegundoApellido() {
         return segundoApellido;
     }
@@ -67,7 +70,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Contrasena")
+    @Column(name = "Contrasena", nullable = false, length = 8)
     public String getContrasena() {
         return contrasena;
     }
@@ -77,7 +80,7 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "Foto_perfil")
+    @Column(name = "Foto_perfil", nullable = false, length = 30)
     public String getFotoPerfil() {
         return fotoPerfil;
     }

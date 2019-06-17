@@ -10,7 +10,7 @@ public class ProvinciaEntity {
     private String nombre;
 
     @Id
-    @Column(name = "Id_provincia")
+    @Column(name = "Id_provincia", nullable = false)
     public int getIdProvincia() {
         return idProvincia;
     }
@@ -20,7 +20,7 @@ public class ProvinciaEntity {
     }
 
     @Basic
-    @Column(name = "Nombre")
+    @Column(name = "Nombre", nullable = false, length = 30)
     public String getNombre() {
         return nombre;
     }

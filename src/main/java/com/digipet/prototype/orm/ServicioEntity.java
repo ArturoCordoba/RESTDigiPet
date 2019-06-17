@@ -11,7 +11,7 @@ public class ServicioEntity {
     private int precio;
 
     @Id
-    @Column(name = "Id_servicio")
+    @Column(name = "Id_servicio", nullable = false)
     public int getIdServicio() {
         return idServicio;
     }
@@ -21,7 +21,7 @@ public class ServicioEntity {
     }
 
     @Basic
-    @Column(name = "Nombre")
+    @Column(name = "Nombre", nullable = false, length = 20)
     public String getNombre() {
         return nombre;
     }
@@ -31,7 +31,7 @@ public class ServicioEntity {
     }
 
     @Basic
-    @Column(name = "Precio")
+    @Column(name = "Precio", nullable = false)
     public int getPrecio() {
         return precio;
     }

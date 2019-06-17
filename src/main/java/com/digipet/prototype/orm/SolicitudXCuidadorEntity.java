@@ -24,7 +24,7 @@ public class SolicitudXCuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Metodo_pago")
+    @Column(name = "Metodo_pago", nullable = false, length = 30)
     public String getMetodoPago() {
         return metodoPago;
     }
@@ -34,7 +34,7 @@ public class SolicitudXCuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Direccion")
+    @Column(name = "Direccion", nullable = false, length = 300)
     public String getDireccion() {
         return direccion;
     }
@@ -44,7 +44,7 @@ public class SolicitudXCuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Descripcion")
+    @Column(name = "Descripcion", nullable = false, length = 300)
     public String getDescripcion() {
         return descripcion;
     }

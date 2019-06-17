@@ -3,6 +3,8 @@ package com.digipet.prototype.orm;
 import javax.persistence.*;
 import java.util.Objects;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 @Entity
 @Table(name = "BADGE", schema = "digipet")
 public class BadgeEntity {
@@ -10,7 +12,8 @@ public class BadgeEntity {
     private String nombre;
 
     @Id
-    @Column(name = "Id_badge")
+    @GeneratedValue(strategy=IDENTITY)
+    @Column(name = "Id_badge", nullable = false)
     public int getIdBadge() {
         return idBadge;
     }
@@ -20,7 +23,7 @@ public class BadgeEntity {
     }
 
     @Basic
-    @Column(name = "Nombre")
+    @Column(name = "Nombre", nullable = false, length = 30)
     public String getNombre() {
         return nombre;
     }

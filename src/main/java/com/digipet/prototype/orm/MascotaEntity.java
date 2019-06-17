@@ -20,7 +20,7 @@ public class MascotaEntity {
     private List<SolicitudEntity> listaSolicitudes;
 
     @Id
-    @Column(name = "Id_mascota")
+    @Column(name = "Id_mascota", nullable = false)
     public int getIdMascota() {
         return idMascota;
     }
@@ -40,7 +40,7 @@ public class MascotaEntity {
     }
 
     @Basic
-    @Column(name = "Raza")
+    @Column(name = "Raza", nullable = false, length = 30)
     public String getRaza() {
         return raza;
     }
@@ -50,7 +50,7 @@ public class MascotaEntity {
     }
 
     @Basic
-    @Column(name = "Edad")
+    @Column(name = "Edad", nullable = false)
     public int getEdad() {
         return edad;
     }
@@ -70,7 +70,7 @@ public class MascotaEntity {
     }
 
     @Basic
-    @Column(name = "Fecha_inscripcion")
+    @Column(name = "Fecha_inscripcion", nullable = false)
     public Date getFechaInscripcion() {
         return fechaInscripcion;
     }

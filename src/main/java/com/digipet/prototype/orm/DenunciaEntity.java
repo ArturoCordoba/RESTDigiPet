@@ -12,7 +12,7 @@ public class DenunciaEntity {
     private CuidadorEntity cuidador;
 
     @Id
-    @Column(name = "Id_denuncia")
+    @Column(name = "Id_denuncia", nullable = false)
     public int getIdDenuncia() {
         return idDenuncia;
     }

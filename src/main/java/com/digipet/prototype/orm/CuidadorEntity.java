@@ -24,7 +24,7 @@ public class CuidadorEntity {
     private List<SolicitudXCuidadorEntity> listaSolicitudes;
 
     @Id
-    @Column(name = "Id_cuidador")
+    @Column(name = "Id_cuidador", nullable = false)
     public int getIdCuidador() {
         return idCuidador;
     }
@@ -34,7 +34,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Carne")
+    @Column(name = "Carne", nullable = false, length = 10)
     public String getCarne() {
         return carne;
     }
@@ -44,7 +44,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Telefono_movil")
+    @Column(name = "Telefono_movil", nullable = false, length = 10)
     public String getTelefonoMovil() {
         return telefonoMovil;
     }
@@ -64,7 +64,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Opcion_provincias")
+    @Column(name = "Opcion_provincias", nullable = false)
     public byte getOpcionProvincias() {
         return opcionProvincias;
     }
@@ -74,7 +74,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Email_2")
+    @Column(name = "Email_2", nullable = true, length = 30)
     public String getEmail2() {
         return email2;
     }
@@ -84,7 +84,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Descripcion")
+    @Column(name = "Descripcion", nullable = false, length = 300)
     public String getDescripcion() {
         return descripcion;
     }
@@ -94,7 +94,7 @@ public class CuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Fecha_Inscripcion")
+    @Column(name = "Fecha_Inscripcion", nullable = false)
     public Date getFechaInscripcion() {
         return fechaInscripcion;
     }

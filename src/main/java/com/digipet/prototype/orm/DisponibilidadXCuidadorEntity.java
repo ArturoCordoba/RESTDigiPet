@@ -13,7 +13,7 @@ public class DisponibilidadXCuidadorEntity {
     private CuidadorEntity cuidador;
 
     @Id
-    @Column(name = "Id_disponibilidad")
+    @Column(name = "Id_disponibilidad", nullable = false)
     public int getIdDisponibilidad() {
         return idDisponibilidad;
     }
@@ -33,7 +33,7 @@ public class DisponibilidadXCuidadorEntity {
     }
 
     @Basic
-    @Column(name = "Fecha_hora_final")
+    @Column(name = "Fecha_hora_final", nullable = false)
     public Timestamp getFechaHoraFinal() {
         return fechaHoraFinal;
     }

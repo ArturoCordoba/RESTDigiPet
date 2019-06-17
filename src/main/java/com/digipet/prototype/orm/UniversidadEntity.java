@@ -10,7 +10,7 @@ public class UniversidadEntity {
     private String nombre;
 
     @Id
-    @Column(name = "Id_universidad")
+    @Column(name = "Id_universidad", nullable = false)
     public int getIdUniversidad() {
         return idUniversidad;
     }
@@ -20,7 +20,7 @@ public class UniversidadEntity {
     }
 
     @Basic
-    @Column(name = "Nombre")
+    @Column(name = "Nombre", nullable = false, length = 50)
     public String getNombre() {
         return nombre;
     }

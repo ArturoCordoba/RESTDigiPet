@@ -15,7 +15,7 @@ public class HotelEntity {
     private List<SolicitudXHotelEntity> listaSolicutdes;
 
     @Id
-    @Column(name = "Id_hotel")
+    @Column(name = "Id_hotel", nullable = false)
     public int getIdHotel() {
         return idHotel;
     }
@@ -25,7 +25,7 @@ public class HotelEntity {
     }
 
     @Basic
-    @Column(name = "Nombre")
+    @Column(name = "Nombre", nullable = false, length = 30)
     public String getNombre() {
         return nombre;
     }
@@ -35,7 +35,7 @@ public class HotelEntity {
     }
 
     @Basic
-    @Column(name = "Direccion")
+    @Column(name = "Direccion", nullable = false, length = 300)
     public String getDireccion() {
         return direccion;
     }
@@ -45,7 +45,7 @@ public class HotelEntity {
     }
 
     @Basic
-    @Column(name = "Capacidad")
+    @Column(name = "Capacidad", nullable = false)
     public int getCapacidad() {
         return capacidad;
     }
@@ -55,7 +55,7 @@ public class HotelEntity {
     }
 
     @Basic
-    @Column(name = "Descripcion")
+    @Column(name = "Descripcion", nullable = false, length = 300)
     public String getDescripcion() {
         return descripcion;
     }

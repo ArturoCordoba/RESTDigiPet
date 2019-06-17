@@ -23,7 +23,7 @@ public class SolicitudEntity {
     private Collection<SolicitudXHotelEntity> solicitudXHotelsByIdSolicitud;
 
     @Id
-    @Column(name = "Id_solicitud")
+    @Column(name = "Id_solicitud", nullable = false)
     public int getIdSolicitud() {
         return idSolicitud;
     }
@@ -33,7 +33,7 @@ public class SolicitudEntity {
     }
 
     @Basic
-    @Column(name = "Hora_inicio")
+    @Column(name = "Hora_inicio", nullable = false)
     public Timestamp getHoraInicio() {
         return horaInicio;
     }
@@ -43,7 +43,7 @@ public class SolicitudEntity {
     }
 
     @Basic
-    @Column(name = "Hora_final")
+    @Column(name = "Hora_final", nullable = false)
     public Timestamp getHoraFinal() {
         return horaFinal;
     }
@@ -53,7 +53,7 @@ public class SolicitudEntity {
     }
 
     @Basic
-    @Column(name = "Duracion")
+    @Column(name = "Duracion", nullable = false)
     public int getDuracion() {
         return duracion;
     }
@@ -63,7 +63,7 @@ public class SolicitudEntity {
     }
 
     @Basic
-    @Column(name = "Estado_solicitud")
+    @Column(name = "Estado_solicitud", nullable = false, length = 10)
     public String getEstadoSolicitud() {
         return estadoSolicitud;
     }

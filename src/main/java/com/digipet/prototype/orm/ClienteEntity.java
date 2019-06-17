@@ -39,7 +39,7 @@ public class ClienteEntity {
     }
 
     @Id
-    @Column(name = "Id_cliente")
+    @Column(name = "Id_cliente", nullable = false)
     public int getIdCliente() {
         return idCliente;
     }
@@ -49,7 +49,7 @@ public class ClienteEntity {
     }
 
     @Basic
-    @Column(name = "Telefono_movil")
+    @Column(name = "Telefono_movil", nullable = false, length = 10)
     public String getTelefonoMovil() {
         return telefonoMovil;
     }
@@ -69,7 +69,7 @@ public class ClienteEntity {
     }
 
     @Basic
-    @Column(name = "Email_2")
+    @Column(name = "Email_2", nullable = true, length = 30)
     public String getEmail2() {
         return email2;
     }
@@ -79,7 +79,7 @@ public class ClienteEntity {
     }
 
     @Basic
-    @Column(name = "Descripcion")
+    @Column(name = "Descripcion", nullable = false, length = 300)
     public String getDescripcion() {
         return descripcion;
     }
@@ -89,7 +89,7 @@ public class ClienteEntity {
     }
 
     @Basic
-    @Column(name = "Fecha_Inscripcion")
+    @Column(name = "Fecha_Inscripcion", nullable = false)
     public Date getFechaInscripcion() {
         return fechaInscripcion;
     }

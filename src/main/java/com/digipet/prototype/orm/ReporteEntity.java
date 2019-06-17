@@ -18,7 +18,7 @@ public class ReporteEntity {
     private SolicitudEntity solicitud;
 
     @Id
-    @Column(name = "Id_reporte")
+    @Column(name = "Id_reporte", nullable = false)
     public int getIdReporte() {
         return idReporte;
     }
@@ -48,7 +48,7 @@ public class ReporteEntity {
     }
 
     @Basic
-    @Column(name = "Cantidad_orines")
+    @Column(name = "Cantidad_orines", nullable = false)
     public int getCantidadOrines() {
         return cantidadOrines;
     }
@@ -58,7 +58,7 @@ public class ReporteEntity {
     }
 
     @Basic
-    @Column(name = "Cantidad_juegos")
+    @Column(name = "Cantidad_juegos", nullable = false)
     public int getCantidadJuegos() {
         return cantidadJuegos;
     }
@@ -78,7 +78,7 @@ public class ReporteEntity {
     }
 
     @Basic
-    @Column(name = "Detalles")
+    @Column(name = "Detalles", nullable = false, length = 300)
     public String getDetalles() {
         return detalles;
     }
