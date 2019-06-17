@@ -5,12 +5,10 @@ import com.digipet.prototype.api.dto.ClientDTO;
 import com.digipet.prototype.auxiliar.ORManager;
 import com.digipet.prototype.orm.ClienteEntity;
 import com.digipet.prototype.orm.UsuarioEntity;
-import org.hibernate.Hibernate;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
 import java.util.ArrayList;
-import java.util.List;
 
 public class ClientRepository {
 
@@ -45,6 +43,10 @@ public class ClientRepository {
         } else {
             throw new Exception();
         }
+    }
+
+    public static boolean registerClient(ClientDTO client){
+        return false;
     }
 
     private static ClientDTO convertToDTO(UsuarioEntity user, ClienteEntity clienteEntity){

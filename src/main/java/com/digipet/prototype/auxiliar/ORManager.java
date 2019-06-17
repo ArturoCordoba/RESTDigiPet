@@ -2,16 +2,11 @@ package com.digipet.prototype.auxiliar;
 
 import com.digipet.prototype.data.HibernateSession;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import javax.persistence.Query;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
+
 import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * Controlador que maneja las comuicaciones de los ClassEntity con la base de datos
