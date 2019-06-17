@@ -10,7 +10,7 @@ import javax.persistence.Query;
 import java.sql.Date;
 import java.util.ArrayList;
 
-public class ClientRepository {
+public class ClienteRepository {
 
     public static ArrayList<ClienteEntity> getAllClients() {
         ArrayList<ClienteEntity> data;

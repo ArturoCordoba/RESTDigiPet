@@ -9,7 +9,7 @@ import javax.persistence.Query;
 import java.sql.Date;
 import java.util.ArrayList;
 
-public class MascotRepository {
+public class MascotaRepository {
 
     public static ArrayList<MascotaEntity> getAllMascotas() {
         ArrayList<MascotaEntity> data;

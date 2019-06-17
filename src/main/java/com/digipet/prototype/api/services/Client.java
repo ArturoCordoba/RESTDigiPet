@@ -1,7 +1,7 @@
 package com.digipet.prototype.api.services;
 
 import com.digipet.prototype.api.dto.ClienteDTO;
-import com.digipet.prototype.data.ClientRepository;
+import com.digipet.prototype.data.ClienteRepository;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -15,7 +15,7 @@ public class Client {
     public ClienteDTO get(@PathParam("id") int id){
         ClienteDTO response = new ClienteDTO();
         try{
-             response = ClientRepository.getClient(id);
+             response = ClienteRepository.getClient(id);
 
             if(response != null){
                 return response;
