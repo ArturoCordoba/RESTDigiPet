@@ -3,793 +3,796 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="1498.6185822747511" y="716.0">com.digipet.prototype.orm.DenunciaEntity</node>
-    <node x="2248.858618506635" y="1268.0">com.digipet.prototype.data.CuidadorRepository</node>
-    <node x="2566.7898150379424" y="358.0">com.digipet.prototype.orm.CuidadorEntity</node>
-    <node x="1140.4550623324562" y="1268.0">com.digipet.prototype.data.ClienteRepository</node>
-    <node x="2381.071496212121" y="1074.0">com.digipet.prototype.data.AuthenticationRepository</node>
-    <node x="1947.6738123324562" y="1074.0">com.digipet.prototype.data.DenunciaRepository</node>
-    <node x="1614.6738123324562" y="1074.0">com.digipet.prototype.auxiliar.ORManager</node>
-    <node x="2768.1396420573597" y="0.0">com.digipet.prototype.orm.EstadoEntity</node>
-    <node x="3430.7571456657897" y="1352.0">com.digipet.prototype.api.services.Cuidador</node>
-    <node x="674.3717289991228" y="1352.0">com.digipet.prototype.api.services.Client</node>
-    <node x="1200.4211185066351" y="358.0">com.digipet.prototype.orm.PagoXClienteEntity</node>
-    <node x="384.0168983712756" y="1074.0">com.digipet.prototype.data.MascotaRepository</node>
-    <node x="1354.4825016469035" y="0.0">com.digipet.prototype.orm.ProvinciaEntity</node>
-    <node x="3177.613928796955" y="84.0">com.digipet.prototype.orm.BadgeXCuidadorEntity</node>
-    <node x="602.1002317046086" y="84.0">com.digipet.prototype.orm.FotoXMascotaEntity</node>
-    <node x="1573.2336185066351" y="1268.0">com.digipet.prototype.api.authentication.AuthenticationEndpoint</node>
-    <node x="560.0" y="1431.0">com.digipet.prototype.api.twitter.TwitterManager</node>
-    <node x="3520.5071456657897" y="1268.0">com.digipet.prototype.api.authentication.AuthorizationFilter</node>
-    <node x="742.240528298347" y="358.0">com.digipet.prototype.orm.MascotaEntity</node>
-    <node x="3293.0722621302884" y="0.0">com.digipet.prototype.orm.BadgeEntity</node>
-    <node x="390.5030282983471" y="358.0">com.digipet.prototype.orm.HotelEntity</node>
-    <node x="0.0" y="1431.0">com.digipet.prototype.api.dto.SolicitudCuidadorDTO</node>
-    <node x="721.6458333333335" y="1074.0">com.digipet.prototype.api.dto.ClienteDTO</node>
-    <node x="2597.8586185066356" y="1268.0">com.digipet.prototype.api.authentication.AuthenticationFilter</node>
-    <node x="2656.7988123324562" y="84.0">com.digipet.prototype.orm.UsuarioEntity</node>
-    <node x="295.0" y="1431.0">com.digipet.prototype.api.dto.SolicitudHotelDTO</node>
-    <node x="393.99052829834704" y="512.0">com.digipet.prototype.orm.SolicitudXHotelEntity</node>
-    <node x="2305.7988123324562" y="84.0">com.digipet.prototype.orm.DisponibilidadXCuidadorEntity</node>
-    <node x="304.34649729451394" y="910.0">com.digipet.prototype.api.dto.MascotaDTO</node>
-    <node x="758.2632555710743" y="512.0">com.digipet.prototype.orm.ServicioEntity</node>
-    <node x="795.0" y="1431.0">com.digipet.prototype.api.dto.BadgeDTO</node>
-    <node x="2847.7988123324562" y="84.0">com.digipet.prototype.orm.UniversidadEntity</node>
-    <node x="852.1002317046087" y="84.0">com.digipet.prototype.orm.TamanoEntity</node>
-    <node x="132.29469496501383" y="358.0">com.digipet.prototype.orm.FotoXReporteEntity</node>
-    <node x="3531.1918273476795" y="910.0">com.digipet.prototype.api.authentication.Role</node>
-    <node x="3483.1918273476795" y="1074.0">com.digipet.prototype.api.authentication.Secured</node>
-    <node x="1377.1259449650136" y="910.0">com.digipet.prototype.data.HibernateSession</node>
-    <node x="1598.4071949650136" y="84.0">com.digipet.prototype.orm.ProvinciaXCuidadorEntity</node>
-    <node x="270.321728999123" y="1268.0">com.digipet.prototype.api.services.Mascota</node>
-    <node x="744.1458333333335" y="910.0">com.digipet.prototype.api.dto.MetodoPagoDTO</node>
-    <node x="3303.1918273476795" y="1074.0">com.digipet.prototype.api.dto.CuidadorDTO</node>
-    <node x="2489.1002317046086" y="0.0">com.digipet.prototype.orm.RolEntity</node>
-    <node x="0.0" y="1074.0">com.digipet.prototype.data.ReporteRepository</node>
-    <node x="1415.666238579564" y="1074.0">com.digipet.prototype.api.dto.Credentials</node>
-    <node x="1065.9071949650136" y="512.0">com.digipet.prototype.orm.ClienteEntity</node>
-    <node x="2401.032678796955" y="512.0">com.digipet.prototype.orm.SolicitudXCuidadorEntity</node>
-    <node x="1766.6738123324562" y="1074.0">com.digipet.prototype.api.authentication.TokenManager</node>
-    <node x="1010.7291666666666" y="1074.0">com.digipet.prototype.data.SolicitudRepository</node>
-    <node x="689.740528298347" y="716.0">com.digipet.prototype.orm.SolicitudEntity</node>
-    <node x="190.14886163168035" y="512.0">com.digipet.prototype.orm.ReporteEntity</node>
+    <node x="3571.301573798256" y="6638.0">com.digipet.prototype.orm.DenunciaEntity</node>
+    <node x="150.3125" y="9901.0">com.digipet.prototype.data.CuidadorRepository</node>
+    <node x="1570.6801137836117" y="5345.0">com.digipet.prototype.orm.CuidadorEntity</node>
+    <node x="4851.521622670807" y="9914.5">com.digipet.prototype.data.ClienteRepository</node>
+    <node x="852.5" y="8909.0">com.digipet.prototype.data.AuthenticationRepository</node>
+    <node x="3535.301573798256" y="8922.5">com.digipet.prototype.data.DenunciaRepository</node>
+    <node x="3148.53518624738" y="8895.5">com.digipet.prototype.auxiliar.ORManager</node>
+    <node x="1195.4477768270901" y="0.0">com.digipet.prototype.orm.EstadoEntity</node>
+    <node x="0.0" y="10174.0">com.digipet.prototype.api.services.Cuidador</node>
+    <node x="5534.411977701018" y="10147.0">com.digipet.prototype.api.services.Client</node>
+    <node x="5145.903953887977" y="584.5">com.digipet.prototype.orm.PagoXClienteEntity</node>
+    <node x="4559.926573798256" y="8868.5">com.digipet.prototype.data.MascotaRepository</node>
+    <node x="2595.398863783612" y="584.5">com.digipet.prototype.orm.ProvinciaEntity</node>
+    <node x="1425.680113783612" y="6705.5">com.digipet.prototype.orm.BadgeXCuidadorEntity</node>
+    <node x="5449.063289337475" y="1583.5">com.digipet.prototype.orm.FotoXMascotaEntity</node>
+    <node x="1409.5" y="9941.5">com.digipet.prototype.api.authentication.AuthenticationEndpoint</node>
+    <node x="6501.688289337475" y="0.0">com.digipet.prototype.api.twitter.TwitterManager</node>
+    <node x="1049.5" y="9927.5">com.digipet.prototype.api.authentication.AuthorizationFilter</node>
+    <node x="5108.45990713159" y="2289.0">com.digipet.prototype.orm.MascotaEntity</node>
+    <node x="1345.680113783612" y="5831.0">com.digipet.prototype.orm.BadgeEntity</node>
+    <node x="3633.362684046707" y="1421.5">com.digipet.prototype.orm.HotelEntity</node>
+    <node x="5965.688289337475" y="0.0">com.digipet.prototype.api.dto.SolicitudCuidadorDTO</node>
+    <node x="5547.188289337475" y="8206.5">com.digipet.prototype.api.dto.ClienteDTO</node>
+    <node x="1740.5" y="9914.0">com.digipet.prototype.api.authentication.AuthenticationFilter</node>
+    <node x="1052.44777682709" y="301.0">com.digipet.prototype.orm.UsuarioEntity</node>
+    <node x="6251.688289337475" y="0.0">com.digipet.prototype.api.dto.SolicitudHotelDTO</node>
+    <node x="3615.862684046707" y="2599.5">com.digipet.prototype.orm.SolicitudXHotelEntity</node>
+    <node x="1164.6608778045381" y="4670.5">com.digipet.prototype.orm.DisponibilidadXCuidadorEntity</node>
+    <node x="4510.926573798256" y="7251.0">com.digipet.prototype.api.dto.MascotaDTO</node>
+    <node x="2756.59375" y="2572.5">com.digipet.prototype.orm.ServicioEntity</node>
+    <node x="6781.688289337475" y="0.0">com.digipet.prototype.api.dto.BadgeDTO</node>
+    <node x="1891.1875" y="4751.5">com.digipet.prototype.orm.UniversidadEntity</node>
+    <node x="5236.063289337475" y="1583.5">com.digipet.prototype.orm.TamanoEntity</node>
+    <node x="2886.3900444712044" y="1583.5">com.digipet.prototype.orm.FotoXReporteEntity</node>
+    <node x="984.75" y="7575.5">com.digipet.prototype.api.authentication.Role</node>
+    <node x="1196.5" y="8922.5">com.digipet.prototype.api.authentication.Secured</node>
+    <node x="3207.4408595125415" y="7561.5">com.digipet.prototype.data.HibernateSession</node>
+    <node x="1510.6608778045381" y="4738.0">com.digipet.prototype.orm.ProvinciaXCuidadorEntity</node>
+    <node x="4216.831620558161" y="9955.0">com.digipet.prototype.api.services.Mascota</node>
+    <node x="5729.063289337475" y="7616.0">com.digipet.prototype.api.dto.MetodoPagoDTO</node>
+    <node x="11.0" y="8085.0">com.digipet.prototype.api.dto.CuidadorDTO</node>
+    <node x="970.4477768270899" y="0.0">com.digipet.prototype.orm.RolEntity</node>
+    <node x="2706.53518624738" y="8909.0">com.digipet.prototype.data.ReporteRepository</node>
+    <node x="1456.129627804538" y="8854.5">com.digipet.prototype.api.dto.Credentials</node>
+    <node x="4851.854956004141" y="1219.0">com.digipet.prototype.orm.ClienteEntity</node>
+    <node x="3265.623584667821" y="4549.0">com.digipet.prototype.orm.SolicitudXCuidadorEntity</node>
+    <node x="1775.129627804538" y="8841.0">com.digipet.prototype.api.authentication.TokenManager</node>
+    <node x="3861.301573798256" y="8922.5">com.digipet.prototype.data.SolicitudRepository</node>
+    <node x="3393.8682396022623" y="3408.0">com.digipet.prototype.orm.SolicitudEntity</node>
+    <node x="2969.59375" y="2329.5">com.digipet.prototype.orm.ReporteEntity</node>
   </nodes>
   <notes />
   <edges>
     <edge source="com.digipet.prototype.orm.CuidadorEntity" target="com.digipet.prototype.orm.UsuarioEntity">
-      <point x="16.96875" y="-17.0" />
-      <point x="2674.2585650379424" y="258.0" />
-      <point x="2731.6113123324562" y="258.0" />
-      <point x="-10.6875" y="17.0" />
+      <point x="-222.1875" y="-611.5" />
+      <point x="1585.4926137836117" y="5305.0" />
+      <point x="1154.1608778045384" y="5305.0" />
+      <point x="1154.1608778045384" y="1199.0" />
+      <point x="1202.07277682709" y="1199.0" />
+      <point x="16.625" y="409.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.SolicitudXCuidadorEntity" target="com.digipet.prototype.orm.SolicitudEntity">
-      <point x="56.19999999999982" y="17.0" />
-      <point x="2597.732678796955" y="676.0" />
-      <point x="876.399619207438" y="676.0" />
-      <point x="91.15909090909099" y="-17.0" />
+      <point x="-103.125" y="-328.0" />
+      <point x="3299.998584667821" y="4489.0" />
+      <point x="3434.7253824594054" y="4489.0" />
+      <point x="-245.1428571428571" y="530.5" />
     </edge>
     <edge source="com.digipet.prototype.data.ClienteRepository" target="com.digipet.prototype.data.HibernateSession">
-      <point x="31.42857142857156" y="-17.0" />
-      <point x="1281.8836337610278" y="1178.0" />
-      <point x="1405.166238579564" y="1178.0" />
-      <point x="1405.166238579564" y="1054.0" />
-      <point x="1465.0634449650136" y="1054.0" />
-      <point x="-12.5625" y="17.0" />
+      <point x="-58.85714285714312" y="-84.5" />
+      <point x="4998.664479813664" y="9841.0" />
+      <point x="3462.0143529140464" y="9841.0" />
+      <point x="3462.0143529140464" y="8065.0" />
+      <point x="3345.2533595125415" y="8065.0" />
+      <point x="15.3125" y="71.5" />
     </edge>
     <edge source="com.digipet.prototype.data.ReporteRepository" target="com.digipet.prototype.data.HibernateSession">
-      <point x="70.33333333333348" y="-17.0" />
-      <point x="175.83333333333348" y="1024.0" />
-      <point x="1389.6884449650136" y="1024.0" />
-      <point x="-87.9375" y="17.0" />
+      <point x="140.33333333333337" y="-44.0" />
+      <point x="3057.368519580713" y="8055.0" />
+      <point x="3253.3783595125415" y="8055.0" />
+      <point x="-76.5625" y="71.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.ClienteEntity" target="com.digipet.prototype.orm.UsuarioEntity">
-      <point x="7.5" y="-17.0" />
-      <point x="1163.4071949650136" y="422.0" />
-      <point x="1119.0738616316803" y="422.0" />
-      <point x="1119.0738616316803" y="228.0" />
-      <point x="2667.4863123324562" y="228.0" />
-      <point x="-74.8125" y="17.0" />
+      <point x="-147.875" y="-490.0" />
+      <point x="4872.979956004141" y="1169.0" />
+      <point x="1268.57277682709" y="1169.0" />
+      <point x="83.125" y="409.0" />
     </edge>
     <edge source="com.digipet.prototype.data.DenunciaRepository" target="com.digipet.prototype.orm.DenunciaEntity">
-      <point x="55.25" y="-17.0" />
-      <point x="2113.4238123324562" y="1054.0" />
-      <point x="2521.571496212121" y="1054.0" />
-      <point x="2521.571496212121" y="800.0" />
-      <point x="1634.3685822747511" y="800.0" />
-      <point x="45.25" y="17.0" />
+      <point x="76.5" y="-30.5" />
+      <point x="64.5" y="206.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.FotoXReporteEntity" target="com.digipet.prototype.orm.ReporteEntity">
-      <point x="92.08333333333348" y="17.0" />
-      <point x="334.8780282983473" y="492.0" />
-      <point x="339.77386163168035" y="492.0" />
-      <point x="64.125" y="-17.0" />
+      <point x="60.5" y="125.5" />
+      <point x="3067.8900444712044" y="2259.0" />
+      <point x="3179.59375" y="2259.0" />
+      <point x="42.0" y="-409.0" />
     </edge>
     <edge source="com.digipet.prototype.data.MascotaRepository" target="com.digipet.prototype.data.HibernateSession">
-      <point x="87.91666666666652" y="-17.0" />
-      <point x="577.4335650379421" y="1034.0" />
-      <point x="1414.8134449650136" y="1034.0" />
-      <point x="-62.8125" y="17.0" />
+      <point x="-197.5" y="-84.5" />
+      <point x="4599.426573798256" y="8035.0" />
+      <point x="3437.1283595125415" y="8035.0" />
+      <point x="107.1875" y="71.5" />
     </edge>
     <edge source="com.digipet.prototype.api.authentication.AuthorizationFilter" target="com.digipet.prototype.api.authentication.Role">
-      <point x="77.0" y="-17.0" />
-      <point x="3713.0071456657897" y="1238.0" />
-      <point x="3604.6918273476795" y="1238.0" />
-      <point x="3604.6918273476795" y="1054.0" />
-      <point x="3591.9418273476795" y="1054.0" />
-      <point x="20.25" y="17.0" />
+      <point x="-113.33333333333303" y="-71.5" />
+      <point x="1106.166666666667" y="9861.0" />
+      <point x="842.0" y="9861.0" />
+      <point x="842.0" y="8065.0" />
+      <point x="1019.25" y="8065.0" />
+      <point x="-34.5" y="57.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.FotoXMascotaEntity">
-      <point x="-96.13043478260852" y="-17.0" />
-      <point x="1381.495510182405" y="880.0" />
-      <point x="121.79469496501383" y="880.0" />
-      <point x="121.79469496501383" y="338.0" />
-      <point x="659.6002317046086" y="338.0" />
-      <point x="-57.5" y="17.0" />
+      <point x="95.86956521739148" y="-71.5" />
+      <point x="3425.810424729933" y="7211.0" />
+      <point x="5578.05423874312" y="7211.0" />
+      <point x="5578.05423874312" y="2269.0" />
+      <point x="5635.063289337475" y="2269.0" />
+      <point x="62.0" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.PagoXClienteEntity">
-      <point x="-17.47826086956502" y="-17.0" />
-      <point x="1460.1476840954485" y="790.0" />
-      <point x="1408.6346755599475" y="790.0" />
-      <point x="1408.6346755599475" y="452.0" />
-      <point x="1411.2544518399686" y="452.0" />
-      <point x="95.83333333333348" y="17.0" />
+      <point x="106.52173913043498" y="-71.5" />
+      <point x="3436.4625986429764" y="7221.0" />
+      <point x="5707.563289337475" y="7221.0" />
+      <point x="5707.563289337475" y="1199.0" />
+      <point x="5316.903953887977" y="1199.0" />
+      <point x="57.0" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.MascotaRepository" target="com.digipet.prototype.api.dto.MascotaDTO">
-      <point x="-17.583333333333485" y="-17.0" />
-      <point x="471.9335650379421" y="984.0" />
-      <point x="386.59649729451394" y="984.0" />
-      <point x="11.75" y="17.0" />
+      <point x="-118.5" y="-84.5" />
+      <point x="4678.426573798256" y="8065.0" />
+      <point x="4642.176573798256" y="8065.0" />
+      <point x="-26.25" y="382.0" />
     </edge>
     <edge source="com.digipet.prototype.data.CuidadorRepository" target="com.digipet.prototype.auxiliar.ORManager">
-      <point x="-100.625" y="-17.0" />
-      <point x="2263.233618506635" y="1158.0" />
-      <point x="1712.9238123324562" y="1158.0" />
-      <point x="32.75" y="17.0" />
+      <point x="193.375" y="-98.0" />
+      <point x="564.6875" y="9881.0" />
+      <point x="3219.03518624738" y="9881.0" />
+      <point x="-70.5" y="57.5" />
     </edge>
     <edge source="com.digipet.prototype.auxiliar.ORManager" target="com.digipet.prototype.data.HibernateSession">
-      <point x="0.0" y="-17.0" />
-      <point x="1680.1738123324562" y="1054.0" />
-      <point x="1490.1884449650136" y="1054.0" />
-      <point x="12.5625" y="17.0" />
+      <point x="0.0" y="-57.5" />
+      <point x="3289.53518624738" y="8065.0" />
+      <point x="3314.6283595125415" y="8065.0" />
+      <point x="-15.3125" y="71.5" />
     </edge>
     <edge source="com.digipet.prototype.data.SolicitudRepository" target="com.digipet.prototype.orm.SolicitudEntity">
-      <point x="-57.75" y="-17.0" />
-      <point x="1068.4791666666665" y="890.0" />
-      <point x="785.240528298347" y="890.0" />
-      <point x="0.0" y="17.0" />
+      <point x="166.49999999999977" y="-30.5" />
+      <point x="4360.801573798256" y="4529.0" />
+      <point x="3843.296811030834" y="4529.0" />
+      <point x="163.42857142857133" y="530.5" />
     </edge>
     <edge source="com.digipet.prototype.api.authentication.AuthenticationFilter" target="com.digipet.prototype.api.authentication.Secured">
-      <point x="60.25" y="-17.0" />
-      <point x="2778.6086185066356" y="1248.0" />
-      <point x="3501.6918273476795" y="1248.0" />
-      <point x="-37.0" y="17.0" />
+      <point x="-104.0" y="-85.0" />
+      <point x="1844.5" y="9841.0" />
+      <point x="1311.5" y="9841.0" />
+      <point x="46.0" y="30.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.SolicitudEntity" target="com.digipet.prototype.orm.MascotaEntity">
-      <point x="-21.704545454545496" y="-17.0" />
-      <point x="763.5359828438015" y="606.0" />
-      <point x="685.0700737528925" y="606.0" />
-      <point x="685.0700737528925" y="462.0" />
-      <point x="769.240528298347" y="462.0" />
-      <point x="-63.0" y="17.0" />
+      <point x="174.77777777777783" y="-530.5" />
+      <point x="3854.6460173800406" y="3358.0" />
+      <point x="5136.70990713159" y="3358.0" />
+      <point x="-141.25" y="449.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.ClienteEntity">
-      <point x="-26.217391304347984" y="-17.0" />
-      <point x="1451.4085536606656" y="800.0" />
-      <point x="1399.8955451251645" y="800.0" />
-      <point x="1399.8955451251645" y="636.0" />
-      <point x="1189.6571949650136" y="636.0" />
-      <point x="33.75" y="17.0" />
+      <point x="63.91304347826099" y="-71.5" />
+      <point x="3393.8539029908025" y="7181.0" />
+      <point x="4992.021622670807" y="7181.0" />
+      <point x="4992.021622670807" y="2269.0" />
+      <point x="5034.938289337475" y="2269.0" />
+      <point x="14.083333333333485" y="490.0" />
     </edge>
     <edge source="com.digipet.prototype.api.services.Client" target="com.digipet.prototype.api.dto.ClienteDTO">
-      <point x="-36.666666666666515" y="-17.0" />
-      <point x="692.7050623324562" y="1332.0" />
-      <point x="660.2668983712756" y="1332.0" />
-      <point x="660.2668983712756" y="1248.0" />
-      <point x="740.3958333333335" y="1248.0" />
-      <point x="-56.25" y="17.0" />
+      <point x="0.0" y="-57.5" />
+      <point x="5679.411977701018" y="10117.0" />
+      <point x="5809.438289337475" y="10117.0" />
+      <point x="5809.438289337475" y="9871.0" />
+      <point x="5770.313289337475" y="9871.0" />
+      <point x="44.625" y="746.5" />
     </edge>
     <edge source="com.digipet.prototype.api.dto.ClienteDTO" target="com.digipet.prototype.api.dto.MascotaDTO">
-      <point x="-56.25" y="-17.0" />
-      <point x="740.3958333333335" y="974.0" />
-      <point x="410.09649729451394" y="974.0" />
-      <point x="35.25" y="17.0" />
+      <point x="-44.625" y="-746.5" />
+      <point x="5681.063289337475" y="8035.0" />
+      <point x="4799.676573798256" y="8035.0" />
+      <point x="131.25" y="382.0" />
     </edge>
     <edge source="com.digipet.prototype.data.CuidadorRepository" target="com.digipet.prototype.orm.BadgeXCuidadorEntity">
-      <point x="43.125" y="-17.0" />
-      <point x="2406.983618506635" y="1218.0" />
-      <point x="3213.9333945040466" y="1218.0" />
-      <point x="3213.9333945040466" y="338.0" />
-      <point x="3398.5305954636215" y="338.0" />
-      <point x="100.41666666666674" y="17.0" />
+      <point x="27.625" y="-98.0" />
+      <point x="398.9375" y="9851.0" />
+      <point x="702.0" y="9851.0" />
+      <point x="702.0" y="7221.0" />
+      <point x="1493.180113783612" y="7221.0" />
+      <point x="-67.5" y="139.0" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.SolicitudEntity">
-      <point x="-52.434782608695514" y="-17.0" />
-      <point x="1425.191162356318" y="830.0" />
-      <point x="848.9071949650136" y="830.0" />
-      <point x="63.666666666666515" y="17.0" />
+      <point x="31.956521739130494" y="-71.5" />
+      <point x="3361.897381251672" y="7151.0" />
+      <point x="3551.123584667821" y="7151.0" />
+      <point x="3551.123584667821" y="4529.0" />
+      <point x="3761.5825253165485" y="4529.0" />
+      <point x="81.71428571428578" y="530.5" />
     </edge>
     <edge source="com.digipet.prototype.data.CuidadorRepository" target="com.digipet.prototype.orm.CuidadorEntity">
-      <point x="-14.375" y="-17.0" />
-      <point x="2349.483618506635" y="1188.0" />
-      <point x="2741.8835650379424" y="1188.0" />
-      <point x="2741.8835650379424" y="492.0" />
-      <point x="2736.4773150379424" y="492.0" />
-      <point x="79.1875" y="17.0" />
+      <point x="82.875" y="-98.0" />
+      <point x="454.1875" y="9861.0" />
+      <point x="814.0" y="9861.0" />
+      <point x="814.0" y="7231.0" />
+      <point x="1837.3051137836117" y="7231.0" />
+      <point x="29.625" y="611.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.UsuarioEntity" target="com.digipet.prototype.orm.RolEntity">
-      <point x="-21.375" y="-17.0" />
-      <point x="2720.9238123324562" y="54.0" />
-      <point x="2598.2668983712756" y="54.0" />
-      <point x="43.66666666666663" y="17.0" />
+      <point x="-99.75" y="-409.0" />
+      <point x="1085.69777682709" y="276.0" />
+      <point x="1072.94777682709" y="276.0" />
+      <point x="0.0" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.ReporteRepository" target="com.digipet.prototype.orm.FotoXReporteEntity">
-      <point x="-70.33333333333348" y="-17.0" />
-      <point x="35.166666666666515" y="1044.0" />
-      <point x="157.64886163168035" y="1044.0" />
-      <point x="157.64886163168035" y="492.0" />
-      <point x="150.71136163168035" y="492.0" />
-      <point x="-92.08333333333348" y="17.0" />
+      <point x="-140.33333333333337" y="-44.0" />
+      <point x="2776.7018529140464" y="8035.0" />
+      <point x="2654.9295370487735" y="8035.0" />
+      <point x="2654.9295370487735" y="2259.0" />
+      <point x="2906.5567111378714" y="2259.0" />
+      <point x="-100.83333333333337" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.UsuarioEntity">
-      <point x="61.17391304347848" y="-17.0" />
-      <point x="1538.799858008492" y="850.0" />
-      <point x="2866.363928796955" y="850.0" />
-      <point x="2866.363928796955" y="258.0" />
-      <point x="2752.9863123324562" y="258.0" />
-      <point x="10.6875" y="17.0" />
+      <point x="-106.52173913043453" y="-71.5" />
+      <point x="3223.419120382107" y="7181.0" />
+      <point x="1143.1608778045384" y="7181.0" />
+      <point x="1143.1608778045384" y="1189.0" />
+      <point x="1168.82277682709" y="1189.0" />
+      <point x="-16.625" y="409.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.ReporteEntity" target="com.digipet.prototype.orm.SolicitudEntity">
-      <point x="71.25" y="17.0" />
-      <point x="346.89886163168035" y="656.0" />
-      <point x="720.1268919347106" y="656.0" />
-      <point x="-65.11363636363649" y="-17.0" />
+      <point x="84.0" y="409.0" />
+      <point x="3221.59375" y="3218.0" />
+      <point x="3536.8682396022627" y="3218.0" />
+      <point x="-142.99999999999977" y="-530.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.SolicitudEntity" target="com.digipet.prototype.orm.ServicioEntity">
-      <point x="13.02272727272748" y="-17.0" />
-      <point x="798.2632555710745" y="566.0" />
-      <point x="788.4299222377408" y="566.0" />
-      <point x="-60.333333333333485" y="17.0" />
+      <point x="-238.33333333333326" y="-530.5" />
+      <point x="3441.5349062689293" y="3248.0" />
+      <point x="2917.427083333333" y="3248.0" />
+      <point x="64.33333333333326" y="166.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.ClienteEntity" target="com.digipet.prototype.orm.PagoXClienteEntity">
-      <point x="37.5" y="-17.0" />
-      <point x="1193.4071949650136" y="422.0" />
-      <point x="1257.9211185066351" y="422.0" />
-      <point x="-57.5" y="17.0" />
+      <point x="21.125" y="-490.0" />
+      <point x="5041.979956004141" y="1169.0" />
+      <point x="5164.903953887977" y="1169.0" />
+      <point x="-95.0" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.api.authentication.AuthenticationEndpoint" target="com.digipet.prototype.data.AuthenticationRepository">
-      <point x="87.0" y="-17.0" />
-      <point x="1790.7336185066351" y="1178.0" />
-      <point x="2521.571496212121" y="1178.0" />
-      <point x="0.0" y="17.0" />
+      <point x="-103.66666666666652" y="-57.5" />
+      <point x="1461.3333333333335" y="9851.0" />
+      <point x="1014.5" y="9851.0" />
+      <point x="0.0" y="44.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.SolicitudEntity" target="com.digipet.prototype.orm.SolicitudXHotelEntity">
-      <point x="-56.43181818181802" y="-17.0" />
-      <point x="728.808710116529" y="646.0" />
-      <point x="469.2905282983472" y="646.0" />
-      <point x="-50.19999999999982" y="17.0" />
+      <point x="-47.666666666666515" y="-530.5" />
+      <point x="3632.2015729355962" y="3288.0" />
+      <point x="3785.362684046707" y="3288.0" />
+      <point x="0.0" y="139.0" />
     </edge>
     <edge source="com.digipet.prototype.data.CuidadorRepository" target="com.digipet.prototype.orm.UsuarioEntity">
-      <point x="14.375" y="-17.0" />
-      <point x="2378.233618506635" y="1208.0" />
-      <point x="2909.0875587240266" y="1208.0" />
-      <point x="2909.0875587240266" y="228.0" />
-      <point x="2817.1113123324562" y="228.0" />
-      <point x="74.8125" y="17.0" />
+      <point x="-82.875" y="-98.0" />
+      <point x="288.4375" y="9871.0" />
+      <point x="349.3125" y="9871.0" />
+      <point x="349.3125" y="1189.0" />
+      <point x="1069.07277682709" y="1189.0" />
+      <point x="-116.375" y="409.0" />
     </edge>
     <edge source="com.digipet.prototype.api.services.Cuidador" target="com.digipet.prototype.data.CuidadorRepository">
-      <point x="-43.33333333333334" y="-17.0" />
-      <point x="3452.4238123324567" y="1332.0" />
-      <point x="2363.858618506635" y="1332.0" />
-      <point x="0.0" y="17.0" />
+      <point x="64.33333333333303" y="-30.5" />
+      <point x="160.83333333333303" y="10127.0" />
+      <point x="371.3125" y="10127.0" />
+      <point x="0.0" y="98.0" />
     </edge>
     <edge source="com.digipet.prototype.api.services.Mascota" target="com.digipet.prototype.data.MascotaRepository">
-      <point x="37.0" y="-17.0" />
-      <point x="362.821728999123" y="1248.0" />
-      <point x="489.5168983712756" y="1248.0" />
-      <point x="0.0" y="17.0" />
+      <point x="144.33333333333337" y="-44.0" />
+      <point x="4577.664953891494" y="9881.0" />
+      <point x="4796.926573798256" y="9881.0" />
+      <point x="0.0" y="84.5" />
     </edge>
     <edge source="com.digipet.prototype.data.ClienteRepository" target="com.digipet.prototype.orm.UsuarioEntity">
-      <point x="94.28571428571422" y="-17.0" />
-      <point x="1344.7407766181705" y="1198.0" />
-      <point x="2888.363928796955" y="1198.0" />
-      <point x="2888.363928796955" y="238.0" />
-      <point x="2795.7363123324562" y="238.0" />
-      <point x="53.4375" y="17.0" />
+      <point x="-176.57142857142844" y="-84.5" />
+      <point x="4880.95019409938" y="9861.0" />
+      <point x="2072.41652682709" y="9861.0" />
+      <point x="2072.41652682709" y="7201.0" />
+      <point x="1132.1608778045384" y="7201.0" />
+      <point x="1132.1608778045384" y="1199.0" />
+      <point x="1135.57277682709" y="1199.0" />
+      <point x="-49.875" y="409.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.ClienteEntity" target="com.digipet.prototype.orm.ProvinciaEntity">
-      <point x="-7.5" y="-17.0" />
-      <point x="1148.4071949650136" y="432.0" />
-      <point x="1108.0738616316803" y="432.0" />
-      <point x="1108.0738616316803" y="64.0" />
-      <point x="1411.7825016469037" y="64.0" />
-      <point x="-38.19999999999982" y="17.0" />
+      <point x="-63.375" y="-490.0" />
+      <point x="4957.479956004141" y="1149.0" />
+      <point x="2743.0988637836117" y="1149.0" />
+      <point x="42.19999999999982" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.ReporteRepository" target="com.digipet.prototype.orm.ReporteEntity">
-      <point x="0.0" y="-17.0" />
-      <point x="105.5" y="1054.0" />
-      <point x="168.64886163168035" y="1054.0" />
-      <point x="168.64886163168035" y="696.0" />
-      <point x="204.39886163168035" y="696.0" />
-      <point x="-71.25" y="17.0" />
+      <point x="0.0" y="-44.0" />
+      <point x="2917.03518624738" y="8035.0" />
+      <point x="2857.868519580713" y="8035.0" />
+      <point x="2857.868519580713" y="3388.0" />
+      <point x="2997.59375" y="3388.0" />
+      <point x="-140.0" y="409.0" />
     </edge>
     <edge source="com.digipet.prototype.api.authentication.Secured" target="com.digipet.prototype.api.authentication.Role">
-      <point x="0.0" y="-17.0" />
-      <point x="3538.6918273476795" y="1054.0" />
-      <point x="3551.4418273476795" y="1054.0" />
-      <point x="-20.25" y="17.0" />
+      <point x="0.0" y="-30.5" />
+      <point x="1265.5" y="8035.0" />
+      <point x="1088.25" y="8035.0" />
+      <point x="34.5" y="57.5" />
     </edge>
     <edge source="com.digipet.prototype.api.services.Cuidador" target="com.digipet.prototype.api.dto.CuidadorDTO">
-      <point x="43.33333333333326" y="-17.0" />
-      <point x="3539.0904789991228" y="1332.0" />
-      <point x="3506.7571456657897" y="1332.0" />
-      <point x="3506.7571456657897" y="1228.0" />
-      <point x="3443.1918273476795" y="1228.0" />
-      <point x="60.0" y="17.0" />
+      <point x="-64.33333333333303" y="-30.5" />
+      <point x="32.16666666666697" y="10127.0" />
+      <point x="85.5" y="10127.0" />
+      <point x="85.5" y="9881.0" />
+      <point x="51.0" y="9881.0" />
+      <point x="-120.0" y="868.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.FotoXMascotaEntity" target="com.digipet.prototype.orm.MascotaEntity">
-      <point x="57.5" y="17.0" />
-      <point x="774.6002317046086" y="318.0" />
-      <point x="817.240528298347" y="318.0" />
-      <point x="-15.0" y="-17.0" />
+      <point x="20.666666666666515" y="125.5" />
+      <point x="5593.729956004141" y="2259.0" />
+      <point x="5430.509907131589" y="2259.0" />
+      <point x="152.54999999999973" y="-449.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.BadgeEntity">
-      <point x="96.13043478260852" y="-17.0" />
-      <point x="1573.756379747622" y="890.0" />
-      <point x="3429.113928796955" y="890.0" />
-      <point x="3429.113928796955" y="64.0" />
-      <point x="3418.9055954636215" y="64.0" />
-      <point x="50.33333333333326" y="17.0" />
+      <point x="-74.56521739130403" y="-71.5" />
+      <point x="3255.3756421212374" y="7151.0" />
+      <point x="1380.5062007401336" y="7151.0" />
+      <point x="-68.33333333333303" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.api.services.Mascota" target="com.digipet.prototype.api.dto.MascotaDTO">
-      <point x="-37.0" y="-17.0" />
-      <point x="288.821728999123" y="1248.0" />
-      <point x="314.821728999123" y="1248.0" />
-      <point x="314.821728999123" y="1014.0" />
-      <point x="316.09649729451394" y="1014.0" />
-      <point x="-58.75" y="17.0" />
+      <point x="0.0" y="-44.0" />
+      <point x="4433.331620558161" y="9881.0" />
+      <point x="4548.801573798256" y="9881.0" />
+      <point x="4548.801573798256" y="8065.0" />
+      <point x="4589.676573798256" y="8065.0" />
+      <point x="-78.75" y="382.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.BadgeXCuidadorEntity" target="com.digipet.prototype.orm.CuidadorEntity">
-      <point x="20.083333333333258" y="17.0" />
-      <point x="3318.1972621302884" y="318.0" />
-      <point x="2742.1335650379424" y="318.0" />
-      <point x="84.84375" y="-17.0" />
+      <point x="-22.5" y="-139.0" />
+      <point x="1538.180113783612" y="6588.0" />
+      <point x="1600.3051137836117" y="6588.0" />
+      <point x="-207.375" y="611.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.SolicitudEntity" target="com.digipet.prototype.orm.ReporteEntity">
-      <point x="-82.47727272727298" y="-17.0" />
-      <point x="702.7632555710741" y="676.0" />
-      <point x="289.89886163168035" y="676.0" />
-      <point x="14.25" y="17.0" />
+      <point x="-206.55555555555543" y="-530.5" />
+      <point x="3473.312684046707" y="3238.0" />
+      <point x="3109.59375" y="3238.0" />
+      <point x="-28.0" y="409.0" />
     </edge>
     <edge source="com.digipet.prototype.api.authentication.AuthenticationEndpoint" target="com.digipet.prototype.api.authentication.TokenManager">
-      <point x="0.0" y="-17.0" />
-      <point x="1703.7336185066351" y="1168.0" />
-      <point x="1806.9238123324562" y="1168.0" />
-      <point x="-40.25" y="17.0" />
+      <point x="103.66666666666652" y="-57.5" />
+      <point x="1668.6666666666665" y="9861.0" />
+      <point x="1837.629627804538" y="9861.0" />
+      <point x="-62.5" y="112.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.CuidadorEntity" target="com.digipet.prototype.orm.BadgeXCuidadorEntity">
-      <point x="62.21875" y="-17.0" />
-      <point x="2719.5085650379424" y="298.0" />
-      <point x="3237.863928796955" y="298.0" />
-      <point x="-60.25" y="17.0" />
+      <point x="-88.875" y="611.5" />
+      <point x="1718.8051137836117" y="6608.0" />
+      <point x="1628.180113783612" y="6608.0" />
+      <point x="67.5" y="-139.0" />
     </edge>
     <edge source="com.digipet.prototype.data.ClienteRepository" target="com.digipet.prototype.api.dto.ClienteDTO">
-      <point x="-94.28571428571422" y="-17.0" />
-      <point x="1156.169348046742" y="1248.0" />
-      <point x="815.3958333333335" y="1248.0" />
-      <point x="18.75" y="17.0" />
+      <point x="117.71428571428578" y="-84.5" />
+      <point x="5175.235908385093" y="9871.0" />
+      <point x="5681.063289337475" y="9871.0" />
+      <point x="-44.625" y="746.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.CuidadorEntity" target="com.digipet.prototype.orm.UniversidadEntity">
-      <point x="39.59375" y="-17.0" />
-      <point x="2696.8835650379424" y="278.0" />
-      <point x="2953.2988123324562" y="278.0" />
-      <point x="0.0" y="17.0" />
+      <point x="74.0625" y="-611.5" />
+      <point x="1881.7426137836117" y="5265.0" />
+      <point x="1927.6875" y="5265.0" />
+      <point x="-73.0" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.SolicitudXCuidadorEntity">
-      <point x="43.695652173913004" y="-17.0" />
-      <point x="1521.3215971389266" y="830.0" />
-      <point x="2696.213999820551" y="830.0" />
-      <point x="2696.213999820551" y="676.0" />
-      <point x="2653.9326787969553" y="676.0" />
-      <point x="112.40000000000009" y="17.0" />
+      <point x="21.304347826086996" y="-71.5" />
+      <point x="3351.2452073386285" y="7141.0" />
+      <point x="3407.5687007401334" y="7141.0" />
+      <point x="3407.5687007401334" y="5325.0" />
+      <point x="3513.123584667821" y="5325.0" />
+      <point x="110.0" y="328.0" />
     </edge>
     <edge source="com.digipet.prototype.api.authentication.AuthorizationFilter" target="com.digipet.prototype.api.authentication.Secured">
-      <point x="0.0" y="-17.0" />
-      <point x="3636.0071456657897" y="1248.0" />
-      <point x="3575.6918273476795" y="1248.0" />
-      <point x="37.0" y="17.0" />
+      <point x="113.33333333333303" y="-71.5" />
+      <point x="1332.833333333333" y="9861.0" />
+      <point x="1265.5" y="9861.0" />
+      <point x="0.0" y="30.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.ClienteEntity" target="com.digipet.prototype.orm.MascotaEntity">
-      <point x="-82.5" y="-17.0" />
-      <point x="1073.4071949650136" y="482.0" />
-      <point x="859.240528298347" y="482.0" />
-      <point x="27.0" y="17.0" />
+      <point x="154.91666666666697" y="490.0" />
+      <point x="5175.771622670808" y="2239.0" />
+      <point x="5227.109907131589" y="2239.0" />
+      <point x="-50.84999999999991" y="-449.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.SolicitudXCuidadorEntity" target="com.digipet.prototype.orm.CuidadorEntity">
-      <point x="-35.125" y="-17.0" />
-      <point x="2506.407678796955" y="482.0" />
-      <point x="2600.7273150379424" y="482.0" />
-      <point x="-56.5625" y="17.0" />
+      <point x="0.0" y="328.0" />
+      <point x="3403.123584667821" y="5305.0" />
+      <point x="2000.2426137836117" y="5305.0" />
+      <point x="192.5625" y="-611.5" />
     </edge>
     <edge source="com.digipet.prototype.data.AuthenticationRepository" target="com.digipet.prototype.orm.UsuarioEntity">
-      <point x="70.25" y="-17.0" />
-      <point x="2591.821496212121" y="1054.0" />
-      <point x="2877.363928796955" y="1054.0" />
-      <point x="2877.363928796955" y="248.0" />
-      <point x="2774.3613123324562" y="248.0" />
-      <point x="32.0625" y="17.0" />
+      <point x="-81.0" y="-44.0" />
+      <point x="933.5" y="8055.0" />
+      <point x="371.3125" y="8055.0" />
+      <point x="371.3125" y="1199.0" />
+      <point x="1102.32277682709" y="1199.0" />
+      <point x="-83.125" y="409.0" />
     </edge>
     <edge source="com.digipet.prototype.api.authentication.AuthenticationEndpoint" target="com.digipet.prototype.api.dto.Credentials">
-      <point x="-87.0" y="-17.0" />
-      <point x="1616.7336185066351" y="1178.0" />
-      <point x="1491.166238579564" y="1178.0" />
-      <point x="0.0" y="17.0" />
+      <point x="0.0" y="-57.5" />
+      <point x="1565.0" y="9861.0" />
+      <point x="1562.129627804538" y="9861.0" />
+      <point x="0.0" y="98.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.BadgeXCuidadorEntity">
-      <point x="87.39130434782601" y="-17.0" />
-      <point x="1565.0172493128396" y="880.0" />
-      <point x="3202.9333945040466" y="880.0" />
-      <point x="3202.9333945040466" y="328.0" />
-      <point x="3358.363928796955" y="328.0" />
-      <point x="60.25" y="17.0" />
+      <point x="-63.91304347826099" y="-71.5" />
+      <point x="3266.0278160342805" y="7141.0" />
+      <point x="1628.180113783612" y="7141.0" />
+      <point x="67.5" y="139.0" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.DenunciaEntity">
-      <point x="17.47826086956502" y="-17.0" />
-      <point x="1495.1042058345786" y="800.0" />
-      <point x="1543.8685822747511" y="800.0" />
-      <point x="-45.25" y="17.0" />
+      <point x="42.60869565217399" y="-71.5" />
+      <point x="3372.5495551647155" y="7161.0" />
+      <point x="3635.801573798256" y="7161.0" />
+      <point x="-64.5" y="206.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.SolicitudXHotelEntity" target="com.digipet.prototype.orm.HotelEntity">
-      <point x="-94.125" y="-17.0" />
-      <point x="425.36552829834704" y="492.0" />
-      <point x="435.8030282983473" y="492.0" />
-      <point x="-30.199999999999818" y="17.0" />
+      <point x="-42.375" y="-139.0" />
+      <point x="3742.987684046707" y="2269.0" />
+      <point x="3747.362684046707" y="2269.0" />
+      <point x="-76.0" y="287.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.CuidadorEntity">
-      <point x="52.434782608695514" y="-17.0" />
-      <point x="1530.060727573709" y="840.0" />
-      <point x="2730.8835650379424" y="840.0" />
-      <point x="2730.8835650379424" y="472.0" />
-      <point x="2713.8523150379424" y="472.0" />
-      <point x="56.5625" y="17.0" />
+      <point x="-53.26086956521749" y="-71.5" />
+      <point x="3276.679989947324" y="7131.0" />
+      <point x="2192.5318267348384" y="7131.0" />
+      <point x="2192.5318267348384" y="6618.0" />
+      <point x="1896.5551137836117" y="6618.0" />
+      <point x="88.875" y="611.5" />
     </edge>
     <edge source="com.digipet.prototype.data.MascotaRepository" target="com.digipet.prototype.orm.SolicitudEntity">
-      <point x="52.75" y="-17.0" />
-      <point x="542.2668983712756" y="1014.0" />
-      <point x="682.1571949650138" y="1014.0" />
-      <point x="682.1571949650138" y="890.0" />
-      <point x="721.5738616316805" y="890.0" />
-      <point x="-63.666666666666515" y="17.0" />
+      <point x="39.5" y="-84.5" />
+      <point x="4836.426573798256" y="4519.0" />
+      <point x="3925.0110967451196" y="4519.0" />
+      <point x="245.1428571428571" y="530.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.DisponibilidadXCuidadorEntity" target="com.digipet.prototype.orm.CuidadorEntity">
-      <point x="66.20000000000005" y="17.0" />
-      <point x="2537.4988123324565" y="148.0" />
-      <point x="2640.3210650379424" y="148.0" />
-      <point x="-16.96875" y="-17.0" />
+      <point x="130.0" y="206.5" />
+      <point x="1457.1608778045381" y="5265.0" />
+      <point x="1703.9926137836117" y="5265.0" />
+      <point x="-103.6875" y="-611.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.EstadoEntity">
-      <point x="78.6521739130435" y="-17.0" />
-      <point x="1556.278118878057" y="870.0" />
-      <point x="3167.113928796955" y="870.0" />
-      <point x="3167.113928796955" y="64.0" />
-      <point x="2902.306308724026" y="64.0" />
-      <point x="53.66666666666663" y="17.0" />
+      <point x="117.17391304347848" y="-71.5" />
+      <point x="3447.11477255602" y="7231.0" />
+      <point x="5816.625789337475" y="7231.0" />
+      <point x="5816.625789337475" y="276.0" />
+      <point x="1366.2811101604232" y="276.0" />
+      <point x="68.33333333333303" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.AuthenticationRepository" target="com.digipet.prototype.data.HibernateSession">
-      <point x="-70.25" y="-17.0" />
-      <point x="2451.321496212121" y="1024.0" />
-      <point x="1565.5634449650136" y="1024.0" />
-      <point x="87.9375" y="17.0" />
+      <point x="81.0" y="-44.0" />
+      <point x="1095.5" y="8045.0" />
+      <point x="3222.7533595125415" y="8045.0" />
+      <point x="-107.1875" y="71.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.CuidadorEntity" target="com.digipet.prototype.orm.ProvinciaXCuidadorEntity">
-      <point x="-84.84375" y="-17.0" />
-      <point x="2572.4460650379424" y="208.0" />
-      <point x="1715.4905282983468" y="208.0" />
-      <point x="-23.416666666666742" y="17.0" />
+      <point x="-14.8125" y="-611.5" />
+      <point x="1792.8676137836117" y="5235.0" />
+      <point x="1718.9108778045381" y="5235.0" />
+      <point x="29.75" y="139.0" />
     </edge>
     <edge source="com.digipet.prototype.api.dto.ClienteDTO" target="com.digipet.prototype.api.dto.MetodoPagoDTO">
-      <point x="56.25" y="-17.0" />
-      <point x="852.8958333333335" y="1014.0" />
-      <point x="879.1458333333335" y="1014.0" />
-      <point x="45.0" y="17.0" />
+      <point x="44.625" y="-746.5" />
+      <point x="-41.25" y="17.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.UsuarioEntity" target="com.digipet.prototype.orm.EstadoEntity">
-      <point x="64.125" y="-17.0" />
-      <point x="2806.4238123324562" y="64.0" />
-      <point x="2848.6396420573597" y="64.0" />
-      <point x="0.0" y="17.0" />
+      <point x="33.25" y="-409.0" />
+      <point x="1218.69777682709" y="276.0" />
+      <point x="1229.614443493757" y="276.0" />
+      <point x="-68.33333333333303" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.ClienteEntity" target="com.digipet.prototype.orm.SolicitudEntity">
-      <point x="-11.25" y="17.0" />
-      <point x="1144.6571949650136" y="626.0" />
-      <point x="841.6723464801651" y="626.0" />
-      <point x="56.43181818181802" y="-17.0" />
+      <point x="-98.58333333333326" y="490.0" />
+      <point x="4922.271622670808" y="2249.0" />
+      <point x="4948.021622670807" y="2249.0" />
+      <point x="4948.021622670807" y="3338.0" />
+      <point x="3791.090461824485" y="3338.0" />
+      <point x="111.2222222222224" y="-530.5" />
     </edge>
     <edge source="com.digipet.prototype.api.authentication.AuthenticationFilter" target="com.digipet.prototype.api.authentication.TokenManager">
-      <point x="-60.25" y="-17.0" />
-      <point x="2658.1086185066356" y="1128.0" />
-      <point x="1887.4238123324562" y="1128.0" />
-      <point x="40.25" y="17.0" />
+      <point x="104.0" y="-85.0" />
+      <point x="2052.5" y="9861.0" />
+      <point x="1962.629627804538" y="9861.0" />
+      <point x="62.5" y="112.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.MascotaEntity" target="com.digipet.prototype.orm.ClienteEntity">
-      <point x="63.0" y="17.0" />
-      <point x="895.240528298347" y="462.0" />
-      <point x="1103.4071949650136" y="462.0" />
-      <point x="-52.5" y="-17.0" />
+      <point x="-118.64999999999986" y="-449.5" />
+      <point x="5159.309907131589" y="2259.0" />
+      <point x="5119.438289337475" y="2259.0" />
+      <point x="98.58333333333348" y="490.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.DenunciaEntity" target="com.digipet.prototype.orm.ClienteEntity">
-      <point x="-67.875" y="-17.0" />
-      <point x="1521.2435822747511" y="626.0" />
-      <point x="1212.1571949650136" y="626.0" />
-      <point x="56.25" y="17.0" />
+      <point x="96.75" y="-206.5" />
+      <point x="3797.051573798256" y="6618.0" />
+      <point x="4981.021622670807" y="6618.0" />
+      <point x="4981.021622670807" y="2259.0" />
+      <point x="5006.771622670808" y="2259.0" />
+      <point x="-14.083333333333258" y="490.0" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.ReporteEntity">
-      <point x="-78.6521739130435" y="-17.0" />
-      <point x="1398.97377105197" y="860.0" />
-      <point x="288.9660625119054" y="860.0" />
-      <point x="288.9660625119054" y="696.0" />
-      <point x="232.89886163168035" y="696.0" />
-      <point x="-42.75" y="17.0" />
+      <point x="0.0" y="-71.5" />
+      <point x="3329.9408595125415" y="7081.0" />
+      <point x="3169.905533425585" y="7081.0" />
+      <point x="3169.905533425585" y="3388.0" />
+      <point x="3053.59375" y="3388.0" />
+      <point x="-84.0" y="409.0" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.FotoXReporteEntity">
-      <point x="-87.39130434782601" y="-17.0" />
-      <point x="1390.2346406171876" y="870.0" />
-      <point x="179.64886163168035" y="870.0" />
-      <point x="179.64886163168035" y="492.0" />
-      <point x="187.54469496501383" y="492.0" />
-      <point x="-55.25" y="17.0" />
+      <point x="-21.304347826086996" y="-71.5" />
+      <point x="3308.6365116864545" y="7101.0" />
+      <point x="2665.9295370487735" y="7101.0" />
+      <point x="2665.9295370487735" y="2269.0" />
+      <point x="2946.8900444712044" y="2269.0" />
+      <point x="-60.5" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.ProvinciaXCuidadorEntity">
-      <point x="8.73913043478251" y="-17.0" />
-      <point x="1486.365075399796" y="890.0" />
-      <point x="1488.1185822747511" y="890.0" />
-      <point x="1488.1185822747511" y="218.0" />
-      <point x="1621.8238616316803" y="218.0" />
-      <point x="-117.08333333333326" y="17.0" />
+      <point x="-85.21739130434753" y="-71.5" />
+      <point x="3244.723468208194" y="7161.0" />
+      <point x="1335.180113783612" y="7161.0" />
+      <point x="1335.180113783612" y="5325.0" />
+      <point x="1599.9108778045381" y="5325.0" />
+      <point x="-89.25" y="139.0" />
     </edge>
     <edge source="com.digipet.prototype.data.ClienteRepository" target="com.digipet.prototype.orm.ClienteEntity">
-      <point x="-31.42857142857156" y="-17.0" />
-      <point x="1219.0264909038847" y="1228.0" />
-      <point x="940.1458333333334" y="1228.0" />
-      <point x="940.1458333333334" y="636.0" />
-      <point x="1167.1571949650136" y="636.0" />
-      <point x="11.25" y="17.0" />
-    </edge>
-    <edge source="com.digipet.prototype.orm.BadgeXCuidadorEntity" target="com.digipet.prototype.orm.BadgeEntity">
-      <point x="-60.25" y="-17.0" />
-      <point x="3237.863928796955" y="64.0" />
-      <point x="3318.2389287969554" y="64.0" />
-      <point x="-50.33333333333326" y="17.0" />
-    </edge>
-    <edge source="com.digipet.prototype.api.services.Client" target="com.digipet.prototype.data.ClienteRepository">
-      <point x="36.666666666666515" y="-17.0" />
-      <point x="766.0383956657893" y="1332.0" />
-      <point x="1250.4550623324562" y="1332.0" />
-      <point x="0.0" y="17.0" />
+      <point x="0.0" y="-84.5" />
+      <point x="5057.521622670807" y="9881.0" />
+      <point x="5084.443240464922" y="9881.0" />
+      <point x="5084.443240464922" y="2269.0" />
+      <point x="5063.104956004141" y="2269.0" />
+      <point x="42.25" y="490.0" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.UniversidadEntity">
-      <point x="69.91304347826099" y="-17.0" />
-      <point x="1547.5389884432745" y="860.0" />
-      <point x="3023.6321456657897" y="860.0" />
-      <point x="70.33333333333326" y="17.0" />
+      <point x="-42.60869565217399" y="-71.5" />
+      <point x="3287.3321638603675" y="7121.0" />
+      <point x="2404.8130767348384" y="7121.0" />
+      <point x="2404.8130767348384" y="5275.0" />
+      <point x="2073.6875" y="5275.0" />
+      <point x="73.0" y="125.5" />
+    </edge>
+    <edge source="com.digipet.prototype.orm.BadgeXCuidadorEntity" target="com.digipet.prototype.orm.BadgeEntity">
+      <point x="-67.5" y="-139.0" />
+      <point x="1493.180113783612" y="6618.0" />
+      <point x="1516.513447116945" y="6618.0" />
+      <point x="68.33333333333303" y="125.5" />
+    </edge>
+    <edge source="com.digipet.prototype.api.services.Client" target="com.digipet.prototype.data.ClienteRepository">
+      <point x="-96.66666666666674" y="-57.5" />
+      <point x="5582.745311034351" y="10127.0" />
+      <point x="5057.521622670807" y="10127.0" />
+      <point x="0.0" y="84.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.DisponibilidadXCuidadorEntity">
-      <point x="34.956521739130494" y="-17.0" />
-      <point x="1512.582466704144" y="820.0" />
-      <point x="2341.0973114295125" y="820.0" />
-      <point x="2341.0973114295125" y="218.0" />
-      <point x="2338.898812332456" y="218.0" />
-      <point x="-132.39999999999998" y="17.0" />
+      <point x="-95.86956521739103" y="-71.5" />
+      <point x="3234.0712942951504" y="7171.0" />
+      <point x="1298.0671278045381" y="7171.0" />
+      <point x="1298.0671278045381" y="5325.0" />
+      <point x="1197.1608778045381" y="5325.0" />
+      <point x="-130.0" y="206.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.ServicioEntity">
-      <point x="-43.695652173913004" y="-17.0" />
-      <point x="1433.9302927911006" y="820.0" />
-      <point x="921.0776495104683" y="820.0" />
-      <point x="921.0776495104683" y="586.0" />
-      <point x="909.0965889044078" y="586.0" />
-      <point x="60.333333333333485" y="17.0" />
+      <point x="-10.652173913043498" y="-71.5" />
+      <point x="3319.288685599498" y="7091.0" />
+      <point x="3036.6106964690634" y="7091.0" />
+      <point x="3036.6106964690634" y="3378.0" />
+      <point x="2788.760416666667" y="3378.0" />
+      <point x="-64.33333333333326" y="166.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.PagoXClienteEntity" target="com.digipet.prototype.orm.ClienteEntity">
-      <point x="19.166666666666515" y="17.0" />
-      <point x="1334.5877851733017" y="442.0" />
-      <point x="1223.4071949650136" y="442.0" />
-      <point x="67.5" y="-17.0" />
+      <point x="-19.0" y="125.5" />
+      <point x="5240.903953887977" y="1189.0" />
+      <point x="5126.479956004141" y="1189.0" />
+      <point x="105.625" y="-490.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.CuidadorEntity" target="com.digipet.prototype.orm.SolicitudXCuidadorEntity">
-      <point x="-11.3125" y="17.0" />
-      <point x="105.375" y="-17.0" />
+      <point x="133.3125" y="-611.5" />
+      <point x="1940.9926137836117" y="5285.0" />
+      <point x="3293.123584667821" y="5285.0" />
+      <point x="-110.0" y="328.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.SolicitudXHotelEntity" target="com.digipet.prototype.orm.SolicitudEntity">
-      <point x="100.40000000000009" y="17.0" />
-      <point x="619.8905282983471" y="616.0" />
-      <point x="754.8541646619835" y="616.0" />
-      <point x="-30.386363636363512" y="-17.0" />
+      <point x="67.80000000000007" y="139.0" />
+      <point x="3853.162684046707" y="3298.0" />
+      <point x="3663.9793507133736" y="3298.0" />
+      <point x="-15.888888888888914" y="-530.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.SolicitudXHotelEntity">
-      <point x="-61.173913043478024" y="-17.0" />
-      <point x="1416.4520319215355" y="840.0" />
-      <point x="502.8368958452388" y="840.0" />
-      <point x="502.8368958452388" y="696.0" />
-      <point x="419.09052829834695" y="696.0" />
-      <point x="-100.40000000000009" y="17.0" />
+      <point x="10.652173913043498" y="-71.5" />
+      <point x="3340.593033425585" y="7071.0" />
+      <point x="3222.7128703821068" y="7071.0" />
+      <point x="3222.7128703821068" y="3268.0" />
+      <point x="3649.762684046707" y="3268.0" />
+      <point x="-135.60000000000002" y="139.0" />
     </edge>
     <edge source="com.digipet.prototype.data.ClienteRepository" target="com.digipet.prototype.auxiliar.ORManager">
-      <point x="62.85714285714266" y="-17.0" />
-      <point x="1313.312205189599" y="1188.0" />
-      <point x="1647.4238123324562" y="1188.0" />
-      <point x="-32.75" y="17.0" />
+      <point x="-117.71428571428578" y="-84.5" />
+      <point x="4939.807336956522" y="9851.0" />
+      <point x="3360.03518624738" y="9851.0" />
+      <point x="70.5" y="57.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.ProvinciaEntity">
-      <point x="0.0" y="-17.0" />
-      <point x="1477.6259449650136" y="770.0" />
-      <point x="1466.7906837240266" y="770.0" />
-      <point x="1466.7906837240266" y="64.0" />
-      <point x="1449.9825016469035" y="64.0" />
-      <point x="0.0" y="17.0" />
+      <point x="-31.956521739130494" y="-71.5" />
+      <point x="3297.984337773411" y="7111.0" />
+      <point x="2528.129627804538" y="7111.0" />
+      <point x="2528.129627804538" y="1199.0" />
+      <point x="2700.898863783612" y="1199.0" />
+      <point x="0.0" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.RolEntity">
-      <point x="26.217391304347984" y="-17.0" />
-      <point x="1503.8433362693615" y="810.0" />
-      <point x="2277.108618506635" y="810.0" />
-      <point x="2277.108618506635" y="64.0" />
-      <point x="2510.933565037942" y="64.0" />
-      <point x="-43.66666666666663" y="17.0" />
+      <point x="-117.17391304347802" y="-71.5" />
+      <point x="3212.7669464690634" y="7191.0" />
+      <point x="306.125" y="7191.0" />
+      <point x="306.125" y="276.0" />
+      <point x="1004.6144434937564" y="276.0" />
+      <point x="-68.33333333333348" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.MascotaEntity" target="com.digipet.prototype.orm.SolicitudEntity">
-      <point x="-45.0" y="17.0" />
-      <point x="787.240528298347" y="472.0" />
-      <point x="693.7518919347106" y="472.0" />
-      <point x="693.7518919347106" y="596.0" />
-      <point x="772.2178010256196" y="596.0" />
-      <point x="-13.02272727272748" y="-17.0" />
+      <point x="28.25" y="449.5" />
+      <point x="5306.20990713159" y="3388.0" />
+      <point x="3949.9793507133736" y="3388.0" />
+      <point x="270.1111111111111" y="-530.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.TamanoEntity">
-      <point x="-8.73913043478251" y="-17.0" />
-      <point x="1468.886814530231" y="780.0" />
-      <point x="1441.243371212121" y="780.0" />
-      <point x="1441.243371212121" y="218.0" />
-      <point x="993.7668983712753" y="218.0" />
-      <point x="56.666666666666515" y="17.0" />
+      <point x="85.21739130434798" y="-71.5" />
+      <point x="3415.1582508168894" y="7201.0" />
+      <point x="5484.825486841734" y="7201.0" />
+      <point x="5484.825486841734" y="2219.0" />
+      <point x="5396.896622670808" y="2219.0" />
+      <point x="64.33333333333348" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.ClienteRepository" target="com.digipet.prototype.orm.PagoXClienteEntity">
-      <point x="0.0" y="-17.0" />
-      <point x="1250.4550623324562" y="1248.0" />
-      <point x="1271.399621212121" y="1248.0" />
-      <point x="1271.399621212121" y="452.0" />
-      <point x="1372.9211185066351" y="452.0" />
-      <point x="57.5" y="17.0" />
+      <point x="176.57142857142844" y="-84.5" />
+      <point x="5234.0930512422365" y="9881.0" />
+      <point x="5914.688289337475" y="9881.0" />
+      <point x="5914.688289337475" y="1189.0" />
+      <point x="5354.903953887977" y="1189.0" />
+      <point x="95.0" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.DenunciaEntity" target="com.digipet.prototype.orm.CuidadorEntity">
-      <point x="22.625" y="-17.0" />
-      <point x="1611.7435822747511" y="686.0" />
-      <point x="2692.532678796955" y="686.0" />
-      <point x="2692.532678796955" y="492.0" />
-      <point x="2668.6023150379424" y="492.0" />
-      <point x="11.3125" y="17.0" />
+      <point x="-32.25" y="-206.5" />
+      <point x="3668.051573798256" y="6598.0" />
+      <point x="2015.0551137836117" y="6598.0" />
+      <point x="207.375" y="611.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.SolicitudEntity" target="com.digipet.prototype.orm.ClienteEntity">
-      <point x="30.386363636363512" y="-17.0" />
-      <point x="815.6268919347106" y="596.0" />
-      <point x="1077.1571949650136" y="596.0" />
-      <point x="-78.75" y="17.0" />
+      <point x="47.66666666666674" y="-530.5" />
+      <point x="3727.5349062689293" y="3318.0" />
+      <point x="4926.021622670807" y="3318.0" />
+      <point x="4926.021622670807" y="2269.0" />
+      <point x="4865.938289337474" y="2269.0" />
+      <point x="-154.91666666666674" y="490.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.MascotaEntity" target="com.digipet.prototype.orm.TamanoEntity">
-      <point x="75.0" y="-17.0" />
-      <point x="907.240528298347" y="338.0" />
-      <point x="937.1002317046087" y="338.0" />
-      <point x="0.0" y="17.0" />
+      <point x="-16.950000000000045" y="-449.5" />
+      <point x="5261.009907131589" y="2269.0" />
+      <point x="5268.229956004141" y="2269.0" />
+      <point x="-64.33333333333326" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.DenunciaRepository" target="com.digipet.prototype.data.HibernateSession">
-      <point x="-55.25" y="-17.0" />
-      <point x="2002.9238123324562" y="1034.0" />
-      <point x="1540.4384449650136" y="1034.0" />
-      <point x="62.8125" y="17.0" />
+      <point x="-76.5" y="-30.5" />
+      <point x="3611.801573798256" y="8055.0" />
+      <point x="3375.8783595125415" y="8055.0" />
+      <point x="45.9375" y="71.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.HotelEntity" target="com.digipet.prototype.orm.SolicitudXHotelEntity">
-      <point x="60.40000000000009" y="17.0" />
-      <point x="526.4030282983472" y="482.0" />
-      <point x="613.615528298347" y="482.0" />
-      <point x="94.125" y="-17.0" />
+      <point x="0.0" y="287.5" />
+      <point x="3823.362684046707" y="2269.0" />
+      <point x="3827.737684046707" y="2269.0" />
+      <point x="42.375" y="-139.0" />
     </edge>
     <edge source="com.digipet.prototype.data.CuidadorRepository" target="com.digipet.prototype.orm.ProvinciaXCuidadorEntity">
-      <point x="-43.125" y="-17.0" />
-      <point x="2320.733618506635" y="1138.0" />
-      <point x="2179.1738123324562" y="1138.0" />
-      <point x="2179.1738123324562" y="218.0" />
-      <point x="1668.6571949650136" y="218.0" />
-      <point x="-70.25" y="17.0" />
+      <point x="-27.625" y="-98.0" />
+      <point x="343.6875" y="9881.0" />
+      <point x="360.3125" y="9881.0" />
+      <point x="360.3125" y="7211.0" />
+      <point x="1324.180113783612" y="7211.0" />
+      <point x="1324.180113783612" y="5315.0" />
+      <point x="1540.4108778045381" y="5315.0" />
+      <point x="-148.75" y="139.0" />
     </edge>
     <edge source="com.digipet.prototype.data.CuidadorRepository" target="com.digipet.prototype.api.dto.CuidadorDTO">
-      <point x="71.875" y="-17.0" />
-      <point x="2435.733618506635" y="1228.0" />
-      <point x="3323.1918273476795" y="1228.0" />
-      <point x="-60.0" y="17.0" />
+      <point x="-138.125" y="-98.0" />
+      <point x="233.1875" y="9861.0" />
+      <point x="291.0" y="9861.0" />
+      <point x="120.0" y="868.0" />
     </edge>
     <edge source="com.digipet.prototype.orm.MascotaEntity" target="com.digipet.prototype.orm.FotoXMascotaEntity">
-      <point x="-45.0" y="-17.0" />
-      <point x="787.240528298347" y="328.0" />
-      <point x="736.2668983712751" y="328.0" />
-      <point x="19.166666666666515" y="17.0" />
+      <point x="50.84999999999991" y="-449.5" />
+      <point x="5328.809907131589" y="2229.0" />
+      <point x="5469.729956004141" y="2229.0" />
+      <point x="-103.33333333333326" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.HotelEntity">
-      <point x="-69.91304347826099" y="-17.0" />
-      <point x="1407.7129014867526" y="850.0" />
-      <point x="383.49052829834704" y="850.0" />
-      <point x="383.49052829834704" y="492.0" />
-      <point x="405.603028298347" y="492.0" />
-      <point x="-60.40000000000009" y="17.0" />
+      <point x="53.26086956521749" y="-71.5" />
+      <point x="3383.201729077759" y="7171.0" />
+      <point x="4847.426573798256" y="7171.0" />
+      <point x="4847.426573798256" y="2269.0" />
+      <point x="3975.362684046707" y="2269.0" />
+      <point x="152.0" y="287.5" />
     </edge>
     <edge source="com.digipet.prototype.data.HibernateSession" target="com.digipet.prototype.orm.MascotaEntity">
-      <point x="-34.956521739130494" y="-17.0" />
-      <point x="1442.669423225883" y="810.0" />
-      <point x="975.3238616316803" y="810.0" />
-      <point x="975.3238616316803" y="492.0" />
-      <point x="841.240528298347" y="492.0" />
-      <point x="9.0" y="17.0" />
+      <point x="74.56521739130449" y="-71.5" />
+      <point x="3404.506076903846" y="7191.0" />
+      <point x="5317.990349290858" y="7191.0" />
+      <point x="5317.990349290858" y="3388.0" />
+      <point x="5362.70990713159" y="3388.0" />
+      <point x="84.75" y="449.5" />
     </edge>
     <edge source="com.digipet.prototype.data.SolicitudRepository" target="com.digipet.prototype.data.HibernateSession">
-      <point x="57.75" y="-17.0" />
-      <point x="1183.9791666666665" y="1044.0" />
-      <point x="1439.9384449650136" y="1044.0" />
-      <point x="-37.6875" y="17.0" />
+      <point x="-166.50000000000023" y="-30.5" />
+      <point x="4027.801573798256" y="8045.0" />
+      <point x="3406.5033595125415" y="8045.0" />
+      <point x="76.5625" y="71.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.CuidadorEntity" target="com.digipet.prototype.orm.DisponibilidadXCuidadorEntity">
-      <point x="-28.28125" y="-17.0" />
-      <point x="2629.0085650379424" y="158.0" />
-      <point x="2471.2988123324562" y="158.0" />
-      <point x="0.0" y="17.0" />
+      <point x="-192.5625" y="-611.5" />
+      <point x="1615.1176137836117" y="5295.0" />
+      <point x="1262.1608778045381" y="5295.0" />
+      <point x="-65.0" y="206.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.SolicitudEntity" target="com.digipet.prototype.orm.SolicitudXCuidadorEntity">
-      <point x="65.11363636363649" y="-17.0" />
-      <point x="850.3541646619835" y="646.0" />
-      <point x="2429.132678796955" y="646.0" />
-      <point x="-112.40000000000009" y="17.0" />
+      <point x="0.0" y="530.5" />
+      <point x="3679.8682396022623" y="4519.0" />
+      <point x="3506.248584667821" y="4519.0" />
+      <point x="103.125" y="-328.0" />
     </edge>
     <edge source="com.digipet.prototype.data.MascotaRepository" target="com.digipet.prototype.orm.MascotaEntity">
-      <point x="17.583333333333485" y="-17.0" />
-      <point x="507.1002317046091" y="1004.0" />
-      <point x="655.490528298347" y="1004.0" />
-      <point x="655.490528298347" y="452.0" />
-      <point x="751.240528298347" y="452.0" />
-      <point x="-81.0" y="17.0" />
+      <point x="118.5" y="-84.5" />
+      <point x="4915.426573798256" y="8055.0" />
+      <point x="5550.1216226708075" y="8055.0" />
+      <point x="5550.1216226708075" y="3388.0" />
+      <point x="5419.20990713159" y="3388.0" />
+      <point x="141.25" y="449.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.ProvinciaXCuidadorEntity" target="com.digipet.prototype.orm.CuidadorEntity">
-      <point x="70.25" y="17.0" />
-      <point x="1809.1571949650136" y="188.0" />
-      <point x="2595.0710650379424" y="188.0" />
-      <point x="-62.21875" y="-17.0" />
+      <point x="148.75" y="139.0" />
+      <point x="1837.9108778045381" y="5325.0" />
+      <point x="1852.1176137836117" y="5325.0" />
+      <point x="44.4375" y="-611.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.ReporteEntity" target="com.digipet.prototype.orm.FotoXReporteEntity">
-      <point x="-64.125" y="-17.0" />
-      <point x="211.52386163168035" y="492.0" />
-      <point x="224.37802829834732" y="492.0" />
-      <point x="-18.416666666666515" y="17.0" />
+      <point x="-42.0" y="-409.0" />
+      <point x="3095.59375" y="2269.0" />
+      <point x="3027.5567111378714" y="2269.0" />
+      <point x="20.16666666666663" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.MascotaRepository" target="com.digipet.prototype.orm.FotoXMascotaEntity">
-      <point x="-87.91666666666652" y="-17.0" />
-      <point x="401.6002317046091" y="1004.0" />
-      <point x="110.79469496501383" y="1004.0" />
-      <point x="110.79469496501383" y="328.0" />
-      <point x="621.2668983712751" y="328.0" />
-      <point x="-95.83333333333348" y="17.0" />
+      <point x="197.5" y="-84.5" />
+      <point x="4994.426573798256" y="8065.0" />
+      <point x="5718.563289337475" y="8065.0" />
+      <point x="5718.563289337475" y="2269.0" />
+      <point x="5676.396622670808" y="2269.0" />
+      <point x="103.33333333333348" y="125.5" />
     </edge>
     <edge source="com.digipet.prototype.data.CuidadorRepository" target="com.digipet.prototype.data.HibernateSession">
-      <point x="-71.875" y="-17.0" />
-      <point x="2291.983618506635" y="1148.0" />
-      <point x="1756.1738123324562" y="1148.0" />
-      <point x="1756.1738123324562" y="1044.0" />
-      <point x="1515.3134449650136" y="1044.0" />
-      <point x="37.6875" y="17.0" />
+      <point x="138.125" y="-98.0" />
+      <point x="509.4375" y="9871.0" />
+      <point x="3138.03518624738" y="9871.0" />
+      <point x="3138.03518624738" y="8065.0" />
+      <point x="3284.0033595125415" y="8065.0" />
+      <point x="-45.9375" y="71.5" />
     </edge>
     <edge source="com.digipet.prototype.orm.ProvinciaXCuidadorEntity" target="com.digipet.prototype.orm.ProvinciaEntity">
-      <point x="-70.25" y="-17.0" />
-      <point x="1668.6571949650136" y="64.0" />
-      <point x="1488.1825016469033" y="64.0" />
-      <point x="38.19999999999982" y="17.0" />
+      <point x="-89.25" y="-139.0" />
+      <point x="1599.9108778045381" y="4529.0" />
+      <point x="1767.4108778045381" y="4529.0" />
+      <point x="1767.4108778045381" y="1179.0" />
+      <point x="2616.4988637836113" y="1179.0" />
+      <point x="-84.40000000000009" y="125.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.5265213442325158" x="1678.5666724167675" y="808.0765913403485" />
-  <SelectedNodes />
-  <Categories />
+  <settings layout="Hierarchic Group" zoom="0.0848084030344291" x="3463.0" y="5131.0" />
+  <SelectedNodes>
+    <node>com.digipet.prototype.api.services.Mascota</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
 </Diagram>
