@@ -1,6 +1,7 @@
 package com.digipet.prototype.api.authentication;
 
-import com.digipet.prototype.dto.Credentials;
+import com.digipet.prototype.api.dto.Credentials;
+import com.digipet.prototype.data.AuthenticationRepository;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -33,8 +34,8 @@ public class AuthenticationEndpoint {
 
 
     private void authenticate(String username, String password) throws Exception {
-        if (!(username.equals("admin") && password.equals("admin"))) {
-            throw new Exception("Invalid authentication");
-        }
+            if (!AuthenticationRepository.validateCredential(username, password)) {
+                throw new Exception("Invalid authentication");
+            }
     }
 }

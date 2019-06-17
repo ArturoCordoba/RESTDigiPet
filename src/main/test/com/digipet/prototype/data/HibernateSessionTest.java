@@ -9,10 +9,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class HibernateUtilTest {
+public class HibernateSessionTest {
 
     @Test
-    public void openSession() {
+    public void saveObject() {
         EstadoEntity estadoEntity = new EstadoEntity();
         estadoEntity.setIdEstado(0);
         estadoEntity.setNombre("Activado");
@@ -33,13 +33,39 @@ public class HibernateUtilTest {
         user.setRol(rolEntity);
 
 
+    }
 
-        Session session = HibernateUtil.openSession();
+    @Test
+    public void deleteObject(){
+        EstadoEntity estadoEntity = new EstadoEntity();
+        estadoEntity.setIdEstado(0);
+        estadoEntity.setNombre("Activado");
 
+        RolEntity rolEntity = new RolEntity();
+        rolEntity.setIdRol(1);
+        rolEntity.setNombre("Administrador");
+
+        UsuarioEntity user = new UsuarioEntity();
+
+        user.setPrimerNombre("Jorge");
+        user.setPrimerApellido("Rogers");
+        user.setSegundoApellido("Rojas");
+        user.setEmail1("jorgerr1@gmail.com");
+        user.setContrasena("pass123");
+        user.setFotoPerfil("jrr.png");
+        user.setEstado(estadoEntity);
+        user.setRol(rolEntity);
+
+
+        user.setIdUsuario(23);
+
+        /*Session session = HibernateSession.openSession();
         session.beginTransaction();
-        session.save(user);
+        session.delete(user);
         session.getTransaction().commit();
-        session.close();
+        session.close();*/
+
+
     }
 
 

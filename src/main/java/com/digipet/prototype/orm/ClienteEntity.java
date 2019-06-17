@@ -20,6 +20,24 @@ public class ClienteEntity {
     private List<PagoXClienteEntity> listaPago;
     private List<SolicitudEntity> listaSolicitudes;
 
+    public ClienteEntity() {
+
+    }
+
+    public ClienteEntity(int idCliente, String telefonoMovil, String canton, String email2, String descripcion, Date fechaInscripcion, UsuarioEntity usuario, ProvinciaEntity provincia, List<MascotaEntity> listaMascotas, List<PagoXClienteEntity> listaPago, List<SolicitudEntity> listaSolicitudes) {
+        this.idCliente = idCliente;
+        this.telefonoMovil = telefonoMovil;
+        this.canton = canton;
+        this.email2 = email2;
+        this.descripcion = descripcion;
+        this.fechaInscripcion = fechaInscripcion;
+        this.usuario = usuario;
+        this.provincia = provincia;
+        this.listaMascotas = listaMascotas;
+        this.listaPago = listaPago;
+        this.listaSolicitudes = listaSolicitudes;
+    }
+
     @Id
     @Column(name = "Id_cliente", nullable = false)
     public int getIdCliente() {

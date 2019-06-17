@@ -78,4 +78,17 @@ public class ORManagerTest {
                 "Alfaro","Alajuela","Alajuela","no@correo","","87655432",
                 "nohay.jpg","laprogre","Salu2",date,configuration);
     }
+    @Test
+    public void obtenerTabla() {
+        ORManager orManager = new ORManager(ClienteEntity.class, null);
+        ArrayList<ClienteEntity> list = orManager.obtenerTabla("ClienteEntity");
+
+    }
+
+
+    @Test
+    public void obtenerObjetoPorID() {
+        ORManager orManager = new ORManager(ClienteEntity.class, null);
+        ClienteEntity clienteEntity = (ClienteEntity) orManager.obtenerObjetoPorID(2);
+    }
 }
