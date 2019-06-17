@@ -1,6 +1,7 @@
 package com.digipet.prototype.api.dto;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ClienteDTO {
     private int idUsuario;
@@ -19,8 +20,8 @@ public class ClienteDTO {
     private String descripcion;
     private String fechaInscripcion;
     private String provincia;
-    private ArrayList<MascotaDTO> listaMascotas;
-    private ArrayList<MetodoPagoDTO> listaPago;
+    private List<MascotaDTO> listaMascotas;
+    private List<MetodoPagoDTO> listaPago;
 
     public ClienteDTO() {
 
@@ -174,7 +175,7 @@ public class ClienteDTO {
         this.provincia = provincia;
     }
 
-    public ArrayList<MascotaDTO> getListaMascotas() {
+    public List<MascotaDTO> getListaMascotas() {
         return listaMascotas;
     }
 
@@ -182,7 +183,7 @@ public class ClienteDTO {
         this.listaMascotas = listaMascotas;
     }
 
-    public ArrayList<MetodoPagoDTO> getListaPago() {
+    public List<MetodoPagoDTO> getListaPago() {
         return listaPago;
     }
 

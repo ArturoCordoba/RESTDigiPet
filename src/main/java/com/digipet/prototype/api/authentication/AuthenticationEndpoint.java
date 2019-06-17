@@ -6,6 +6,7 @@ import com.digipet.prototype.data.AuthenticationRepository;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -14,6 +15,7 @@ public class AuthenticationEndpoint {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response authenticateUser(Credentials credentials){
         String username = credentials.getEmail();
         String password = credentials.getPassword();
@@ -25,7 +27,7 @@ public class AuthenticationEndpoint {
             //Se crea un token para el usuario recibido
             String token = TokenManager.issueToken(username);
 
-            return Response.ok(token).build();
+            return Response.ok().entity(jsonToken(token)).build();
 
         } catch (Exception e) {
             return Response.status(Response.Status.FORBIDDEN).build();
@@ -37,5 +39,9 @@ public class AuthenticationEndpoint {
             if (!AuthenticationRepository.validateCredential(username, password)) {
                 throw new Exception("Invalid authentication");
             }
+    }
+
+    private String jsonToken(String token){
+        return  "{\"data\": {\"token\":\"" + token + "\"}}";
     }
 }

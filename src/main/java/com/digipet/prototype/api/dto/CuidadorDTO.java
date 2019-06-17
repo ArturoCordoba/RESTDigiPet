@@ -1,6 +1,7 @@
 package com.digipet.prototype.api.dto;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CuidadorDTO {
     private int idUsuario;
@@ -20,8 +21,8 @@ public class CuidadorDTO {
     private String descripcion;
     private String fechaInscripcion;
     private String nombreUniversidad;
-    private ArrayList<String> listaDisponibilidad;
-    private ArrayList<String> listaProvincias;
-    private ArrayList<String> listaIdSolcitudes;
+    private List<String> listaDisponibilidad;
+    private List<String> listaProvincias;
+    private List<String> listaIdSolcitudes;
 
 }

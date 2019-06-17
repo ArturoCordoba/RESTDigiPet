@@ -4,11 +4,14 @@ import com.digipet.prototype.api.dto.MascotaDTO;
 import com.digipet.prototype.auxiliar.ORManager;
 import com.digipet.prototype.orm.FotoXMascotaEntity;
 import com.digipet.prototype.orm.MascotaEntity;
+import com.digipet.prototype.orm.SolicitudEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MascotaRepository {
 
@@ -16,14 +19,17 @@ public class MascotaRepository {
      * Método que obtiene la la tabla de mascotas
      * @return ArrayList de mascotas
      */
-    public static ArrayList<MascotaEntity> getAllMascotas() {
-        ArrayList<MascotaEntity> data;
+    public static List<MascotaEntity> getAllMascotas() {
+        List<MascotaEntity> data;
 
         Session session = HibernateSession.openSession();
 
         try {
-            Query query = session.createQuery("FROM " + "MascotaEntity");
-            data = (ArrayList<MascotaEntity>) query.getResultList();
+            Query query = session.createQuery(
+                    "from MascotaEntity m " +
+                            "join fetch m.listaFotos " +
+                            "join fetch m.listaSolicitudes");
+            data = query.getResultList();
 
         } catch (Exception exception){
             System.out.println("Error no identificado en getAllMascots");
@@ -33,26 +39,62 @@ public class MascotaRepository {
         return data;
     }
 
-    /**
-     * Método que retorna una mascota según su id
-     * @param id de la mascota
-     * @return mascota a quien pertenece el id
-     * @throws Exception Si la mascota es nula
-     */
-    public static MascotaDTO getMascota(int id) throws Exception{
-        //Se obtiene la mascota respectivo
-        MascotaEntity mascota = ORManager.obtenerObjetoPorID(id,MascotaEntity.class);
+    public static MascotaDTO getMascota(int id){
+        MascotaDTO mascota = null;
 
-        if(mascota != null){
-            MascotaDTO mascotaDTO = convertToDTO(mascota);
-            return mascotaDTO;
-        } else {
-            throw new Exception();
+        Session session = HibernateSession.openSession();
+
+        try {
+            Query query = session.createQuery(
+                    "from MascotaEntity m " +
+                            "join fetch m.listaFotos, m.listaSolicitudes " +
+                            "where m.idMascota = :id")
+                    .setParameter("id",id);
+
+            //List<MascotaEntity> result = query.getResultList();
+
+            /*if(result.size() > 0 ){
+                MascotaEntity mascotaEntity = result.get(0);
+                mascota = convertToDTO(mascotaEntity);
+            }*/
+
+        } catch (Exception exception){
+            System.out.println("Error no identificado en getAllMascots");
+            throw exception;
         }
+
+        return mascota;
     }
 
     private static MascotaDTO convertToDTO(MascotaEntity mascota) {
         MascotaDTO mascotaDTO = new MascotaDTO();
+
+        List<FotoXMascotaEntity> listaFotosE = mascota.getListaFotos();
+        List<String> listaFotos = new ArrayList<>();
+
+        if(listaFotosE != null){
+            //Se convierte la lista de fotos obtenida de la entidad
+            for (int i = 0; i < listaFotosE.size(); i++) {
+                listaFotos.add(listaFotosE.get(i).getFoto());
+            }
+        }
+
+        List<SolicitudEntity> listaSolicitudEntity = mascota.getListaSolicitudes();
+        List<Integer> listaIdSolicitudes = new ArrayList<>();
+
+        for (int i = 0; i < listaSolicitudEntity.size(); i++) {
+            listaIdSolicitudes.add(listaSolicitudEntity.get(i).getIdSolicitud());
+        }
+
+        mascotaDTO.setId_mascota(mascota.getIdMascota());
+        mascotaDTO.setNombre(mascota.getNombre());
+        mascotaDTO.setRaza(mascota.getRaza());
+        mascotaDTO.setEdad(mascota.getEdad());
+        mascotaDTO.setDescripcion(mascota.getDescripcion());
+        mascotaDTO.setFechaInscripcion(mascota.getFechaInscripcion().toString());
+        mascotaDTO.setListaFotos(listaFotos);
+        mascotaDTO.setListaIdSolicitudes(listaIdSolicitudes);
+
         return mascotaDTO;
     }
 
