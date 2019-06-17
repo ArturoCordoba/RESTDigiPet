@@ -1,0 +1,633 @@
+@startuml
+
+title __RESTDIGIPET's Class Diagram__\n
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.authentication {
+        class AuthenticationEndpoint {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.authentication {
+        class AuthenticationFilter {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.data {
+        class AuthenticationRepository {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.authentication {
+        class AuthorizationFilter {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class BadgeDTO {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class BadgeEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class BadgeXCuidadorEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.services {
+        class Client {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class ClienteDTO {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class ClienteEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.data {
+        class ClienteRepository {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.data {
+        class ClienteRepositoryTest {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class Credentials {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.services {
+        class Cuidador {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class CuidadorDTO {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class CuidadorEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.data {
+        class CuidadorRepository {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.data {
+        class CuidadorRepositoryTest {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class DenunciaEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.data {
+        class DenunciaRepository {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class DisponibilidadXCuidadorEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class EstadoEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      class Estudiante {
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class FotoXMascotaEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class FotoXReporteEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.data {
+        class HibernateSession {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.data {
+        class HibernateSessionTest {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class HotelEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    class JspClass {
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.services {
+        class Mascota {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class MascotaDTO {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class MascotaEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.data {
+        class MascotaRepository {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.data {
+        class MascotaRepositoryTest {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class MetodoPagoDTO {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      class MyResource {
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.auxiliar {
+        class ORManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.auxiliar {
+        class ORManagerTest {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class PagoXClienteEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class ProvinciaEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class ProvinciaXCuidadorEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class ReporteEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.data {
+        class ReporteRepository {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class RolEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.authentication {
+        enum Role {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.authentication {
+        interface Secured {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class ServicioEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class SolicitudCuidadorDTO {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class SolicitudEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class SolicitudHotelDTO {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.data {
+        class SolicitudRepository {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class SolicitudXCuidadorEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class SolicitudXHotelEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class TamanoEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      class Test {
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.authentication {
+        class TokenManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.authentication {
+        class TokenManagerTest {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.twitter {
+        class TwitterManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class UniversidadEntity {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class UsuarioEntity {
+        }
+      }
+    }
+  }
+  
+
+  AuthenticationFilter -up-|> ContainerRequestFilter
+  AuthorizationFilter -up-|> ContainerRequestFilter
+  BadgeXCuidadorEntity o-- CuidadorEntity : cuidador
+  BadgeXCuidadorEntity o-- BadgeEntity : badge
+  ClienteEntity o-- UsuarioEntity : usuario
+  ClienteEntity o-- ProvinciaEntity : provincia
+  Credentials -up-|> Serializable
+  CuidadorEntity o-- UsuarioEntity : usuario
+  CuidadorEntity o-- UniversidadEntity : universidad
+  DenunciaEntity o-- ClienteEntity : cliente
+  DenunciaEntity o-- CuidadorEntity : cuidador
+  DisponibilidadXCuidadorEntity o-- CuidadorEntity : cuidador
+  FotoXMascotaEntity o-- MascotaEntity : mascota
+  FotoXReporteEntity o-- ReporteEntity : reporte
+  MascotaEntity o-- ClienteEntity : cliente
+  MascotaEntity o-- TamanoEntity : tamaño
+  PagoXClienteEntity o-- ClienteEntity : cliente
+  ProvinciaXCuidadorEntity o-- CuidadorEntity : cuidador
+  ProvinciaXCuidadorEntity o-- ProvinciaEntity : provinciaByIdProvincia
+  ReporteEntity o-- SolicitudEntity : solicitud
+  SolicitudEntity o-- ClienteEntity : cliente
+  SolicitudEntity o-- MascotaEntity : mascota
+  SolicitudEntity o-- ServicioEntity : servicio
+  SolicitudXCuidadorEntity o-- SolicitudEntity : solicitud
+  SolicitudXCuidadorEntity o-- CuidadorEntity : cuidador
+  SolicitudXHotelEntity o-- SolicitudEntity : solicitudByIdSolicitud
+  SolicitudXHotelEntity o-- HotelEntity : hotel
+  UsuarioEntity o-- RolEntity : rol
+  UsuarioEntity o-- EstadoEntity : estado
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

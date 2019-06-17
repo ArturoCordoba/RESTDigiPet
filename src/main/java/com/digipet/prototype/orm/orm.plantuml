@@ -1,0 +1,634 @@
+@startuml
+
+title __ORM's Class Diagram__\n
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class BadgeEntity {
+            - idBadge : int
+            - nombre : String
+            + getIdBadge()
+            + setIdBadge()
+            + getNombre()
+            + setNombre()
+            + equals()
+            + hashCode()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class BadgeXCuidadorEntity {
+            - id : int
+            + getCuidador()
+            + setCuidador()
+            + getBadge()
+            + setBadge()
+            + getId()
+            + setId()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class ClienteEntity {
+            - idCliente : int
+            - telefonoMovil : String
+            - canton : String
+            - email2 : String
+            - descripcion : String
+            - fechaInscripcion : Date
+            - listaMascotas : List<MascotaEntity>
+            - listaPago : List<PagoXClienteEntity>
+            - listaSolicitudes : List<SolicitudEntity>
+            + ClienteEntity()
+            + ClienteEntity()
+            + getIdCliente()
+            + setIdCliente()
+            + getTelefonoMovil()
+            + setTelefonoMovil()
+            + getCanton()
+            + setCanton()
+            + getEmail2()
+            + setEmail2()
+            + getDescripcion()
+            + setDescripcion()
+            + getFechaInscripcion()
+            + setFechaInscripcion()
+            + equals()
+            + hashCode()
+            + getUsuario()
+            + setUsuario()
+            + getProvincia()
+            + setProvincia()
+            + getListaMascotas()
+            + setListaMascotas()
+            + getListaPago()
+            + setListaPago()
+            + getListaSolicitudes()
+            + setListaSolicitudes()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class CuidadorEntity {
+            - idCuidador : int
+            - carne : String
+            - telefonoMovil : String
+            - canton : String
+            - opcionProvincias : boolean
+            - email2 : String
+            - descripcion : String
+            - fechaInscripcion : Date
+            - listaBadges : List<BadgeXCuidadorEntity>
+            - listaDisponibilidad : List<DisponibilidadXCuidadorEntity>
+            - listaProvincias : List<ProvinciaXCuidadorEntity>
+            - listaSolicitudes : List<SolicitudXCuidadorEntity>
+            + getIdCuidador()
+            + setIdCuidador()
+            + getCarne()
+            + setCarne()
+            + getTelefonoMovil()
+            + setTelefonoMovil()
+            + getCanton()
+            + setCanton()
+            + isOpcionProvincias()
+            + setOpcionProvincias()
+            + getEmail2()
+            + setEmail2()
+            + getDescripcion()
+            + setDescripcion()
+            + getFechaInscripcion()
+            + setFechaInscripcion()
+            + equals()
+            + hashCode()
+            + getListaBadges()
+            + setListaBadges()
+            + getUsuario()
+            + setUsuario()
+            + getUniversidad()
+            + setUniversidad()
+            + getListaDisponibilidad()
+            + setListaDisponibilidad()
+            + getListaProvincias()
+            + setListaProvincias()
+            + getListaSolicitudes()
+            + setListaSolicitudes()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class DenunciaEntity {
+            - idDenuncia : int
+            - descripcion : String
+            + getIdDenuncia()
+            + setIdDenuncia()
+            + getDescripcion()
+            + setDescripcion()
+            + equals()
+            + hashCode()
+            + getCliente()
+            + setCliente()
+            + getCuidador()
+            + setCuidador()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class DisponibilidadXCuidadorEntity {
+            - idDisponibilidad : int
+            - fechaHoraInicio : Timestamp
+            - fechaHoraFinal : Timestamp
+            + getIdDisponibilidad()
+            + setIdDisponibilidad()
+            + getFechaHoraInicio()
+            + setFechaHoraInicio()
+            + getFechaHoraFinal()
+            + setFechaHoraFinal()
+            + equals()
+            + hashCode()
+            + getCuidador()
+            + setCuidador()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class EstadoEntity {
+            - idEstado : int
+            - nombre : String
+            + getIdEstado()
+            + setIdEstado()
+            + getNombre()
+            + setNombre()
+            + equals()
+            + hashCode()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class FotoXMascotaEntity {
+            - foto : String
+            + getFoto()
+            + setFoto()
+            + equals()
+            + hashCode()
+            + getMascota()
+            + setMascota()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class FotoXReporteEntity {
+            - foto : String
+            + getFoto()
+            + setFoto()
+            + equals()
+            + hashCode()
+            + getReporte()
+            + setReporte()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class HotelEntity {
+            - idHotel : int
+            - nombre : String
+            - direccion : String
+            - capacidad : int
+            - descripcion : String
+            - listaSolicutdes : List<SolicitudXHotelEntity>
+            + getIdHotel()
+            + setIdHotel()
+            + getNombre()
+            + setNombre()
+            + getDireccion()
+            + setDireccion()
+            + getCapacidad()
+            + setCapacidad()
+            + getDescripcion()
+            + setDescripcion()
+            + equals()
+            + hashCode()
+            + getListaSolicutdes()
+            + setListaSolicutdes()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class MascotaEntity {
+            - idMascota : int
+            - nombre : String
+            - raza : String
+            - edad : int
+            - descripcion : String
+            - fechaInscripcion : Date
+            - listaFotos : List<FotoXMascotaEntity>
+            - listaSolicitudes : List<SolicitudEntity>
+            + getIdMascota()
+            + setIdMascota()
+            + getNombre()
+            + setNombre()
+            + getRaza()
+            + setRaza()
+            + getEdad()
+            + setEdad()
+            + getDescripcion()
+            + setDescripcion()
+            + getFechaInscripcion()
+            + setFechaInscripcion()
+            + equals()
+            + hashCode()
+            + getListaFotos()
+            + setListaFotos()
+            + getCliente()
+            + setCliente()
+            + getTamaño()
+            + setTamaño()
+            + getListaSolicitudes()
+            + setListaSolicitudes()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class PagoXClienteEntity {
+            - metodoPago : String
+            + getMetodoPago()
+            + setMetodoPago()
+            + equals()
+            + hashCode()
+            + getCliente()
+            + setCliente()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class ProvinciaEntity {
+            - idProvincia : String
+            - nombre : String
+            + getIdProvincia()
+            + setIdProvincia()
+            + getNombre()
+            + setNombre()
+            + equals()
+            + hashCode()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class ProvinciaXCuidadorEntity {
+            - id : int
+            + getCuidador()
+            + setCuidador()
+            + getProvinciaByIdProvincia()
+            + setProvinciaByIdProvincia()
+            + getId()
+            + setId()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class ReporteEntity {
+            - idReporte : int
+            - duracion : int
+            - cantidadCaca : int
+            - cantidadOrines : int
+            - cantidadJuegos : int
+            - distancia : int
+            - detalles : String
+            - listaFotos : List<FotoXReporteEntity>
+            + getIdReporte()
+            + setIdReporte()
+            + getDuracion()
+            + setDuracion()
+            + getCantidadCaca()
+            + setCantidadCaca()
+            + getCantidadOrines()
+            + setCantidadOrines()
+            + getCantidadJuegos()
+            + setCantidadJuegos()
+            + getDistancia()
+            + setDistancia()
+            + getDetalles()
+            + setDetalles()
+            + equals()
+            + hashCode()
+            + getListaFotos()
+            + setListaFotos()
+            + getSolicitud()
+            + setSolicitud()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class RolEntity {
+            - idRol : int
+            - nombre : String
+            + getIdRol()
+            + setIdRol()
+            + getNombre()
+            + setNombre()
+            + equals()
+            + hashCode()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class ServicioEntity {
+            - idServicio : int
+            - nombre : String
+            - precio : int
+            + getIdServicio()
+            + setIdServicio()
+            + getNombre()
+            + setNombre()
+            + getPrecio()
+            + setPrecio()
+            + equals()
+            + hashCode()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class SolicitudEntity {
+            - idSolicitud : int
+            - horaInicio : Timestamp
+            - horaFinal : Timestamp
+            - duracion : float
+            - estadoSolicitud : String
+            - precioUnitario : float
+            - reporte : List<ReporteEntity>
+            - solicitudXCuidadorsByIdSolicitud : Collection<SolicitudXCuidadorEntity>
+            - solicitudXHotelsByIdSolicitud : Collection<SolicitudXHotelEntity>
+            + getIdSolicitud()
+            + setIdSolicitud()
+            + getHoraInicio()
+            + setHoraInicio()
+            + getHoraFinal()
+            + setHoraFinal()
+            + getDuracion()
+            + setDuracion()
+            + getEstadoSolicitud()
+            + setEstadoSolicitud()
+            + getPrecioUnitario()
+            + setPrecioUnitario()
+            + equals()
+            + hashCode()
+            + getReporte()
+            + setReporte()
+            + getCliente()
+            + setCliente()
+            + getMascota()
+            + setMascota()
+            + getServicio()
+            + setServicio()
+            + getSolicitudXCuidadorsByIdSolicitud()
+            + setSolicitudXCuidadorsByIdSolicitud()
+            + getSolicitudXHotelsByIdSolicitud()
+            + setSolicitudXHotelsByIdSolicitud()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class SolicitudXCuidadorEntity {
+            - calificacion : float
+            - metodoPago : String
+            - direccion : String
+            - descripcion : String
+            - id : int
+            + getCalificacion()
+            + setCalificacion()
+            + getMetodoPago()
+            + setMetodoPago()
+            + getDireccion()
+            + setDireccion()
+            + getDescripcion()
+            + setDescripcion()
+            + equals()
+            + hashCode()
+            + getSolicitud()
+            + setSolicitud()
+            + getCuidador()
+            + setCuidador()
+            + getId()
+            + setId()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class SolicitudXHotelEntity {
+            - id : int
+            + getSolicitudByIdSolicitud()
+            + setSolicitudByIdSolicitud()
+            + getHotel()
+            + setHotel()
+            + getId()
+            + setId()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class TamanoEntity {
+            - idTamano : int
+            - nombre : String
+            + getIdTamano()
+            + setIdTamano()
+            + getNombre()
+            + setNombre()
+            + equals()
+            + hashCode()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class UniversidadEntity {
+            - idUniversidad : int
+            - nombre : String
+            + getIdUniversidad()
+            + setIdUniversidad()
+            + getNombre()
+            + setNombre()
+            + equals()
+            + hashCode()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.orm {
+        class UsuarioEntity {
+            - idUsuario : int
+            - primerNombre : String
+            - primerApellido : String
+            - segundoApellido : String
+            - email1 : String
+            - contrasena : String
+            - fotoPerfil : String
+            + getIdUsuario()
+            + setIdUsuario()
+            + getPrimerNombre()
+            + setPrimerNombre()
+            + getPrimerApellido()
+            + setPrimerApellido()
+            + getSegundoApellido()
+            + setSegundoApellido()
+            + getEmail1()
+            + setEmail1()
+            + getContrasena()
+            + setContrasena()
+            + getFotoPerfil()
+            + setFotoPerfil()
+            + equals()
+            + hashCode()
+            + getRol()
+            + setRol()
+            + getEstado()
+            + setEstado()
+        }
+      }
+    }
+  }
+  
+
+  BadgeXCuidadorEntity o-- CuidadorEntity : cuidador
+  BadgeXCuidadorEntity o-- BadgeEntity : badge
+  ClienteEntity o-- UsuarioEntity : usuario
+  ClienteEntity o-- ProvinciaEntity : provincia
+  CuidadorEntity o-- UsuarioEntity : usuario
+  CuidadorEntity o-- UniversidadEntity : universidad
+  DenunciaEntity o-- ClienteEntity : cliente
+  DenunciaEntity o-- CuidadorEntity : cuidador
+  DisponibilidadXCuidadorEntity o-- CuidadorEntity : cuidador
+  FotoXMascotaEntity o-- MascotaEntity : mascota
+  FotoXReporteEntity o-- ReporteEntity : reporte
+  MascotaEntity o-- ClienteEntity : cliente
+  MascotaEntity o-- TamanoEntity : tamaño
+  PagoXClienteEntity o-- ClienteEntity : cliente
+  ProvinciaXCuidadorEntity o-- CuidadorEntity : cuidador
+  ProvinciaXCuidadorEntity o-- ProvinciaEntity : provinciaByIdProvincia
+  ReporteEntity o-- SolicitudEntity : solicitud
+  SolicitudEntity o-- ClienteEntity : cliente
+  SolicitudEntity o-- MascotaEntity : mascota
+  SolicitudEntity o-- ServicioEntity : servicio
+  SolicitudXCuidadorEntity o-- SolicitudEntity : solicitud
+  SolicitudXCuidadorEntity o-- CuidadorEntity : cuidador
+  SolicitudXHotelEntity o-- SolicitudEntity : solicitudByIdSolicitud
+  SolicitudXHotelEntity o-- HotelEntity : hotel
+  UsuarioEntity o-- RolEntity : rol
+  UsuarioEntity o-- EstadoEntity : estado
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

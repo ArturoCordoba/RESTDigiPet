@@ -1,0 +1,312 @@
+@startuml
+
+title __DTO's Class Diagram__\n
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class BadgeDTO {
+            - id : int
+            - nombre : String
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class ClienteDTO {
+            - idUsuario : int
+            - primerNombre : String
+            - primerApellido : String
+            - segundoApellido : String
+            - email1 : String
+            - contrasena : String
+            - fotoPerfil : String
+            - id_rol : int
+            - id_estado : int
+            - idCliente : int
+            - telefonoMovil : String
+            - canton : String
+            - email2 : String
+            - descripcion : String
+            - fechaInscripcion : String
+            - provincia : String
+            - listaMascotas : List<MascotaDTO>
+            - listaPago : List<MetodoPagoDTO>
+            + ClienteDTO()
+            + ClienteDTO()
+            + getIdUsuario()
+            + setIdUsuario()
+            + getPrimerNombre()
+            + setPrimerNombre()
+            + getPrimerApellido()
+            + setPrimerApellido()
+            + getSegundoApellido()
+            + setSegundoApellido()
+            + getEmail1()
+            + setEmail1()
+            + getContrasena()
+            + setContrasena()
+            + getFotoPerfil()
+            + setFotoPerfil()
+            + getId_rol()
+            + setId_rol()
+            + getId_estado()
+            + setId_estado()
+            + getIdCliente()
+            + setIdCliente()
+            + getTelefonoMovil()
+            + setTelefonoMovil()
+            + getCanton()
+            + setCanton()
+            + getEmail2()
+            + setEmail2()
+            + getDescripcion()
+            + setDescripcion()
+            + getFechaInscripcion()
+            + setFechaInscripcion()
+            + getProvincia()
+            + setProvincia()
+            + getListaMascotas()
+            + setListaMascotas()
+            + getListaPago()
+            + setListaPago()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class Credentials {
+            - email : String
+            - password : String
+            + Credentials()
+            + Credentials()
+            + getEmail()
+            + setEmail()
+            + getPassword()
+            + setPassword()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class CuidadorDTO {
+            - idUsuario : int
+            - primerNombre : String
+            - primerApellido : String
+            - segundoApellido : String
+            - email1 : String
+            - contraseña : String
+            - fotoPerfil : String
+            - provinciaResidencia : String
+            - idRol : int
+            - idEstado : int
+            - carne : String
+            - telefonoMovil : String
+            - canton : String
+            - opcionProvincias : boolean
+            - email2 : String
+            - descripcion : String
+            - fechaInscripcion : String
+            - nombreUniversidad : String
+            - listaDisponibilidad : List<String>
+            - listaProvincias : List<String>
+            - listaIdSolcitudes : List<String>
+            + CuidadorDTO()
+            + CuidadorDTO()
+            + getProvinciaResidencia()
+            + setProvinciaResidencia()
+            + getIdUsuario()
+            + setIdUsuario()
+            + getPrimerNombre()
+            + setPrimerNombre()
+            + getPrimerApellido()
+            + setPrimerApellido()
+            + getSegundoApellido()
+            + setSegundoApellido()
+            + getEmail1()
+            + setEmail1()
+            + getContraseña()
+            + setContraseña()
+            + getFotoPerfil()
+            + setFotoPerfil()
+            + getIdRol()
+            + setIdRol()
+            + getIdEstado()
+            + setIdEstado()
+            + getCarne()
+            + setCarne()
+            + getTelefonoMovil()
+            + setTelefonoMovil()
+            + getCanton()
+            + setCanton()
+            + isOpcionProvincias()
+            + setOpcionProvincias()
+            + getEmail2()
+            + setEmail2()
+            + getDescripcion()
+            + setDescripcion()
+            + getFechaInscripcion()
+            + setFechaInscripcion()
+            + getNombreUniversidad()
+            + setNombreUniversidad()
+            + getListaDisponibilidad()
+            + setListaDisponibilidad()
+            + getListaProvincias()
+            + setListaProvincias()
+            + getListaIdSolcitudes()
+            + setListaIdSolcitudes()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class MascotaDTO {
+            - id_mascota : int
+            - nombre : String
+            - raza : String
+            - edad : int
+            - descripcion : String
+            - fechaInscripcion : String
+            - tamano : String
+            - listaFotos : List<String>
+            - listaIdSolicitudes : List<Integer>
+            + MascotaDTO()
+            + MascotaDTO()
+            + getId_mascota()
+            + setId_mascota()
+            + getNombre()
+            + setNombre()
+            + getRaza()
+            + setRaza()
+            + getEdad()
+            + setEdad()
+            + getDescripcion()
+            + setDescripcion()
+            + getFechaInscripcion()
+            + setFechaInscripcion()
+            + getListaFotos()
+            + setListaFotos()
+            + getListaIdSolicitudes()
+            + setListaIdSolicitudes()
+            + getTamano()
+            + setTamano()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class MetodoPagoDTO {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class SolicitudCuidadorDTO {
+            - idSolicitud : int
+            - horaInicio : String
+            - horaFinal : String
+            - duracion : int
+            - estadoSolicitud : String
+            - precioUnitario : float
+            - idReporte : int
+            - idCliente : int
+            - idMascota : int
+            - idServicio : int
+            - idCuidador : int
+            - calificacion : float
+            - metodoPago : String
+            - direccion : String
+            - descripcion : String
+            + SolicitudCuidadorDTO()
+            + SolicitudCuidadorDTO()
+            + getIdSolicitud()
+            + setIdSolicitud()
+            + getHoraInicio()
+            + setHoraInicio()
+            + getHoraFinal()
+            + setHoraFinal()
+            + getDuracion()
+            + setDuracion()
+            + getEstadoSolicitud()
+            + setEstadoSolicitud()
+            + getPrecioUnitario()
+            + setPrecioUnitario()
+            + getIdReporte()
+            + setIdReporte()
+            + getIdCliente()
+            + setIdCliente()
+            + getIdMascota()
+            + setIdMascota()
+            + getIdServicio()
+            + setIdServicio()
+            + getIdCuidador()
+            + setIdCuidador()
+            + getCalificacion()
+            + setCalificacion()
+            + getMetodoPago()
+            + setMetodoPago()
+            + getDireccion()
+            + setDireccion()
+            + getDescripcion()
+            + setDescripcion()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.digipet.prototype {
+      package com.digipet.prototype.api.dto {
+        class SolicitudHotelDTO {
+            - idSolicitud : int
+            - horaInicio : String
+            - horaFinal : String
+            - duracion : int
+            - estadoSolicitud : String
+            - precioUnitario : float
+            - idCliente : int
+            - idMascota : int
+            - idServicio : int
+            - idHotel : int
+        }
+      }
+    }
+  }
+  
+
+  Credentials -up-|> Serializable
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
