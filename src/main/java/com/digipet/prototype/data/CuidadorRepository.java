@@ -1,11 +1,47 @@
 package com.digipet.prototype.data;
 
+import com.digipet.prototype.api.dto.ClienteDTO;
+import com.digipet.prototype.auxiliar.ORManager;
 import com.digipet.prototype.orm.CuidadorEntity;
+import com.digipet.prototype.orm.UsuarioEntity;
 import org.hibernate.Session;
 
+import javax.persistence.Query;
 import java.sql.Date;
+import java.util.ArrayList;
 
 public class CuidadorRepository {
+
+    public static ArrayList<CuidadorEntity> getAllCuidadores() {
+        ArrayList<CuidadorEntity> data;
+
+        Session session = HibernateSession.openSession();
+
+        try {
+            Query query = session.createQuery("FROM " + "CuidadorEntity");
+            data = (ArrayList<CuidadorEntity>) query.getResultList();
+
+        } catch (Exception exception){
+            System.out.println("Error no identificado");
+            throw exception;
+        }
+
+        return data;
+    }
+
+    public static ClienteDTO getCuidador(int id) throws Exception{
+        //Se obtiene el cuidador respectivo
+        CuidadorEntity cuidador = ORManager.obtenerObjetoPorID(id,CuidadorEntity.class);
+
+        UsuarioEntity user = ORManager.obtenerObjetoPorID(id,UsuarioEntity.class);
+
+        if(cuidador != null && user != null){
+            ClienteDTO clienteDTO = convertToDTO(user, cuidador);
+            return clienteDTO;
+        } else {
+            throw new Exception();
+        }
+    }
 
     public static void registrarCuidadorSP(String nombre, String primerApellido, String segundoApellido,
                                            String provincia, String canton, String universidad, String carne,
