@@ -9,7 +9,7 @@ import com.digipet.prototype.orm.UsuarioEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 public class CuidadorRepository {
@@ -67,51 +67,34 @@ public class CuidadorRepository {
 
     /**
      * Método que llama al Store Procedure de REGISTRAR_CUIDADOR
-     * @param nombre nombre del cuidador
-     * @param primerApellido primer apellido del cuidador
-     * @param segundoApellido segundo apellido del cuidador
-     * @param provincia provincia de residencia del cuidador
-     * @param canton cantón de residencia del cuidador
-     * @param universidad universidad de estudio del cuidador
-     * @param carne carne de universidad del cuidador
-     * @param correo1 correo primario del cuidador
-     * @param correo2 correo secundario del cuidador (puede estar vacío)
-     * @param telefono teléfono del cuidador
-     * @param foto foto de perfil del cuidador
-     * @param contrasena contraseña del cuidador
-     * @param descripcion descripción del cuidador
-     * @param opProvincia provincias adicionales donde el cuidador puede laborar
-     * @param fecha fecha de inscripción del cuidador
+     * @param cuidador Objeto DTO con la informacion del cuidador
      */
-    public static void registrarCuidadorSP(String nombre, String primerApellido, String segundoApellido,
-                                           String provincia, String canton, String universidad, String carne,
-                                           String correo1, String correo2, String telefono, String foto,
-                                           String contrasena, String descripcion, String opProvincia, Date fecha){
+    public static void registrarCuidadorSP(CuidadorDTO cuidador){
         try {
             Session session = com.digipet.prototype.data.HibernateSession.openSession();
 
-            if (correo2 == null) correo2 = "";
+            Date date = new Date();
 
             session.beginTransaction();
             org.hibernate.query.Query query = session.createSQLQuery(
                     "CALL REGISTRAR_CUIDADOR(:Pnombre,:Papellido,:Sapellido,:Iprovincia,:Ccanton,:Iuniversidad," +
                             ":Ccarne,:Correo1,:Correo2,:Telefono,:Foto,:Ccontrasena,:Ddescripcion,:Op_provincia,:Fecha)")
                     .addEntity(CuidadorEntity.class)
-                    .setParameter("Pnombre",nombre)
-                    .setParameter("Papellido",primerApellido)
-                    .setParameter("Sapellido",segundoApellido)
-                    .setParameter("Iprovincia",provincia)
-                    .setParameter("Ccanton",canton)
-                    .setParameter("Iuniversidad",universidad)
-                    .setParameter("Ccarne",carne)
-                    .setParameter("Correo1",correo1)
-                    .setParameter("Correo2",correo2)
-                    .setParameter("Telefono",telefono)
-                    .setParameter("Foto",foto)
-                    .setParameter("Ccontrasena",contrasena)
-                    .setParameter("Ddescripcion",descripcion)
-                    .setParameter("Op_provincia",opProvincia)
-                    .setParameter("Fecha",fecha);
+                    .setParameter("Pnombre",cuidador.getPrimerNombre())
+                    .setParameter("Papellido",cuidador.getPrimerApellido())
+                    .setParameter("Sapellido",cuidador.getSegundoApellido())
+                    .setParameter("Iprovincia",cuidador.getProvinciaResidencia())
+                    .setParameter("Ccanton",cuidador.getCanton())
+                    .setParameter("Iuniversidad",cuidador.getNombreUniversidad())
+                    .setParameter("Ccarne",cuidador.getCarne())
+                    .setParameter("Correo1",cuidador.getEmail1())
+                    .setParameter("Correo2",cuidador.getEmail2())
+                    .setParameter("Telefono",cuidador.getTelefonoMovil())
+                    .setParameter("Foto",cuidador.getFotoPerfil())
+                    .setParameter("Ccontrasena",cuidador.getContraseña())
+                    .setParameter("Ddescripcion",cuidador.getDescripcion())
+                    .setParameter("Op_provincia",cuidador.isOpcionProvincias())
+                    .setParameter("Fecha",date.toString());
 
             query.executeUpdate();
 
@@ -176,5 +159,28 @@ public class CuidadorRepository {
             System.out.println("Durante el procesamiento de insertarProvinciaCuidadorSP");
             throw e;
         }
+    }
+
+    private static CuidadorDTO convertToDTO(UsuarioEntity usuario, CuidadorEntity cuidador){
+        CuidadorDTO cuidadorDTO = new CuidadorDTO();
+
+        cuidadorDTO.setIdUsuario(usuario.getIdUsuario());
+        cuidadorDTO.setPrimerNombre(usuario.getPrimerNombre());
+        cuidadorDTO.setPrimerApellido(usuario.getPrimerApellido());
+        cuidadorDTO.setSegundoApellido(usuario.getSegundoApellido());
+        cuidadorDTO.setEmail1(usuario.getEmail1());
+        cuidadorDTO.setContraseña(usuario.getContrasena());
+        cuidadorDTO.setFotoPerfil(usuario.getFotoPerfil());
+        cuidadorDTO.setIdRol(usuario.getIdUsuario());
+        cuidadorDTO.setIdEstado(usuario.getEstado().getIdEstado());
+        cuidadorDTO.setCarne(cuidador.getCarne());
+        cuidadorDTO.setTelefonoMovil(cuidador.getTelefonoMovil());
+        cuidadorDTO.setOpcionProvincias(cuidador.isOpcionProvincias());
+        cuidadorDTO.setEmail2(cuidador.getEmail2());
+        cuidadorDTO.setDescripcion(cuidador.getDescripcion());
+        cuidadorDTO.setFechaInscripcion(cuidador.getFechaInscripcion().toString());
+        cuidadorDTO.setNombreUniversidad(cuidador.getUniversidad().getNombre());
+
+        return cuidadorDTO;
     }
 }
