@@ -9,8 +9,6 @@ import org.hibernate.query.Query;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
 import java.sql.Date;
 import java.util.List;
 
@@ -20,32 +18,18 @@ import java.util.List;
 public class ORManager {
 
     /**
-     * Método que crea un SessionFactory para la comunicación con la base de datos
-     * @param <T> tipo de clase
-     * @return instancia de SessionFactory
-     */
-    private static <T> SessionFactory crearSesionUno(Class<T> tClass) {
-        try {
-            Configuration configuration = new Configuration().configure().addAnnotatedClass(tClass);
-            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-            return configuration.buildSessionFactory(serviceRegistry);
-        } catch (Exception e){
-            System.out.println("Error al crear servicio en el creador de sesiones");
-            throw e;
-        }
-    }
-
-    /**
      * Método para crear un objeto en la base de datos. El objeto a guardar es el instanciado en el constructor
      * @param object objeto a agregar a la base de datos
+     * @param configuration objeto de configuración con las clases necesarias anotadas
      * @param <T> tipo de clase
      * @throws IllegalArgumentException Cuando el objeto es nulo
      */
-    public static <T> void crearObjeto(T object, Class<T> tClass) throws IllegalArgumentException{
+    public static <T> void crearObjeto(T object, Configuration configuration) throws IllegalArgumentException{
 
         if (object == null) throw new IllegalArgumentException("Intento de crear un objeto cuando su valor es nulo.");
 
-        SessionFactory sessionFactory = crearSesionUno(tClass);
+        ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
+        SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
         Session session = sessionFactory.openSession();
 
         try {
@@ -63,17 +47,17 @@ public class ORManager {
     }
 
     /**
-     * Método que ejecuta un Query de selección dado según la entrada
+     ** Método que ejecuta un Query de selección dado según la entrada
      * @param string Query a ejecutar
-     * @param tClass clase de la tabla a la que está mapeada
-     * @param <T> tipo de clase
+     * @param configuration objeto de configuración con las clases necesarias anotadas
      * @return Una lista con los resultados del query
      */
-    public static <T> List ejecutarSelect(String string, Class<T> tClass){
+    public static List ejecutarSelect(String string, Configuration configuration){
         List data;
 
         try {
-            SessionFactory sessionFactory = crearSesionUno(tClass);
+            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
+            SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
             Session session = sessionFactory.openSession();
 
             data = session.createQuery(string).list();
@@ -88,14 +72,11 @@ public class ORManager {
         return data;
     }
 
-    public static void registrarClienteSP(String nombre, String primerApellido, String segundoApellido,
-                                              String provincia, String canton, String correo1, String correo2,
-                                              String telefono, String foto, String contrasena, String descripcion,
-                                              Date fecha){
+    public static void registrarClienteSP(String Pnombre, String Papellido, String Sapellido,
+                                              String Iprovincia, String Ccanton, String Correo1, String Correo2,
+                                              String Telefono, String Foto, String Contrasena, String Ddescripcion,
+                                              Date Fecha, Configuration configuration){
         try {
-            Configuration configuration = new Configuration().configure()
-                    .addAnnotatedClass(UsuarioEntity.class)
-                    .addAnnotatedClass(ClienteEntity.class);
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
             SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
             Session session = sessionFactory.openSession();
@@ -104,21 +85,22 @@ public class ORManager {
             Query query = session.createSQLQuery(
                     "CALL REGISTRAR_CLIENTE(:Pnombre,:Papellido,:Sapellido,:Iprovincia,:Ccanton," +
                             ":Correo1,:Correo2,:Telefono,:Foto,:Contrasena,:Ddescripcion,:Fecha)")
-                    .addEntity(ClienteEntity.class).addEntity(UsuarioEntity.class)
-                    .setParameter("Pnombre",nombre)
-                    .setParameter("Papellido",primerApellido)
-                    .setParameter("Sapellido",segundoApellido)
-                    .setParameter("Iprovincia",provincia)
-                    .setParameter("Ccanton",canton)
-                    .setParameter("Correo1",correo1)
-                    .setParameter("Correo2",correo2)
-                    .setParameter("Telefono",telefono)
-                    .setParameter("Foto",foto)
-                    .setParameter("Contrasena", contrasena)
-                    .setParameter("Ddescripcion",descripcion)
-                    .setParameter("Fecha",fecha);
+                    .addEntity(UsuarioEntity.class)
+                    .addEntity(ClienteEntity.class)
+                    .setParameter("Pnombre",Pnombre)
+                    .setParameter("Papellido",Papellido)
+                    .setParameter("Sapellido",Sapellido)
+                    .setParameter("Iprovincia",Iprovincia)
+                    .setParameter("Ccanton",Ccanton)
+                    .setParameter("Correo1",Correo1)
+                    .setParameter("Correo2",Correo2)
+                    .setParameter("Telefono",Telefono)
+                    .setParameter("Foto",Foto)
+                    .setParameter("Contrasena", Contrasena)
+                    .setParameter("Ddescripcion",Ddescripcion)
+                    .setParameter("Fecha",Fecha);
 
-            query.list();
+            query.executeUpdate();
 
             session.getTransaction().commit();
             sessionFactory.close();
