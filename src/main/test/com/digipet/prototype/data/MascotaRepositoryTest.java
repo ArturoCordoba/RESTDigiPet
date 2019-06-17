@@ -27,12 +27,12 @@ public class MascotaRepositoryTest {
 
     @Test
     public void getMascota() {
-        //MascotaDTO result = MascotaRepository.getMascota(1);
-        //assertEquals(result.getNombre(), "Cookie");
+        MascotaDTO result = MascotaRepository.getMascota(1);
+        assertEquals(result.getNombre(), "Cookie");
     }
 
     @Test
     public void insertarFotoMascotaSP() {
-        MascotaRepository.insertarFotoMascotaSP(1,"nueva.jpeg");
+        //MascotaRepository.insertarFotoMascotaSP(1,"nueva.jpeg");
     }
 }

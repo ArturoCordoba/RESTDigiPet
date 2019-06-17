@@ -10,6 +10,7 @@ import org.hibernate.Session;
 
 import javax.persistence.Query;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CuidadorRepository {
@@ -19,7 +20,7 @@ public class CuidadorRepository {
      * @return ArrayList de cuidadores
      */
     public static List<CuidadorDTO> getAllCuidadores() {
-        List<CuidadorDTO> data = null;
+        List<CuidadorDTO> data = new ArrayList<>();
         List cuidadores;
 
         Session session = HibernateSession.openSession();

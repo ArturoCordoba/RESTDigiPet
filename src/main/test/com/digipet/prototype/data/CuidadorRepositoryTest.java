@@ -41,7 +41,7 @@ public class CuidadorRepositoryTest {
 
     @Test
     public void insertarBadgeCuidadorSP() {
-        CuidadorRepository.insertarBadgeCuidadorSP(4,1);
+        //CuidadorRepository.insertarBadgeCuidadorSP(4,1);
     }
 
     @Test
