@@ -8,8 +8,6 @@ import com.digipet.prototype.orm.UsuarioEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Date;
 

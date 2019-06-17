@@ -10,7 +10,6 @@ import org.hibernate.Session;
 
 import javax.persistence.Query;
 import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CuidadorRepository {
