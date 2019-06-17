@@ -86,6 +86,8 @@ public class ClienteRepository {
         try {
             Session session = com.digipet.prototype.data.HibernateSession.openSession();
 
+            if (correo2==null) correo2 = "";
+
             session.beginTransaction();
             org.hibernate.query.Query query = session.createSQLQuery(
                     "CALL REGISTRAR_CLIENTE(:Pnombre,:Papellido,:Sapellido,:Iprovincia,:Ccanton," +

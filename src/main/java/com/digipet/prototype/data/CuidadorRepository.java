@@ -1,6 +1,6 @@
 package com.digipet.prototype.data;
 
-import com.digipet.prototype.api.dto.ClienteDTO;
+import com.digipet.prototype.api.dto.CuidadorDTO;
 import com.digipet.prototype.auxiliar.ORManager;
 import com.digipet.prototype.orm.CuidadorEntity;
 import com.digipet.prototype.orm.UsuarioEntity;
@@ -29,15 +29,15 @@ public class CuidadorRepository {
         return data;
     }
 
-    public static ClienteDTO getCuidador(int id) throws Exception{
+    public static CuidadorDTO getCuidador(int id) throws Exception{
         //Se obtiene el cuidador respectivo
         CuidadorEntity cuidador = ORManager.obtenerObjetoPorID(id,CuidadorEntity.class);
 
         UsuarioEntity user = ORManager.obtenerObjetoPorID(id,UsuarioEntity.class);
 
         if(cuidador != null && user != null){
-            ClienteDTO clienteDTO = convertToDTO(user, cuidador);
-            return clienteDTO;
+            CuidadorDTO cuidadorDTO = convertToDTO(user, cuidador);
+            return cuidadorDTO;
         } else {
             throw new Exception();
         }
@@ -49,6 +49,8 @@ public class CuidadorRepository {
                                            String contrasena, String descripcion, String opProvincia, Date fecha){
         try {
             Session session = com.digipet.prototype.data.HibernateSession.openSession();
+
+            if (correo2==null) correo2 = "";
 
             session.beginTransaction();
             org.hibernate.query.Query query = session.createSQLQuery(
