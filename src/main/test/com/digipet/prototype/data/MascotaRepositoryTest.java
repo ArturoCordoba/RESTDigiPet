@@ -1,8 +1,12 @@
 package com.digipet.prototype.data;
 
+import com.digipet.prototype.api.dto.MascotaDTO;
 import org.junit.Test;
 
 import java.sql.Date;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 public class MascotaRepositoryTest {
 
@@ -15,4 +19,15 @@ public class MascotaRepositoryTest {
     */
     }
 
+    @Test
+    public void getAllMascotas() {
+        List<MascotaDTO> mascotas = (List<MascotaDTO>) MascotaRepository.getAllMascotas();
+        assertEquals(mascotas.get(0).getNombre(),"Cookie");
+    }
+
+    @Test
+    public void getMascota() {
+        MascotaDTO result = MascotaRepository.getMascota(1);
+        assertEquals(result.getNombre(), "Cookie");
+    }
 }

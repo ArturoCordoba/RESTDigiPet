@@ -11,6 +11,7 @@ import javax.persistence.Query;
 import javax.transaction.Transactional;
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class MascotaRepository {
@@ -19,17 +20,25 @@ public class MascotaRepository {
      * Método que obtiene la la tabla de mascotas
      * @return ArrayList de mascotas
      */
-    public static List getAllMascotas() {
-        List data;
+    public static List<MascotaDTO> getAllMascotas() {
+        List<MascotaDTO> data = new ArrayList<>();
 
         Session session = HibernateSession.openSession();
 
         try {
             Query query = session.createQuery(
                     "from MascotaEntity m " +
-                            "join fetch m.listaFotos, m.listaSolicitudes ");
-            data = query.getResultList();
+                            "fetch all properties ");
+            List mascotaList = query.getResultList();
 
+            for (Object o : mascotaList) {
+                MascotaEntity mascotaEntity = (MascotaEntity) o;
+                data.add(convertToDTO(mascotaEntity));
+            }
+
+        } catch (NullPointerException nullpt){
+          System.out.println("Error al pasar de Entity a DTO");
+          throw nullpt;
         } catch (Exception exception){
             System.out.println("Error no identificado en getAllMascots");
             throw exception;
@@ -46,16 +55,11 @@ public class MascotaRepository {
         try {
             Query query = session.createQuery(
                     "from MascotaEntity m " +
-                            "join fetch m.listaFotos, m.listaSolicitudes " +
+                            "fetch all properties " +
                             "where m.idMascota = :id")
                     .setParameter("id",id);
 
-            //List<MascotaEntity> result = query.getResultList();
-
-            /*if(result.size() > 0 ){
-                MascotaEntity mascotaEntity = result.get(0);
-                mascota = convertToDTO(mascotaEntity);
-            }*/
+            mascota = convertToDTO((MascotaEntity) query.getSingleResult());
 
         } catch (Exception exception){
             System.out.println("Error no identificado en getAllMascots");
