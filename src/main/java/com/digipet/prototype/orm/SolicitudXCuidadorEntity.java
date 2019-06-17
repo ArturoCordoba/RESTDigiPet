@@ -6,7 +6,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "SOLICITUD_X_CUIDADOR", schema = "digipet")
 public class SolicitudXCuidadorEntity {
-    private int calificacion;
+    private float calificacion;
     private String metodoPago;
     private String direccion;
     private String descripcion;
@@ -15,11 +15,11 @@ public class SolicitudXCuidadorEntity {
 
     @Basic
     @Column(name = "Calificacion")
-    public int getCalificacion() {
+    public float getCalificacion() {
         return calificacion;
     }
 
-    public void setCalificacion(int calificacion) {
+    public void setCalificacion(float calificacion) {
         this.calificacion = calificacion;
     }
 

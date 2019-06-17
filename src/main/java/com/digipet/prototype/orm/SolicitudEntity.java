@@ -12,9 +12,9 @@ public class SolicitudEntity {
     private int idSolicitud;
     private Timestamp horaInicio;
     private Timestamp horaFinal;
-    private int duracion;
+    private float duracion;
     private String estadoSolicitud;
-    private int precioUnitario;
+    private float precioUnitario;
     private List<ReporteEntity> reporte;
     private ClienteEntity cliente;
     private MascotaEntity mascota;
@@ -54,11 +54,11 @@ public class SolicitudEntity {
 
     @Basic
     @Column(name = "Duracion", nullable = false)
-    public int getDuracion() {
+    public float getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(int duracion) {
+    public void setDuracion(float duracion) {
         this.duracion = duracion;
     }
 
@@ -74,11 +74,11 @@ public class SolicitudEntity {
 
     @Basic
     @Column(name = "Precio_unitario")
-    public int getPrecioUnitario() {
+    public float getPrecioUnitario() {
         return precioUnitario;
     }
 
-    public void setPrecioUnitario(int precioUnitario) {
+    public void setPrecioUnitario(float precioUnitario) {
         this.precioUnitario = precioUnitario;
     }
 

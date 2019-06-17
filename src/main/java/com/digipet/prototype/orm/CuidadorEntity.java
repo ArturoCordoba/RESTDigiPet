@@ -12,7 +12,7 @@ public class CuidadorEntity {
     private String carne;
     private String telefonoMovil;
     private String canton;
-    private byte opcionProvincias;
+    private boolean opcionProvincias;
     private String email2;
     private String descripcion;
     private Date fechaInscripcion;
@@ -65,11 +65,11 @@ public class CuidadorEntity {
 
     @Basic
     @Column(name = "Opcion_provincias", nullable = false)
-    public byte getOpcionProvincias() {
+    public boolean isOpcionProvincias() {
         return opcionProvincias;
     }
 
-    public void setOpcionProvincias(byte opcionProvincias) {
+    public void setOpcionProvincias(boolean opcionProvincias) {
         this.opcionProvincias = opcionProvincias;
     }
 
