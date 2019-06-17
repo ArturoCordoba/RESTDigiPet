@@ -29,7 +29,7 @@ public class MascotRepository {
     }
 
     public static MascotaDTO getMascota(int id) throws Exception{
-        //Se obtiene el cliente respectivo
+        //Se obtiene la mascota respectivo
         MascotaEntity mascota = ORManager.obtenerObjetoPorID(id,MascotaEntity.class);
 
         if(mascota != null){
