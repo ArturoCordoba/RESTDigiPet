@@ -8,6 +8,7 @@ import org.hibernate.service.ServiceRegistry;
 import org.junit.Test;
 
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -34,11 +35,7 @@ public class ORManagerTest {
         usuarioEntity.setContrasena("contra8");
         usuarioEntity.setFotoPerfil("penege.png");
 
-        Configuration configuration = new Configuration().configure()
-                .addAnnotatedClass(RolEntity.class)
-                .addAnnotatedClass(EstadoEntity.class)
-                .addAnnotatedClass(UsuarioEntity.class);
-        ORManager.crearObjeto(usuarioEntity, configuration);
+        ORManager.crearObjeto(usuarioEntity);
     }
 
 
@@ -48,47 +45,21 @@ public class ORManagerTest {
 
     @Test
     public void registrarClienteSP() {
-        Configuration configuration = new Configuration().configure()
-                .addAnnotatedClass(PagoXClienteEntity.class)
-                .addAnnotatedClass(HotelEntity.class)
-                .addAnnotatedClass(SolicitudXHotelEntity.class)
-                .addAnnotatedClass(ProvinciaXCuidadorEntity.class)
-                .addAnnotatedClass(DisponibilidadXCuidadorEntity.class)
-                .addAnnotatedClass(BadgeEntity.class)
-                .addAnnotatedClass(BadgeXCuidadorEntity.class)
-                .addAnnotatedClass(UniversidadEntity.class)
-                .addAnnotatedClass(CuidadorEntity.class)
-                .addAnnotatedClass(SolicitudXCuidadorEntity.class)
-                .addAnnotatedClass(FotoXReporteEntity.class)
-                .addAnnotatedClass(ReporteEntity.class)
-                .addAnnotatedClass(ServicioEntity.class)
-                .addAnnotatedClass(SolicitudEntity.class)
-                .addAnnotatedClass(FotoXMascotaEntity.class)
-                .addAnnotatedClass(TamanoEntity.class)
-                .addAnnotatedClass(ProvinciaEntity.class)
-                .addAnnotatedClass(EstadoEntity.class)
-                .addAnnotatedClass(RolEntity.class)
-                .addAnnotatedClass(MascotaEntity.class)
-                .addAnnotatedClass(ClienteEntity.class)
-                .addAnnotatedClass(UsuarioEntity.class);
-
         String dateSTR = "2015-03-31";
         Date date = Date.valueOf(dateSTR);
         com.digipet.prototype.auxiliar.ORManager.registrarClienteSP("Gutierrez","Casimiro,",
                 "Alfaro","Alajuela","Alajuela","no@correo","","87655432",
-                "nohay.jpg","laprogre","Salu2",date,configuration);
+                "nohay.jpg","laprogre","Salu2",date);
     }
     @Test
     public void obtenerTabla() {
-        ORManager orManager = new ORManager(ClienteEntity.class, null);
-        ArrayList<ClienteEntity> list = orManager.obtenerTabla("ClienteEntity");
+        ArrayList<ClienteEntity> list = com.digipet.prototype.auxiliar.ORManager.obtenerTabla("ClienteEntity");
 
     }
 
 
     @Test
     public void obtenerObjetoPorID() {
-        ORManager orManager = new ORManager(ClienteEntity.class, null);
-        ClienteEntity clienteEntity = (ClienteEntity) orManager.obtenerObjetoPorID(2);
+        ClienteEntity clienteEntity = (ClienteEntity) com.digipet.prototype.auxiliar.ORManager.obtenerObjetoPorID(2,ClienteEntity.class);
     }
 }

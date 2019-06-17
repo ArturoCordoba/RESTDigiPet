@@ -33,11 +33,9 @@ public class ClientRepository {
 
     public static ClientDTO getClient(int id) throws Exception{
         //Se obtiene el cliente respectivo
-        ORManager orManager = new ORManager(ClienteEntity.class, null);
-        ClienteEntity client = (ClienteEntity) orManager.obtenerObjetoPorID(id);
+        ClienteEntity client = (ClienteEntity) com.digipet.prototype.auxiliar.ORManager.obtenerObjetoPorID(id,ClienteEntity.class);
 
-        ORManager orManager1 = new ORManager(UsuarioEntity.class, null);
-        UsuarioEntity user = (UsuarioEntity) orManager1.obtenerObjetoPorID(id);
+        UsuarioEntity user = (UsuarioEntity) com.digipet.prototype.auxiliar.ORManager.obtenerObjetoPorID(id,UsuarioEntity.class);
 
         if(client != null && user != null){
             ClientDTO clientDTO = convertToDTO(user, client);
