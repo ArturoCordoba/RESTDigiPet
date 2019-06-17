@@ -1,11 +1,15 @@
 package com.digipet.prototype.api.services;
 
+import com.digipet.prototype.api.authentication.Secured;
 import com.digipet.prototype.api.dto.ClienteDTO;
 import com.digipet.prototype.data.ClienteRepository;
 
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.SecurityContext;
+import java.security.Principal;
 import java.util.ArrayList;
 
 @Path("client")
@@ -22,15 +26,20 @@ public class Client {
 
     /**
      * Metodo para obtener un cliente especifico
-     * @param id Identificador del cliente
      * @return Objeto ClienteDTO con la informacion obtenida
      */
+    @Secured
     @GET
-    @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public ClienteDTO get(@PathParam("id") int id){
+    public ClienteDTO get(@Context SecurityContext securityContext){
         ClienteDTO response = new ClienteDTO();
         try{
+            //Se obtiene el identificador del usuario que hizo la solicitud
+            Principal principal = securityContext.getUserPrincipal();
+            String idString = principal.getName();
+            int id = Integer.parseInt(idString);
+
+            //Se realiza la busqueda del cliente
              response = ClienteRepository.getClient(id);
 
             if(response != null){

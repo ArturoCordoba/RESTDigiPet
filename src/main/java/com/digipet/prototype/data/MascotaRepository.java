@@ -18,7 +18,7 @@ public class MascotaRepository {
      * Método que obtiene la la tabla de mascotas
      * @return ArrayList de mascotas
      */
-    public static List<MascotaDTO> getAllMascotas() {
+    public static List<MascotaDTO> getAllMascotas(int idCliente) {
         List<MascotaDTO> data = new ArrayList<>();
 
         Session session = HibernateSession.openSession();
@@ -26,7 +26,9 @@ public class MascotaRepository {
         try {
             Query query = session.createQuery(
                     "from MascotaEntity m " +
-                            "fetch all properties ");
+                            "fetch all properties " +
+                            "where m.cliente.id = :id")
+                    .setParameter("id", idCliente);
             List mascotaList = query.getResultList();
 
             for (Object o : mascotaList) {

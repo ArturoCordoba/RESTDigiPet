@@ -11,6 +11,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import java.security.Principal;
 import java.util.Date;
+import java.util.List;
 
 @Path("mascota")
 public class Mascota {
@@ -35,6 +36,27 @@ public class Mascota {
         return mascotaDTO;
     }
 
+    @Secured
+    @GET
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<MascotaDTO> getMascotas(@Context SecurityContext securityContext){
+        try{
+            //Se obtiene el identificador del usuario que realiza la solicitud
+            Principal principal = securityContext.getUserPrincipal();
+            String idString = principal.getName();
+            int id = Integer.parseInt(idString);
+
+            List<MascotaDTO> listaMascotas = MascotaRepository.getAllMascotas(id);
+
+            return listaMascotas;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
     /**
      * Metodo para registrar una mascota
      * @param securityContext
@@ -47,8 +69,7 @@ public class Mascota {
     public Response registrarMascota(@Context SecurityContext securityContext, MascotaDTO mascota){
         try{
             if(mascota != null){
-                //Se obtiene el identificador del usuario que esta realizando
-                //la solicitud
+                //Se obtiene el identificador del usuario que esta realizand la solicitud
                 Principal principal = securityContext.getUserPrincipal();
                 String stringID = principal.getName();
                 int id = Integer.valueOf(stringID);
