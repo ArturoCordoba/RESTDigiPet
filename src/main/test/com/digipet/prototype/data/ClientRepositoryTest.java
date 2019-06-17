@@ -12,7 +12,7 @@ public class ClientRepositoryTest {
     public void registrarClienteSP() {
         String dateSTR = "2015-03-31";
         Date date = Date.valueOf(dateSTR);
-        com.digipet.prototype.data.ClientRepository.registrarClienteSP("Gutierrez","Casimiro,",
+        ClientRepository.registrarClienteSP("Gutierrez","Casimiro,",
                 "Alfaro","Alajuela","Alajuela","no@correo","","87655432",
                 "nohay.jpg","laprogre","Salu2",date);
     }
