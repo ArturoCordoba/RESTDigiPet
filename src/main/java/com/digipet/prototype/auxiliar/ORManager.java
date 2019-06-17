@@ -95,7 +95,7 @@ public class ORManager<T> {
             session.close();
 
         } catch (Exception exception){
-            System.out.println("Error no identificado");
+            System.out.println(exception.toString());
             throw exception;
         }
         return data;

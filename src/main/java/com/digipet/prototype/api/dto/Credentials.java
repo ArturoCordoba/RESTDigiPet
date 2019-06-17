@@ -1,4 +1,4 @@
-package com.digipet.prototype.dto;
+package com.digipet.prototype.api.dto;
 
 import java.io.Serializable;
 
