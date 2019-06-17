@@ -4,6 +4,7 @@ import com.digipet.prototype.api.dto.MascotaDTO;
 import com.digipet.prototype.auxiliar.ORManager;
 import com.digipet.prototype.orm.FotoXMascotaEntity;
 import com.digipet.prototype.orm.MascotaEntity;
+import com.digipet.prototype.orm.SolicitudEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
@@ -54,6 +55,7 @@ public class MascotaRepository {
     public static MascotaDTO getMascota(int id) throws Exception{
         //Se obtiene la mascota respectivo
         MascotaEntity mascota = ORManager.obtenerObjetoPorID(id,MascotaEntity.class);
+        MascotaDTO data;
 
         Session session = HibernateSession.openSession();
 
@@ -64,14 +66,14 @@ public class MascotaRepository {
                             "where m.idMascota = :id")
                     .setParameter("id",id);
 
-            mascota = convertToDTO((MascotaEntity) query.getSingleResult());
+            data = convertToDTO((MascotaEntity) query.getSingleResult());
 
         } catch (Exception exception){
             System.out.println("Error no identificado en getAllMascots");
             throw exception;
         }
 
-        return mascota;
+        return data;
     }
 
     private static MascotaDTO convertToDTO(MascotaEntity mascota) {
