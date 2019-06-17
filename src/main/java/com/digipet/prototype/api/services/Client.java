@@ -20,6 +20,11 @@ public class Client {
         }
     }*/
 
+    /**
+     * Metodo para obtener un cliente especifico
+     * @param id Identificador del cliente
+     * @return Objeto ClienteDTO con la informacion obtenida
+     */
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -37,6 +42,11 @@ public class Client {
         return response;
     }
 
+    /**
+     * Metodo para agregar un nuevo cliente
+     * @param client Objeto ClienteDTO con la informacion necesaria para agregar un cliente
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response registerClient(ClienteDTO client){
