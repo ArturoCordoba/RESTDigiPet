@@ -6,16 +6,16 @@ import java.util.Objects;
 @Entity
 @Table(name = "PROVINCIA", schema = "digipet")
 public class ProvinciaEntity {
-    private int idProvincia;
+    private String idProvincia;
     private String nombre;
 
     @Id
     @Column(name = "Id_provincia", nullable = false)
-    public int getIdProvincia() {
+    public String getIdProvincia() {
         return idProvincia;
     }
 
-    public void setIdProvincia(int idProvincia) {
+    public void setIdProvincia(String idProvincia) {
         this.idProvincia = idProvincia;
     }
 

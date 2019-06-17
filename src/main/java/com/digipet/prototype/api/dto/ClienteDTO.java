@@ -18,7 +18,7 @@ public class ClienteDTO {
     private String email2;
     private String descripcion;
     private String fechaInscripcion;
-    private int id_provincia;
+    private String provincia;
     private ArrayList<MascotaDTO> listaMascotas;
     private ArrayList<MetodoPagoDTO> listaPago;
 
@@ -26,7 +26,7 @@ public class ClienteDTO {
 
     }
 
-    public ClienteDTO(int idUsuario, String primerNombre, String primerApellido, String segundoApellido, String email1, String contrasena, String fotoPerfil, int id_rol, int id_estado, int idCliente, String telefonoMovil, String canton, String email2, String descripcion, String fechaInscripcion, int id_provincia, ArrayList<MascotaDTO> listaMascotas, ArrayList<MetodoPagoDTO> listaPago) {
+    public ClienteDTO(int idUsuario, String primerNombre, String primerApellido, String segundoApellido, String email1, String contrasena, String fotoPerfil, int id_rol, int id_estado, int idCliente, String telefonoMovil, String canton, String email2, String descripcion, String fechaInscripcion, String provincia, ArrayList<MascotaDTO> listaMascotas, ArrayList<MetodoPagoDTO> listaPago) {
         this.idUsuario = idUsuario;
         this.primerNombre = primerNombre;
         this.primerApellido = primerApellido;
@@ -41,7 +41,7 @@ public class ClienteDTO {
         this.email2 = email2;
         this.descripcion = descripcion;
         this.fechaInscripcion = fechaInscripcion;
-        this.id_provincia = id_provincia;
+        this.provincia = provincia;
         this.listaMascotas = listaMascotas;
         this.listaPago = listaPago;
     }
@@ -166,12 +166,12 @@ public class ClienteDTO {
         this.fechaInscripcion = fechaInscripcion;
     }
 
-    public int getId_provincia() {
-        return id_provincia;
+    public String getProvincia() {
+        return provincia;
     }
 
-    public void setId_provincia(int id_provincia) {
-        this.id_provincia = id_provincia;
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
     }
 
     public ArrayList<MascotaDTO> getListaMascotas() {
