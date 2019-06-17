@@ -2,6 +2,7 @@ package com.digipet.prototype.data;
 
 import com.digipet.prototype.api.dto.MascotaDTO;
 import com.digipet.prototype.auxiliar.ORManager;
+import com.digipet.prototype.orm.FotoXMascotaEntity;
 import com.digipet.prototype.orm.MascotaEntity;
 import org.hibernate.Session;
 
@@ -11,6 +12,10 @@ import java.util.ArrayList;
 
 public class MascotaRepository {
 
+    /**
+     * Método que obtiene la la tabla de mascotas
+     * @return ArrayList de mascotas
+     */
     public static ArrayList<MascotaEntity> getAllMascotas() {
         ArrayList<MascotaEntity> data;
 
@@ -28,6 +33,12 @@ public class MascotaRepository {
         return data;
     }
 
+    /**
+     * Método que retorna una mascota según su id
+     * @param id de la mascota
+     * @return mascota a quien pertenece el id
+     * @throws Exception Si la mascota es nula
+     */
     public static MascotaDTO getMascota(int id) throws Exception{
         //Se obtiene la mascota respectivo
         MascotaEntity mascota = ORManager.obtenerObjetoPorID(id,MascotaEntity.class);
@@ -79,6 +90,33 @@ public class MascotaRepository {
 
         } catch (Exception e){
             System.out.println("Durante el procesamiento de registrarMascotaSP");
+            throw e;
+        }
+    }
+
+    /**
+     * Método que llama al Store Procedure de INSERTAR_FOTO_PERFIL
+     * @param mascota mascota a quien corresponde la foto
+     * @param foto url de la foto a insertar
+     */
+    public static void insertarFotoMascotaSP(int mascota, String foto){
+        try {
+            Session session = com.digipet.prototype.data.HibernateSession.openSession();
+
+            session.beginTransaction();
+            org.hibernate.query.Query query = session.createSQLQuery(
+                    "CALL INSERTAR_FOTO_MASCOTA(:Imascota,:Foto_masc)")
+                    .addEntity(FotoXMascotaEntity.class)
+                    .setParameter("Imascota",mascota)
+                    .setParameter("Foto_masc",foto);
+
+            query.executeUpdate();
+
+            session.getTransaction().commit();
+            session.close();
+
+        } catch (Exception e){
+            System.out.println("Durante el procesamiento de insertarFotoMascota");
             throw e;
         }
     }

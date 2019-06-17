@@ -12,6 +12,10 @@ import java.util.ArrayList;
 
 public class ClienteRepository {
 
+    /**
+     * Método que obtiene la la tabla de clientes
+     * @return ArrayList de clientes
+     */
     public static ArrayList<ClienteEntity> getAllClients() {
         ArrayList<ClienteEntity> data;
 
@@ -29,6 +33,12 @@ public class ClienteRepository {
         return data;
     }
 
+    /**
+     * Método que retorna un cliente según su id
+     * @param id del cliente
+     * @return cliente a quien pertenece el id
+     * @throws Exception Si el cliente o usuario son nulos
+     */
     public static ClienteDTO getClient(int id) throws Exception{
         //Se obtiene el cliente respectivo
         ClienteEntity client = ORManager.obtenerObjetoPorID(id,ClienteEntity.class);
@@ -43,6 +53,12 @@ public class ClienteRepository {
         }
     }
 
+    /**
+     * Método que parsea un cliente/usuario a un cliente completo
+     * @param user usuario de la base
+     * @param clienteEntity cliente de la base relacionado al usuario
+     * @return ClienteDTO completo
+     */
     private static ClienteDTO convertToDTO(UsuarioEntity user, ClienteEntity clienteEntity){
         ClienteDTO client = new ClienteDTO();
         client.setIdUsuario(user.getIdUsuario());
@@ -71,13 +87,13 @@ public class ClienteRepository {
      * @param segundoApellido segundo apellido del usuario
      * @param provincia provincia de localización deñ cliente
      * @param canton cantón de localización del cliente
-     * @param correo1 correo del usuario
-     * @param correo2 correo del cliente (puede estar vacío)
+     * @param correo1 correo primario del cliente
+     * @param correo2 correo secundario del cliente (puede estar vacío)
      * @param telefono teléfono del cliente
-     * @param foto foto del usuario
+     * @param foto foto de perfil del usuario
      * @param contrasena contraseña del usuario
      * @param descripcion descripción del cliente
-     * @param fecha fecha de inscripción
+     * @param fecha fecha de inscripción del cliente
      */
     public static void registrarClienteSP(String nombre, String primerApellido, String segundoApellido,
                                           String provincia, String canton, String correo1, String correo2,
@@ -86,7 +102,7 @@ public class ClienteRepository {
         try {
             Session session = com.digipet.prototype.data.HibernateSession.openSession();
 
-            if (correo2==null) correo2 = "";
+            if (correo2 == null) correo2 = "";
 
             session.beginTransaction();
             org.hibernate.query.Query query = session.createSQLQuery(
