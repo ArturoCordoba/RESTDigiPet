@@ -28,6 +28,7 @@ public class BadgeXCuidadorEntity {
         this.badge = badge;
     }
 
+    //TODO: remover el id
     private int id;
 
     @Id

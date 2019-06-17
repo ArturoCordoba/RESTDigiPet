@@ -29,7 +29,12 @@ public class CuidadorDTO {
 
     }
 
-    public CuidadorDTO(int idUsuario, String primerNombre, String primerApellido, String segundoApellido, String email1, String contraseña, String fotoPerfil, int idRol, int idEstado, String carne, String telefonoMovil, String canton, boolean opcionProvincias, String email2, String descripcion, String fechaInscripcion, String nombreUniversidad, List<String> listaDisponibilidad, List<String> listaProvincias, List<String> listaIdSolcitudes, String provinciaResidencia) {
+    public CuidadorDTO(int idUsuario, String primerNombre, String primerApellido, String segundoApellido,
+                       String email1, String contraseña, String fotoPerfil, int idRol, int idEstado,
+                       String carne, String telefonoMovil, String canton, boolean opcionProvincias, String email2,
+                       String descripcion, String fechaInscripcion, String nombreUniversidad,
+                       List<String> listaDisponibilidad, List<String> listaProvincias, List<String> listaIdSolcitudes,
+                       String provinciaResidencia) {
         this.idUsuario = idUsuario;
         this.primerNombre = primerNombre;
         this.primerApellido = primerApellido;

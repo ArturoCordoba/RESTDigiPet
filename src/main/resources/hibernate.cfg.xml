@@ -15,7 +15,7 @@
     <property name="connection.username">gafa</property>
     <property name="connection.password">gafa1234</property>
 
-    <property name="show_sql">false</property>
+    <property name="show_sql">true</property>
     <property name="format_sql">true</property>
 
       <!-- Mapped classes -->

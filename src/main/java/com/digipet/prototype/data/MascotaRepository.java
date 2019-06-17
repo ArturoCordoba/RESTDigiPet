@@ -51,10 +51,9 @@ public class MascotaRepository {
      * @return mascota a quien pertenece el id
      * @throws Exception Si la mascota es nula
      */
-    public static MascotaDTO getMascota(int id) throws Exception{
+    public static MascotaDTO getMascota(int id) {
         //Se obtiene la mascota respectivo
-        MascotaEntity mascota = ORManager.obtenerObjetoPorID(id,MascotaEntity.class);
-        MascotaDTO data;
+        MascotaDTO mascota;
 
         Session session = HibernateSession.openSession();
 
@@ -65,14 +64,14 @@ public class MascotaRepository {
                             "where m.idMascota = :id")
                     .setParameter("id",id);
 
-            data = convertToDTO((MascotaEntity) query.getSingleResult());
+            mascota = convertToDTO((MascotaEntity) query.getSingleResult());
 
         } catch (Exception exception){
             System.out.println("Error no identificado en getAllMascots");
             throw exception;
         }
 
-        return data;
+        return mascota;
     }
 
     private static MascotaDTO convertToDTO(MascotaEntity mascota) {

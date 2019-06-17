@@ -21,7 +21,7 @@ public class MascotaRepositoryTest {
 
     @Test
     public void getAllMascotas() {
-        List<MascotaDTO> mascotas = (List<MascotaDTO>) MascotaRepository.getAllMascotas();
+        List<MascotaDTO> mascotas = MascotaRepository.getAllMascotas();
         assertEquals(mascotas.get(0).getNombre(),"Cookie");
     }
 
@@ -29,5 +29,10 @@ public class MascotaRepositoryTest {
     public void getMascota() {
         //MascotaDTO result = MascotaRepository.getMascota(1);
         //assertEquals(result.getNombre(), "Cookie");
+    }
+
+    @Test
+    public void insertarFotoMascotaSP() {
+        MascotaRepository.insertarFotoMascotaSP(1,"nueva.jpeg");
     }
 }

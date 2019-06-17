@@ -9,7 +9,7 @@ import com.digipet.prototype.orm.UsuarioEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 public class CuidadorRepository {
@@ -18,7 +18,7 @@ public class CuidadorRepository {
      * Método que obtiene la la tabla de cuidadores
      * @return ArrayList de cuidadores
      */
-    public static List getAllCuidadores() {
+    public static List<CuidadorDTO> getAllCuidadores() {
         List<CuidadorDTO> data = null;
         List cuidadores;
 
@@ -73,17 +73,16 @@ public class CuidadorRepository {
         try {
             Session session = com.digipet.prototype.data.HibernateSession.openSession();
 
-            Date date = new Date();
+            Date date = Date.valueOf(cuidador.getFechaInscripcion());
 
             session.beginTransaction();
             org.hibernate.query.Query query = session.createSQLQuery(
-                    "CALL REGISTRAR_CUIDADOR(:Pnombre,:Papellido,:Sapellido,:Iprovincia,:Ccanton,:Iuniversidad," +
+                    "CALL REGISTRAR_CUIDADOR(:Pnombre,:Papellido,:Sapellido,:Ccanton,:Iuniversidad," +
                             ":Ccarne,:Correo1,:Correo2,:Telefono,:Foto,:Ccontrasena,:Ddescripcion,:Op_provincia,:Fecha)")
                     .addEntity(CuidadorEntity.class)
                     .setParameter("Pnombre",cuidador.getPrimerNombre())
                     .setParameter("Papellido",cuidador.getPrimerApellido())
                     .setParameter("Sapellido",cuidador.getSegundoApellido())
-                    .setParameter("Iprovincia",cuidador.getProvinciaResidencia())
                     .setParameter("Ccanton",cuidador.getCanton())
                     .setParameter("Iuniversidad",cuidador.getNombreUniversidad())
                     .setParameter("Ccarne",cuidador.getCarne())
@@ -94,7 +93,7 @@ public class CuidadorRepository {
                     .setParameter("Ccontrasena",cuidador.getContraseña())
                     .setParameter("Ddescripcion",cuidador.getDescripcion())
                     .setParameter("Op_provincia",cuidador.isOpcionProvincias())
-                    .setParameter("Fecha",date.toString());
+                    .setParameter("Fecha",date);
 
             query.executeUpdate();
 

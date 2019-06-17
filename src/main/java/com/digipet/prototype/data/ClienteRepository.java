@@ -10,7 +10,7 @@ import org.hibernate.Session;
 import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Date;
+import java.sql.Date;
 
 public class ClienteRepository {
 
@@ -18,7 +18,7 @@ public class ClienteRepository {
      * Método que obtiene la la tabla de clientes
      * @return ArrayList de clientes
      */
-    public static List getAllClients() {
+    public static List<ClienteDTO> getAllClients() {
         List<ClienteDTO> data = new ArrayList<>();
         List clientes;
 
@@ -100,7 +100,7 @@ public class ClienteRepository {
         try {
             Session session = com.digipet.prototype.data.HibernateSession.openSession();
 
-            Date date = new Date();
+            Date date = Date.valueOf(cliente.getFechaInscripcion());
 
             session.beginTransaction();
             org.hibernate.query.Query query = session.createSQLQuery(

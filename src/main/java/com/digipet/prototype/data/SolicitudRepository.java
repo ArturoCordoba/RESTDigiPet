@@ -12,7 +12,7 @@ public class SolicitudRepository {
      * @param horaInicio hora de inicio de la solicitud
      * @param horaFinal hora final de la solicitud
      * @param duracion duración de la solicitud
-     * @param solicitud solicitud
+     * @param solicitud estado de la solicitud
      * @param precio precio total de la solicitud
      * @param cliente cliente que pide la solicitud
      * @param mascota mascota de la solicitud
