@@ -3,12 +3,15 @@ package com.digipet.prototype.data;
 import com.digipet.prototype.api.dto.ClienteDTO;
 import com.digipet.prototype.auxiliar.ORManager;
 import com.digipet.prototype.orm.ClienteEntity;
+import com.digipet.prototype.orm.PagoXClienteEntity;
 import com.digipet.prototype.orm.UsuarioEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class ClienteRepository {
 
@@ -16,17 +19,27 @@ public class ClienteRepository {
      * Método que obtiene la la tabla de clientes
      * @return ArrayList de clientes
      */
-    public static ArrayList<ClienteEntity> getAllClients() {
-        ArrayList<ClienteEntity> data;
+    public static List getAllClients() {
+        List<ClienteDTO> data = null;
+        List clientes;
 
         Session session = HibernateSession.openSession();
 
         try {
             Query query = session.createQuery("FROM " + "ClienteEntity");
-            data = (ArrayList<ClienteEntity>) query.getResultList();
+            clientes = query.getResultList();
 
+            for (Object cliente : clientes) {
+                ClienteEntity clienteEntity = (ClienteEntity) cliente;
+                UsuarioEntity usuarioEntity = ORManager.obtenerObjetoPorID(clienteEntity.getIdCliente(), UsuarioEntity.class);
+                data.add(convertToDTO(usuarioEntity, clienteEntity));
+            }
+
+        } catch (NullPointerException nullptr){
+            System.out.println("Error de puntero al convertir en DTO");
+            throw nullptr;
         } catch (Exception exception){
-            System.out.println("Error no identificado");
+            System.out.println("Error no identificado en getAllClients");
             throw exception;
         }
 
@@ -41,12 +54,12 @@ public class ClienteRepository {
      */
     public static ClienteDTO getClient(int id) throws Exception{
         //Se obtiene el cliente respectivo
-        ClienteEntity client = ORManager.obtenerObjetoPorID(id,ClienteEntity.class);
+        ClienteEntity clienteEntity = ORManager.obtenerObjetoPorID(id,ClienteEntity.class);
 
-        UsuarioEntity user = ORManager.obtenerObjetoPorID(id,UsuarioEntity.class);
+        UsuarioEntity usuarioEntity = ORManager.obtenerObjetoPorID(id,UsuarioEntity.class);
 
-        if(client != null && user != null){
-            ClienteDTO clienteDTO = convertToDTO(user, client);
+        if(clienteEntity != null && usuarioEntity != null){
+            ClienteDTO clienteDTO = convertToDTO(usuarioEntity, clienteEntity);
             return clienteDTO;
         } else {
             throw new Exception();
@@ -130,6 +143,33 @@ public class ClienteRepository {
 
         } catch (Exception e){
             System.out.println("Durante el procesamiento de registrarClienteSP");
+            throw e;
+        }
+    }
+
+    /**
+     * Método que llama al Store Procedure de INSERTAR_PAGO_CLIENTE
+     * @param cliente cliente a asignar el pago
+     * @param pago pago a asignar
+     */
+    public static void insertarPagoClienteSP(int cliente, String pago){
+        try {
+            Session session = com.digipet.prototype.data.HibernateSession.openSession();
+
+            session.beginTransaction();
+            org.hibernate.query.Query query = session.createSQLQuery(
+                    "CALL INSERTAR_PAGO_CLIENTE(:Icliente,:Pago)")
+                    .addEntity(PagoXClienteEntity.class)
+                    .setParameter("Icliente",cliente)
+                    .setParameter("Pago",pago);
+
+            query.executeUpdate();
+
+            session.getTransaction().commit();
+            session.close();
+
+        } catch (Exception e){
+            System.out.println("Durante el procesamiento de insertarPagoClienteSP");
             throw e;
         }
     }

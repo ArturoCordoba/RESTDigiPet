@@ -4,12 +4,14 @@ import com.digipet.prototype.api.dto.CuidadorDTO;
 import com.digipet.prototype.auxiliar.ORManager;
 import com.digipet.prototype.orm.BadgeXCuidadorEntity;
 import com.digipet.prototype.orm.CuidadorEntity;
+import com.digipet.prototype.orm.ProvinciaXCuidadorEntity;
 import com.digipet.prototype.orm.UsuarioEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.List;
 
 public class CuidadorRepository {
 
@@ -17,15 +19,25 @@ public class CuidadorRepository {
      * Método que obtiene la la tabla de cuidadores
      * @return ArrayList de cuidadores
      */
-    public static ArrayList<CuidadorEntity> getAllCuidadores() {
-        ArrayList<CuidadorEntity> data;
+    public static List getAllCuidadores() {
+        List<CuidadorDTO> data = null;
+        List cuidadores;
 
         Session session = HibernateSession.openSession();
 
         try {
             Query query = session.createQuery("FROM " + "CuidadorEntity");
-            data = (ArrayList<CuidadorEntity>) query.getResultList();
+            cuidadores = query.getResultList();
 
+            for (Object cuidador : cuidadores) {
+                CuidadorEntity cuidadorEntity = (CuidadorEntity) cuidador;
+                UsuarioEntity usuarioEntity = ORManager.obtenerObjetoPorID(cuidadorEntity.getIdCuidador(), UsuarioEntity.class);
+                data.add(convertToDTO(usuarioEntity, cuidadorEntity));
+            }
+
+        } catch (NullPointerException nullptr){
+            System.out.println("Error de puntero al convertir en DTO");
+            throw nullptr;
         } catch (Exception exception){
             System.out.println("Error no identificado");
             throw exception;
@@ -135,7 +147,34 @@ public class CuidadorRepository {
             session.close();
 
         } catch (Exception e){
-            System.out.println("Durante el procesamiento de insertarBagdeCuidador");
+            System.out.println("Durante el procesamiento de insertarBagdeCuidadorSP");
+            throw e;
+        }
+    }
+
+    /**
+     * Método que llama al Store Procedure de INSERTAR_PROVINCIA_CUIDADOR
+     * @param cuidador cuidador residente
+     * @param provincia provincia de residencia
+     */
+    public static void insertarProvinciaCuidadorSP(int cuidador, String provincia){
+        try {
+            Session session = com.digipet.prototype.data.HibernateSession.openSession();
+
+            session.beginTransaction();
+            org.hibernate.query.Query query = session.createSQLQuery(
+                    "CALL INSERTAR_PROVINCIA_CUIDADOR(:Icuidador,:Iprovincia)")
+                    .addEntity(ProvinciaXCuidadorEntity.class)
+                    .setParameter("Icuidador",cuidador)
+                    .setParameter("Iprovincia",provincia);
+
+            query.executeUpdate();
+
+            session.getTransaction().commit();
+            session.close();
+
+        } catch (Exception e){
+            System.out.println("Durante el procesamiento de insertarProvinciaCuidadorSP");
             throw e;
         }
     }
