@@ -4,11 +4,9 @@ import com.digipet.prototype.api.dto.MascotaDTO;
 import com.digipet.prototype.auxiliar.ORManager;
 import com.digipet.prototype.orm.FotoXMascotaEntity;
 import com.digipet.prototype.orm.MascotaEntity;
-import com.digipet.prototype.orm.SolicitudEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
-import javax.transaction.Transactional;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -47,8 +45,15 @@ public class MascotaRepository {
         return data;
     }
 
-    public static MascotaDTO getMascota(int id){
-        MascotaDTO mascota = null;
+    /**
+     * Método que retorna una mascota según su id
+     * @param id de la mascota
+     * @return mascota a quien pertenece el id
+     * @throws Exception Si la mascota es nula
+     */
+    public static MascotaDTO getMascota(int id) throws Exception{
+        //Se obtiene la mascota respectivo
+        MascotaEntity mascota = ORManager.obtenerObjetoPorID(id,MascotaEntity.class);
 
         Session session = HibernateSession.openSession();
 

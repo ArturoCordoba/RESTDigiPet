@@ -8,6 +8,7 @@ import com.digipet.prototype.orm.UsuarioEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
 
@@ -18,7 +19,7 @@ public class ClienteRepository {
      * @return ArrayList de clientes
      */
     public static List getAllClients() {
-        List<ClienteDTO> data = null;
+        List<ClienteDTO> data = new ArrayList<>();
         List clientes;
 
         Session session = HibernateSession.openSession();
