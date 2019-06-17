@@ -8,10 +8,10 @@ import com.digipet.prototype.orm.UsuarioEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Date;
 
 public class ClienteRepository {
 
@@ -88,34 +88,20 @@ public class ClienteRepository {
         client.setEmail2(clienteEntity.getEmail2());
         client.setDescripcion(clienteEntity.getDescripcion());
         client.setFechaInscripcion(clienteEntity.getFechaInscripcion().toString());
-        client.setId_provincia(clienteEntity.getProvincia().getIdProvincia());
+        client.setProvincia(clienteEntity.getProvincia().getNombre());
 
         return client;
     }
 
     /**
      * Método que llama al Store Procedure de REGISTRAR_CLIENTE
-     * @param nombre nombre del usuario
-     * @param primerApellido primer apellido del usuario
-     * @param segundoApellido segundo apellido del usuario
-     * @param provincia provincia de localización deñ cliente
-     * @param canton cantón de localización del cliente
-     * @param correo1 correo primario del cliente
-     * @param correo2 correo secundario del cliente (puede estar vacío)
-     * @param telefono teléfono del cliente
-     * @param foto foto de perfil del usuario
-     * @param contrasena contraseña del usuario
-     * @param descripcion descripción del cliente
-     * @param fecha fecha de inscripción del cliente
+     * @param cliente Objeto DTO que contiene los datos del cliente que se desea registrar
      */
-    public static void registrarClienteSP(String nombre, String primerApellido, String segundoApellido,
-                                          String provincia, String canton, String correo1, String correo2,
-                                          String telefono, String foto, String contrasena, String descripcion,
-                                          Date fecha){
+    public static void registrarClienteSP(ClienteDTO cliente){
         try {
             Session session = com.digipet.prototype.data.HibernateSession.openSession();
 
-            if (correo2 == null) correo2 = "";
+            Date date = new Date();
 
             session.beginTransaction();
             org.hibernate.query.Query query = session.createSQLQuery(
@@ -123,18 +109,18 @@ public class ClienteRepository {
                             ":Correo1,:Correo2,:Telefono,:Foto,:Contrasena,:Ddescripcion,:Fecha)")
                     .addEntity(UsuarioEntity.class)
                     .addEntity(ClienteEntity.class)
-                    .setParameter("Pnombre",nombre)
-                    .setParameter("Papellido",primerApellido)
-                    .setParameter("Sapellido",segundoApellido)
-                    .setParameter("Iprovincia",provincia)
-                    .setParameter("Ccanton",canton)
-                    .setParameter("Correo1",correo1)
-                    .setParameter("Correo2",correo2)
-                    .setParameter("Telefono",telefono)
-                    .setParameter("Foto",foto)
-                    .setParameter("Contrasena", contrasena)
-                    .setParameter("Ddescripcion",descripcion)
-                    .setParameter("Fecha",fecha);
+                    .setParameter("Pnombre",cliente.getPrimerNombre())
+                    .setParameter("Papellido",cliente.getPrimerApellido())
+                    .setParameter("Sapellido",cliente.getSegundoApellido())
+                    .setParameter("Iprovincia",cliente.getProvincia())
+                    .setParameter("Ccanton",cliente.getCanton())
+                    .setParameter("Correo1",cliente.getEmail1())
+                    .setParameter("Correo2",cliente.getEmail2())
+                    .setParameter("Telefono",cliente.getTelefonoMovil())
+                    .setParameter("Foto",cliente.getFotoPerfil())
+                    .setParameter("Contrasena", cliente.getContrasena())
+                    .setParameter("Ddescripcion",cliente.getDescripcion())
+                    .setParameter("Fecha",date);
 
             query.executeUpdate();
 
@@ -143,6 +129,7 @@ public class ClienteRepository {
 
         } catch (Exception e){
             System.out.println("Durante el procesamiento de registrarClienteSP");
+            e.printStackTrace();
             throw e;
         }
     }

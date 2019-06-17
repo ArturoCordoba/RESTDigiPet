@@ -35,7 +35,7 @@ public class ORManagerTest {
         usuarioEntity.setContrasena("contra8");
         usuarioEntity.setFotoPerfil("penege.png");
 
-        ORManager.crearObjeto(usuarioEntity);
+        //ORManager.crearObjeto(usuarioEntity);
     }
 
     @Test
