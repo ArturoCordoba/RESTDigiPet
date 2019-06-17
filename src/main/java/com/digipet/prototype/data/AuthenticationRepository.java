@@ -36,4 +36,33 @@ public class AuthenticationRepository {
 
         return false;
     }
+
+    /**
+     * Metodo para obtener un identificador de usuario a partir de su email
+     * @param email Email del usuario autenticado
+     * @return El identificador del usuario, -1 si ocurre algun error
+     */
+    public static int getIdUser(String email){
+        try{
+            //Se obtiene una conexion con la base de datos
+            Session session = HibernateSession.openSession();
+
+            //Se crea el query a ejecutar
+            Query query = session.createQuery("FROM UsuarioEntity user WHERE user.email1 = :email1");
+            query.setParameter("email1", email);
+
+            //Se obtiene la instancia del usuario
+            UsuarioEntity user = (UsuarioEntity) query.getSingleResult();
+
+            //Se valida que el usuario no sea nulo
+            if(user != null){
+                //Se obtiene el identificador del usuario
+                return user.getIdUsuario();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return -1;
+    }
 }

@@ -24,8 +24,11 @@ public class AuthenticationEndpoint {
             //Se intenta autenticar al usuario con las credenciales proveidas
             authenticate(username, password);
 
+            //Se obtiene el identificador del usuario
+            int id = AuthenticationRepository.getIdUser(username);
+
             //Se crea un token para el usuario recibido
-            String token = TokenManager.issueToken(username);
+            String token = TokenManager.issueToken(Integer.toString(id));
 
             return Response.ok().entity(jsonToken(token)).build();
 

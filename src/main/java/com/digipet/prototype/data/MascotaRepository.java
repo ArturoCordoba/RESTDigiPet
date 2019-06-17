@@ -8,9 +8,8 @@ import com.digipet.prototype.orm.SolicitudEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class MascotaRepository {
@@ -104,6 +103,7 @@ public class MascotaRepository {
         mascotaDTO.setFechaInscripcion(mascota.getFechaInscripcion().toString());
         mascotaDTO.setListaFotos(listaFotos);
         mascotaDTO.setListaIdSolicitudes(listaIdSolicitudes);
+        mascotaDTO.setTamano(mascota.getTamaño().getNombre());
 
         return mascotaDTO;
     }

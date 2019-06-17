@@ -9,6 +9,7 @@ public class MascotaDTO {
     private int edad;
     private String descripcion;
     private String fechaInscripcion;
+    private String tamano;
     private List<String> listaFotos;
     private List<Integer> listaIdSolicitudes;
 
@@ -16,13 +17,14 @@ public class MascotaDTO {
 
     }
 
-    public MascotaDTO(int id_mascota, String nombre, String raza, int edad, String descripcion, String fechaInscripcion, List<String> listaFotos, List<Integer> listaIdSolicitudes) {
+    public MascotaDTO(int id_mascota, String nombre, String raza, int edad, String descripcion, String fechaInscripcion, String tamano,List<String> listaFotos, List<Integer> listaIdSolicitudes) {
         this.id_mascota = id_mascota;
         this.nombre = nombre;
         this.raza = raza;
         this.edad = edad;
         this.descripcion = descripcion;
         this.fechaInscripcion = fechaInscripcion;
+        this.tamano = tamano;
         this.listaFotos = listaFotos;
         this.listaIdSolicitudes = listaIdSolicitudes;
     }
@@ -89,5 +91,13 @@ public class MascotaDTO {
 
     public void setListaIdSolicitudes(List<Integer> listaIdSolicitudes) {
         this.listaIdSolicitudes = listaIdSolicitudes;
+    }
+
+    public String getTamano() {
+        return tamano;
+    }
+
+    public void setTamano(String tamano) {
+        this.tamano = tamano;
     }
 }
