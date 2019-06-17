@@ -19,16 +19,15 @@ public class MascotaRepository {
      * Método que obtiene la la tabla de mascotas
      * @return ArrayList de mascotas
      */
-    public static List<MascotaEntity> getAllMascotas() {
-        List<MascotaEntity> data;
+    public static List getAllMascotas() {
+        List data;
 
         Session session = HibernateSession.openSession();
 
         try {
             Query query = session.createQuery(
                     "from MascotaEntity m " +
-                            "join fetch m.listaFotos " +
-                            "join fetch m.listaSolicitudes");
+                            "join fetch m.listaFotos, m.listaSolicitudes ");
             data = query.getResultList();
 
         } catch (Exception exception){
