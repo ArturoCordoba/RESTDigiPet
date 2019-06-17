@@ -38,25 +38,15 @@ public class ORManagerTest {
         ORManager.crearObjeto(usuarioEntity);
     }
 
-
     @Test
     public void ejecutarSelect() {
     }
 
     @Test
-    public void registrarClienteSP() {
-        String dateSTR = "2015-03-31";
-        Date date = Date.valueOf(dateSTR);
-        com.digipet.prototype.auxiliar.ORManager.registrarClienteSP("Gutierrez","Casimiro,",
-                "Alfaro","Alajuela","Alajuela","no@correo","","87655432",
-                "nohay.jpg","laprogre","Salu2",date);
-    }
-    @Test
     public void obtenerTabla() {
         ArrayList<ClienteEntity> list = com.digipet.prototype.auxiliar.ORManager.obtenerTabla("ClienteEntity");
 
     }
-
 
     @Test
     public void obtenerObjetoPorID() {

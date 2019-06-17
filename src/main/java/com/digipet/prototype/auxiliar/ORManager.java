@@ -9,6 +9,7 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.sql.Date;
 
+
 /**
  * Controlador que maneja las comuicaciones de los ClassEntity con la base de datos
  */
@@ -36,58 +37,6 @@ public class ORManager {
         } catch (Exception exception){
             System.out.println("Error no identificado al crear objeto");
             throw exception;
-        }
-    }
-
-    /**
-     * Método que llama al Store Procedure de REGISTRAR_CLIENTE
-     * @param nombre nombre del usuario
-     * @param primerApellido primer apellido del usuario
-     * @param segundoApellido segundo apellido del usuario
-     * @param provincia provincia de localización deñ cliente
-     * @param canton cantón de localización del cliente
-     * @param correo1 correo del usuario
-     * @param correo2 correo del cliente (puede estar vacío)
-     * @param telefono teléfono del cliente
-     * @param foto foto del usuario
-     * @param contrasena contraseña del usuario
-     * @param descripcion descripción del cliente
-     * @param fecha fecha de inscripción
-     */
-    public static void registrarClienteSP(String nombre, String primerApellido, String segundoApellido,
-                                              String provincia, String canton, String correo1, String correo2,
-                                              String telefono, String foto, String contrasena, String descripcion,
-                                              Date fecha){
-        try {
-            Session session = com.digipet.prototype.data.HibernateSession.openSession();
-
-            session.beginTransaction();
-            Query query = session.createSQLQuery(
-                    "CALL REGISTRAR_CLIENTE(:Pnombre,:Papellido,:Sapellido,:Iprovincia,:Ccanton," +
-                            ":Correo1,:Correo2,:Telefono,:Foto,:Contrasena,:Ddescripcion,:Fecha)")
-                    .addEntity(UsuarioEntity.class)
-                    .addEntity(ClienteEntity.class)
-                    .setParameter("Pnombre",nombre)
-                    .setParameter("Papellido",primerApellido)
-                    .setParameter("Sapellido",segundoApellido)
-                    .setParameter("Iprovincia",provincia)
-                    .setParameter("Ccanton",canton)
-                    .setParameter("Correo1",correo1)
-                    .setParameter("Correo2",correo2)
-                    .setParameter("Telefono",telefono)
-                    .setParameter("Foto",foto)
-                    .setParameter("Contrasena", contrasena)
-                    .setParameter("Ddescripcion",descripcion)
-                    .setParameter("Fecha",fecha);
-
-            query.executeUpdate();
-
-            session.getTransaction().commit();
-            session.close();
-
-        } catch (Exception e){
-            System.out.println("Durante el procesamiento de registrarClienteSP");
-            throw e;
         }
     }
 
