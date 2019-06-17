@@ -2,7 +2,7 @@ package com.digipet.prototype.api.dto;
 
 import java.util.ArrayList;
 
-public class ClientDTO {
+public class ClienteDTO {
     private int idUsuario;
     private String primerNombre;
     private String primerApellido;
@@ -22,11 +22,11 @@ public class ClientDTO {
     private ArrayList<MascotaDTO> listaMascotas;
     private ArrayList<MetodoPagoDTO> listaPago;
 
-    public ClientDTO() {
+    public ClienteDTO() {
 
     }
 
-    public ClientDTO(int idUsuario, String primerNombre, String primerApellido, String segundoApellido, String email1, String contrasena, String fotoPerfil, int id_rol, int id_estado, int idCliente, String telefonoMovil, String canton, String email2, String descripcion, String fechaInscripcion, int id_provincia, ArrayList<MascotaDTO> listaMascotas, ArrayList<MetodoPagoDTO> listaPago) {
+    public ClienteDTO(int idUsuario, String primerNombre, String primerApellido, String segundoApellido, String email1, String contrasena, String fotoPerfil, int id_rol, int id_estado, int idCliente, String telefonoMovil, String canton, String email2, String descripcion, String fechaInscripcion, int id_provincia, ArrayList<MascotaDTO> listaMascotas, ArrayList<MetodoPagoDTO> listaPago) {
         this.idUsuario = idUsuario;
         this.primerNombre = primerNombre;
         this.primerApellido = primerApellido;

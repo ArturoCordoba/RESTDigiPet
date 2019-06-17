@@ -1,6 +1,7 @@
 package com.digipet.prototype.data;
 
-import com.digipet.prototype.api.dto.ClientDTO;
+import com.digipet.prototype.api.dto.ClienteDTO;
+import com.digipet.prototype.auxiliar.ORManager;
 import com.digipet.prototype.orm.ClienteEntity;
 import com.digipet.prototype.orm.UsuarioEntity;
 import org.hibernate.Session;
@@ -28,26 +29,22 @@ public class ClientRepository {
         return data;
     }
 
-    public static ClientDTO getClient(int id) throws Exception{
+    public static ClienteDTO getClient(int id) throws Exception{
         //Se obtiene el cliente respectivo
-        ClienteEntity client = (ClienteEntity) com.digipet.prototype.auxiliar.ORManager.obtenerObjetoPorID(id,ClienteEntity.class);
+        ClienteEntity client = ORManager.obtenerObjetoPorID(id,ClienteEntity.class);
 
-        UsuarioEntity user = (UsuarioEntity) com.digipet.prototype.auxiliar.ORManager.obtenerObjetoPorID(id,UsuarioEntity.class);
+        UsuarioEntity user = ORManager.obtenerObjetoPorID(id,UsuarioEntity.class);
 
         if(client != null && user != null){
-            ClientDTO clientDTO = convertToDTO(user, client);
-            return clientDTO;
+            ClienteDTO clienteDTO = convertToDTO(user, client);
+            return clienteDTO;
         } else {
             throw new Exception();
         }
     }
 
-    public static boolean registerClient(ClientDTO client){
-        return false;
-    }
-
-    private static ClientDTO convertToDTO(UsuarioEntity user, ClienteEntity clienteEntity){
-        ClientDTO client = new ClientDTO();
+    private static ClienteDTO convertToDTO(UsuarioEntity user, ClienteEntity clienteEntity){
+        ClienteDTO client = new ClienteDTO();
         client.setIdUsuario(user.getIdUsuario());
         client.setPrimerNombre(user.getPrimerNombre());
         client.setPrimerApellido(user.getPrimerApellido());
